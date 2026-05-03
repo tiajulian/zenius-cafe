@@ -267,8 +267,8 @@
     <div class="success-check">
       <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
     </div>
-    <h2 class="success-title">You're all <em>booked in!</em></h2>
-    <p class="success-sub">A confirmation has been sent to your email. We can't wait to see you.</p>
+    <h2 class="success-title">Request <em>received!</em></h2>
+    <p class="success-sub">We'll confirm your booking shortly. Keep an eye on your inbox for a confirmation email from us.</p>
     <div class="success-detail" id="success-detail">
       <!-- populated by JS -->
     </div>
@@ -516,7 +516,7 @@
     })
     .then(function (r) { return r.json(); })
     .then(function (data) {
-      if (data.ok) {
+      if (data.ok && (data.confirmed || data.pending)) {
         showSuccess();
       } else if (data.error === 'SLOT_FULL') {
         handleCapacityError('That time slot just became fully booked. Please choose another time.');
