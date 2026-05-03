@@ -545,6 +545,29 @@
       .reveal { opacity: 1; transform: none; }
     }
 
+    /* ── Unsplash icon images ───────────────────── */
+    .card-icon-img {
+      width: 62px; height: 62px; border-radius: 10px;
+      object-fit: cover; display: block; margin-bottom: 1.3rem;
+      box-shadow: 0 4px 14px rgba(42,26,14,.13);
+    }
+    .feature-img {
+      width: 84px; height: 84px; border-radius: 50%;
+      object-fit: cover; display: block; margin: 0 auto 1.2rem;
+      box-shadow: 0 4px 20px rgba(42,26,14,.22);
+      border: 3px solid rgba(251,247,242,.18);
+    }
+    .stat-icon-img {
+      width: 54px; height: 54px; border-radius: 50%;
+      object-fit: cover; display: block; margin-bottom: .45rem;
+      box-shadow: 0 3px 12px rgba(42,26,14,.1);
+    }
+    .v-card-icon-img {
+      width: 50px; height: 50px; border-radius: 10px;
+      object-fit: cover; display: block; margin-bottom: 1rem;
+      box-shadow: 0 2px 10px rgba(42,26,14,.1);
+    }
+
     /* ── Gallery overlays always visible on touch ── */
     @media (pointer: coarse) {
       .g-overlay {
@@ -810,7 +833,7 @@
           <div class="stat-lbl">Open Weekdays</div>
         </div>
         <div>
-          <div class="stat-num">🐾</div>
+          <img class="stat-icon-img" src="https://images.unsplash.com/photo-1712746438528-f725ba394f10?w=108&h=108&fit=crop&crop=center&q=80" alt="Dog friendly">
           <div class="stat-lbl">Dog Friendly</div>
         </div>
       </div>
@@ -827,7 +850,7 @@
   <div class="menu-grid">
 
     <div class="menu-card reveal">
-      <span class="card-icon">☕</span>
+      <img class="card-icon-img" src="https://images.unsplash.com/photo-1610632380989-680fe40816c6?w=124&h=124&fit=crop&crop=center&q=80" alt="Coffee">
       <div class="card-cat">Drinks</div>
       <h3 class="card-title">Coffee</h3>
       <ul class="item-list">
@@ -841,7 +864,7 @@
     </div>
 
     <div class="menu-card reveal" style="transition-delay:.1s">
-      <span class="card-icon">🍵</span>
+      <img class="card-icon-img" src="https://images.unsplash.com/photo-1515823064-d6e0c04616a7?w=124&h=124&fit=crop&crop=center&q=80" alt="Matcha latte">
       <div class="card-cat">Specialty</div>
       <h3 class="card-title">Alt Drinks</h3>
       <ul class="item-list">
@@ -855,7 +878,7 @@
     </div>
 
     <div class="menu-card reveal" style="transition-delay:.2s">
-      <span class="card-icon">🥑</span>
+      <img class="card-icon-img" src="https://images.unsplash.com/photo-1687276287139-88f7333c8ca4?w=124&h=124&fit=crop&crop=center&q=80" alt="Brunch">
       <div class="card-cat">Food</div>
       <h3 class="card-title">Brunch</h3>
       <ul class="item-list">
@@ -871,7 +894,7 @@
     </div>
 
     <div class="menu-card reveal" style="transition-delay:.3s">
-      <span class="card-icon">🥣</span>
+      <img class="card-icon-img" src="https://images.unsplash.com/photo-1654923064926-be7e64267a31?w=124&h=124&fit=crop&crop=center&q=80" alt="Bowls">
       <div class="card-cat">Bowls</div>
       <h3 class="card-title">Bowls</h3>
       <ul class="item-list">
@@ -889,17 +912,17 @@
 <div class="feature-strip">
   <div class="feature-inner">
     <div class="feature-item reveal">
-      <span class="feature-emoji">🎨</span>
+      <img class="feature-img" src="https://images.unsplash.com/photo-1529892485617-25f63cd7b1e9?w=168&h=168&fit=crop&crop=center&q=80" alt="Latte art">
       <div class="feature-title">Latte Art</div>
       <div class="feature-desc">Every cup is handcrafted. Seahorses, bees, bunnies. Ask your barista.</div>
     </div>
     <div class="feature-item reveal" style="transition-delay:.12s">
-      <span class="feature-emoji">☀️</span>
+      <img class="feature-img" src="https://images.unsplash.com/photo-1775880307620-18b8be1712bd?w=168&h=168&fit=crop&crop=center&q=80" alt="Outdoor seating">
       <div class="feature-title">Outdoor Seating</div>
       <div class="feature-desc">Spill out onto Abercrombie Street and soak up the Chippendale morning sun.</div>
     </div>
     <div class="feature-item reveal" style="transition-delay:.24s">
-      <span class="feature-emoji">🐶</span>
+      <img class="feature-img" src="https://images.unsplash.com/photo-1712746438528-f725ba394f10?w=168&h=168&fit=crop&crop=center&q=80" alt="Dog friendly">
       <div class="feature-title">Dog Friendly</div>
       <div class="feature-desc">Four-legged regulars welcome. Puppy cinos on the house.</div>
     </div>
@@ -1055,7 +1078,7 @@
   </div>
   <div class="visit-grid">
     <div class="v-card reveal">
-      <span class="v-card-icon">🕐</span>
+      <img class="v-card-icon-img" src="https://images.unsplash.com/photo-1709380146579-e46f2736650a?w=100&h=100&fit=crop&crop=center&q=80" alt="Opening hours">
       <h3>Hours</h3>
       <ul class="hours-list">
         <li><span class="h-day">Monday</span>    <span class="h-time">7am to 3pm</span></li>
@@ -1075,7 +1098,7 @@
       </iframe>
     </div>
     <div class="v-card reveal" style="transition-delay:.24s">
-      <span class="v-card-icon">📍</span>
+      <img class="v-card-icon-img" src="https://images.unsplash.com/photo-1529892485617-25f63cd7b1e9?w=100&h=100&fit=crop&crop=center&q=80" alt="Location">
       <h3>Contact</h3>
       <ul class="contact-list">
         <li>
