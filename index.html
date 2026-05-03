@@ -4,11 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zenius Coffee | Chippendale, Sydney</title>
-  <meta name="description" content="Specialty coffee and brunch in the heart of Chippendale. Ranked #2 in Chippendale. Visit us at 96 Abercrombie St.">
+  <meta name="description" content="Specialty coffee and brunch at 96 Abercrombie St, Chippendale. Ranked #2 in Chippendale. Open Mon–Fri 7am–3pm, Sat–Sun 8am–3pm. Dog friendly.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="restaurant">
+  <meta property="og:title" content="Zenius Coffee | Chippendale, Sydney">
+  <meta property="og:description" content="Specialty coffee, latte art &amp; brunch in the heart of Chippendale. Ranked #2 of 120 cafes. Open 7 days.">
+  <meta property="og:url" content="https://tiajulian.github.io/zenius-cafe/">
+  <meta property="og:image" content="https://tiajulian.github.io/zenius-cafe/images/about.jpg">
+  <meta property="og:site_name" content="Zenius Coffee">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Zenius Coffee | Chippendale, Sydney">
+  <meta name="twitter:description" content="Specialty coffee, latte art &amp; brunch in the heart of Chippendale. Ranked #2.">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Zenius Coffee",
+    "url": "https://tiajulian.github.io/zenius-cafe/",
+    "telephone": "+61289578415",
+    "email": "zeniuscoffee@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "96 Abercrombie Street",
+      "addressLocality": "Chippendale",
+      "addressRegion": "NSW",
+      "postalCode": "2008",
+      "addressCountry": "AU"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": -33.89196, "longitude": 151.19538 },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "15:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "08:00", "closes": "15:00" }
+    ],
+    "servesCuisine": ["Coffee","Brunch","Australian"],
+    "priceRange": "$$",
+    "sameAs": [
+      "https://www.instagram.com/zeniuschippendale/",
+      "https://www.facebook.com/zeniuscoffee/",
+      "https://www.tiktok.com/@zeniuscoffee"
+    ]
+  }
+  </script>
+
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☕</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --espresso: #0C0804;
@@ -23,36 +68,34 @@
     }
 
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
+    body { background: var(--espresso); color: var(--cream); font-family: 'DM Sans', sans-serif; overflow-x: hidden; }
 
-    body {
-      background: var(--espresso);
-      color: var(--cream);
-      font-family: 'DM Sans', sans-serif;
-      overflow-x: hidden;
-      cursor: none;
+    /* ── Skip link ───────────────────────────────── */
+    .skip-link {
+      position: absolute; top: -100%; left: 1rem;
+      background: var(--caramel); color: var(--espresso);
+      padding: .5rem 1.2rem; border-radius: 4px;
+      font-size: .85rem; font-weight: 500; z-index: 10000;
+      text-decoration: none; transition: top .2s;
     }
+    .skip-link:focus { top: 1rem; }
 
-    /* ── Noise overlay ───────────────────────────────── */
+    /* ── Noise overlay ───────────────────────────── */
     body::after {
-      content: '';
-      position: fixed;
-      inset: 0;
+      content: ''; position: fixed; inset: 0;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
-      opacity: 0.03;
-      pointer-events: none;
-      z-index: 9990;
+      opacity: 0.03; pointer-events: none; z-index: 9990;
     }
 
-    /* ── Scroll progress ─────────────────────────────── */
+    /* ── Scroll progress ─────────────────────────── */
     #progress {
       position: fixed; top: 0; left: 0; height: 2px; width: 0%;
       background: linear-gradient(90deg, var(--caramel), var(--mint));
       z-index: 9999; transition: width 0.08s linear;
     }
 
-    /* ── Custom cursor ───────────────────────────────── */
+    /* ── Custom cursor (desktop pointer only) ────── */
     #cur-dot {
       position: fixed; width: 8px; height: 8px;
       background: var(--caramel); border-radius: 50%;
@@ -67,23 +110,27 @@
       transition: width .25s, height .25s, border-color .25s;
     }
     body:has(a:hover) #cur-ring,
-    body:has(button:hover) #cur-ring {
-      width: 60px; height: 60px;
-      border-color: rgba(200,150,90,.8);
+    body:has(button:hover) #cur-ring { width: 60px; height: 60px; border-color: rgba(200,150,90,.8); }
+    /* Hide custom cursor on touch devices */
+    @media (pointer: coarse) {
+      #cur-dot, #cur-ring { display: none; }
     }
-    @media (hover: none) { #cur-dot, #cur-ring { display: none; } body { cursor: auto; } }
+    /* Only hide system cursor on fine-pointer (mouse) devices */
+    @media (pointer: fine) {
+      body { cursor: none; }
+    }
 
-    /* ── NAV ─────────────────────────────────────────── */
-    nav {
+    /* ── NAV — scoped to #nav to avoid ghost overlay on footer nav ── */
+    #nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 500;
       display: flex; align-items: center; justify-content: space-between;
       padding: 2rem 5vw;
       transition: padding .4s, background .4s, border-color .4s;
       border-bottom: 1px solid transparent;
     }
-    nav.scrolled {
+    #nav.scrolled {
       padding: 1.1rem 5vw;
-      background: rgba(12, 8, 4, .82);
+      background: rgba(12,8,4,.88);
       backdrop-filter: blur(24px) saturate(160%);
       border-color: rgba(200,150,90,.12);
     }
@@ -97,9 +144,9 @@
     .nav-links a {
       color: rgba(242,232,217,.7); text-decoration: none;
       font-size: .78rem; letter-spacing: .14em; text-transform: uppercase;
-      transition: color .3s, opacity .3s;
+      transition: color .3s;
     }
-    .nav-links a:hover { color: var(--caramel); opacity: 1; }
+    .nav-links a:hover { color: var(--caramel); }
     .nav-cta {
       background: var(--caramel); color: var(--espresso);
       padding: .55rem 1.4rem; border-radius: 100px;
@@ -109,7 +156,22 @@
     }
     .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(200,150,90,.35); }
 
-    /* ── HERO ────────────────────────────────────────── */
+    /* Hamburger button */
+    .hamburger {
+      display: none; flex-direction: column; justify-content: center;
+      gap: 5px; background: none; border: none; cursor: pointer;
+      padding: .4rem; z-index: 10;
+    }
+    .hamburger span {
+      display: block; width: 24px; height: 2px;
+      background: var(--cream); border-radius: 2px;
+      transition: transform .3s, opacity .3s;
+    }
+    #nav.menu-open .hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    #nav.menu-open .hamburger span:nth-child(2) { opacity: 0; }
+    #nav.menu-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ── HERO ────────────────────────────────────── */
     .hero {
       min-height: 100vh;
       display: flex; align-items: center; justify-content: center;
@@ -122,7 +184,6 @@
       text-align: center; z-index: 2; padding: 2rem;
       display: flex; flex-direction: column; align-items: center;
     }
-
     .hero-badge {
       display: inline-block; opacity: 0;
       animation: fadeUp .8s .3s ease forwards;
@@ -130,7 +191,6 @@
       color: var(--caramel); border: 1px solid rgba(200,150,90,.35);
       padding: .4rem 1.3rem; border-radius: 100px; margin-bottom: 2.2rem;
     }
-
     h1.hero-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(4.5rem, 11vw, 9.5rem);
@@ -139,28 +199,21 @@
       opacity: 0; animation: fadeUp 1s .5s ease forwards;
     }
     h1.hero-title em { font-style: italic; color: var(--caramel); }
-
     .hero-sub {
       font-size: .82rem; letter-spacing: .22em; text-transform: uppercase;
       color: rgba(242,232,217,.45);
       opacity: 0; animation: fadeUp .8s .85s ease forwards;
       margin-bottom: 2.8rem;
     }
-
-    /* SVG coffee cup */
-    .hero-cup {
-      opacity: 0; animation: fadeUp .8s 1s ease forwards;
-      margin-bottom: 2.5rem;
-    }
+    .hero-cup { opacity: 0; animation: fadeUp .8s 1s ease forwards; margin-bottom: 2.5rem; }
     .steam-path { animation: steam 3s ease-in-out infinite; transform-origin: bottom center; }
     .steam-path:nth-child(2) { animation-delay: .4s; }
     .steam-path:nth-child(3) { animation-delay: .8s; }
     @keyframes steam {
-      0%   { opacity: 0;   transform: translateY(0)   scaleX(1); }
+      0%   { opacity: 0; transform: translateY(0) scaleX(1); }
       40%  { opacity: .65; }
-      100% { opacity: 0;   transform: translateY(-18px) scaleX(1.4); }
+      100% { opacity: 0; transform: translateY(-18px) scaleX(1.4); }
     }
-
     .hero-btns {
       display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;
       opacity: 0; animation: fadeUp .8s 1.15s ease forwards;
@@ -182,7 +235,6 @@
       text-decoration: none; transition: all .3s;
     }
     .btn-ghost:hover { border-color: var(--caramel); color: var(--caramel); }
-
     .hero-scroll {
       position: absolute; bottom: 2.8rem; left: 50%; transform: translateX(-50%);
       display: flex; flex-direction: column; align-items: center; gap: .5rem;
@@ -196,12 +248,9 @@
     }
     @keyframes scrollPulse { 0%,100%{opacity:.25;transform:scaleY(1)} 50%{opacity:1;transform:scaleY(1.15)} }
 
-    /* ── MARQUEE ─────────────────────────────────────── */
+    /* ── MARQUEE ─────────────────────────────────── */
     .marquee-bar { background: var(--caramel); padding: .75rem 0; overflow: hidden; }
-    .marquee-track {
-      display: flex; white-space: nowrap;
-      animation: marquee 28s linear infinite;
-    }
+    .marquee-track { display: flex; white-space: nowrap; animation: marquee 28s linear infinite; }
     .marquee-track span {
       font-family: 'Cormorant Garamond', serif;
       font-style: italic; font-size: .88rem; letter-spacing: .05em;
@@ -210,32 +259,16 @@
     .marquee-track s { text-decoration: none; color: rgba(12,8,4,.35); padding: 0 .5rem; }
     @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
-    /* ── SECTION BASE ────────────────────────────────── */
+    /* ── SECTION BASE ────────────────────────────── */
     section { padding: 8rem 5vw; }
-
-    .reveal {
-      opacity: 0; transform: translateY(28px);
-      transition: opacity .75s ease, transform .75s ease;
-    }
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .75s ease, transform .75s ease; }
     .reveal.in { opacity: 1; transform: translateY(0); }
-
-    .sec-label {
-      font-size: .68rem; letter-spacing: .32em; text-transform: uppercase;
-      color: var(--caramel); margin-bottom: 1rem;
-    }
-    .sec-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2.8rem, 5.5vw, 5rem);
-      font-weight: 300; line-height: 1.02;
-    }
+    .sec-label { font-size: .68rem; letter-spacing: .32em; text-transform: uppercase; color: var(--caramel); margin-bottom: 1rem; }
+    .sec-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem, 5.5vw, 5rem); font-weight: 300; line-height: 1.02; }
     .sec-title em { font-style: italic; color: var(--caramel); }
 
-    /* ── ABOUT ───────────────────────────────────────── */
-    .about-wrap {
-      max-width: 1240px; margin: 0 auto;
-      display: grid; grid-template-columns: 1fr 1.1fr; gap: 6rem; align-items: center;
-    }
-
+    /* ── ABOUT ───────────────────────────────────── */
+    .about-wrap { max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.1fr; gap: 6rem; align-items: center; }
     .about-visual { position: relative; }
     .about-main-img {
       width: 100%; aspect-ratio: 4/5; border-radius: 6px; overflow: hidden;
@@ -244,20 +277,15 @@
     }
     .about-main-img img { width: 100%; height: 100%; object-fit: cover; }
     .about-main-img::before {
-      content: '';
-      position: absolute; inset: 0; z-index: 1;
+      content: ''; position: absolute; inset: 0; z-index: 1;
       background: radial-gradient(ellipse at 30% 40%, rgba(200,150,90,.18) 0%, transparent 65%);
     }
-    /* Coffee ring decoration */
     .about-ring {
       position: absolute; top: -2.5rem; left: -2.5rem;
       width: 120px; height: 120px; border-radius: 50%;
       border: 1px solid rgba(200,150,90,.2);
     }
-    .about-ring::after {
-      content: ''; position: absolute; inset: 12px; border-radius: 50%;
-      border: 1px solid rgba(200,150,90,.12);
-    }
+    .about-ring::after { content: ''; position: absolute; inset: 12px; border-radius: 50%; border: 1px solid rgba(200,150,90,.12); }
     .about-accent-img {
       position: absolute; bottom: -2.5rem; right: -2.5rem;
       width: 52%; aspect-ratio: 1; border-radius: 6px; overflow: hidden;
@@ -265,35 +293,18 @@
       border: 4px solid var(--espresso);
     }
     .about-accent-img img { width: 100%; height: 100%; object-fit: cover; }
-
     .about-copy { padding: 1.5rem 0; }
-    .about-copy p {
-      font-size: 1.02rem; line-height: 1.9;
-      color: rgba(242,232,217,.72); margin-bottom: 1.5rem;
-    }
-
+    .about-copy p { font-size: 1.02rem; line-height: 1.9; color: rgba(242,232,217,.72); margin-bottom: 1.5rem; }
     .about-stats { display: flex; gap: 3rem; margin-top: 3rem; }
-    .stat-num {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 3rem; font-weight: 300; color: var(--caramel); line-height: 1;
-    }
-    .stat-lbl {
-      font-size: .7rem; letter-spacing: .12em; text-transform: uppercase;
-      color: rgba(242,232,217,.45); margin-top: .35rem;
-    }
+    .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; color: var(--caramel); line-height: 1; }
+    .stat-lbl { font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(242,232,217,.45); margin-top: .35rem; }
 
-    /* ── MENU ────────────────────────────────────────── */
+    /* ── MENU ────────────────────────────────────── */
     #menu { background: var(--dark); }
     .menu-top { max-width: 1240px; margin: 0 auto 4rem; }
-
-    .menu-grid {
-      max-width: 1240px; margin: 0 auto;
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 1.5rem;
-    }
-
+    .menu-grid { max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 1.5rem; }
     .menu-card {
-      background: rgba(61,43,31,.25);
-      border: 1px solid rgba(200,150,90,.1);
+      background: rgba(61,43,31,.25); border: 1px solid rgba(200,150,90,.1);
       border-radius: 10px; padding: 2.8rem 2.4rem;
       position: relative; overflow: hidden;
       transition: transform .4s, background .4s, border-color .4s;
@@ -305,74 +316,29 @@
     }
     .menu-card:hover { transform: translateY(-5px); background: rgba(61,43,31,.5); border-color: rgba(200,150,90,.28); }
     .menu-card:hover::before { transform: scaleX(1); }
-
     .card-icon { font-size: 2.2rem; display: block; margin-bottom: 1.3rem; }
-    .card-cat {
-      font-size: .64rem; letter-spacing: .3em; text-transform: uppercase;
-      color: var(--caramel); margin-bottom: .4rem;
-    }
-    .card-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.7rem; font-weight: 400; margin-bottom: 1.8rem;
-    }
-
-    .item-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
-    .item-list li {
-      padding: .65rem 0;
-      border-bottom: 1px solid rgba(200,150,90,.08);
-      font-size: .88rem; color: rgba(242,232,217,.68);
-    }
+    .card-cat { font-size: .64rem; letter-spacing: .3em; text-transform: uppercase; color: var(--caramel); margin-bottom: .4rem; }
+    .card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 400; margin-bottom: 1.8rem; }
+    .item-list { list-style: none; display: flex; flex-direction: column; }
+    .item-list li { padding: .65rem 0; border-bottom: 1px solid rgba(200,150,90,.08); font-size: .88rem; color: rgba(242,232,217,.68); }
     .item-list li:last-child { border-bottom: none; }
     .item-list li strong { display: block; color: rgba(242,232,217,.88); font-weight: 400; }
     .item-list li small { font-size: .75rem; color: rgba(242,232,217,.38); margin-top: .15rem; display: block; }
 
-    /* ── GALLERY ─────────────────────────────────────── */
+    /* ── GALLERY ─────────────────────────────────── */
     #gallery { padding-bottom: 0; }
-    .gallery-top {
-      max-width: 1240px; margin: 0 auto 3rem;
-      display: flex; justify-content: space-between; align-items: flex-end;
-    }
-    .ig-link {
-      display: flex; align-items: center; gap: .5rem;
-      color: var(--caramel); text-decoration: none;
-      font-size: .82rem; letter-spacing: .1em;
-      transition: opacity .3s;
-    }
+    .gallery-top { max-width: 1240px; margin: 0 auto 3rem; display: flex; justify-content: space-between; align-items: flex-end; }
+    .ig-link { display: flex; align-items: center; gap: .5rem; color: var(--caramel); text-decoration: none; font-size: .82rem; letter-spacing: .1em; transition: opacity .3s; }
     .ig-link:hover { opacity: .65; }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      grid-template-rows: auto;
-      gap: 5px;
-    }
-    .g-item {
-      position: relative; overflow: hidden;
-      aspect-ratio: 1; cursor: pointer;
-    }
+    .gallery-grid { display: grid; grid-template-columns: repeat(6,1fr); gap: 5px; }
+    .g-item { position: relative; overflow: hidden; aspect-ratio: 1; cursor: pointer; }
     .g-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
     .g-item:nth-child(5) { grid-column: span 2; }
-
-    .g-inner {
-      width: 100%; height: 100%;
-      transition: transform .6s cubic-bezier(.25,.46,.45,.94);
-    }
+    .g-inner { width: 100%; height: 100%; transition: transform .6s cubic-bezier(.25,.46,.45,.94); }
     .g-item:hover .g-inner { transform: scale(1.07); }
-
-    .g-overlay {
-      position: absolute; inset: 0;
-      background: rgba(12,8,4,.45);
-      opacity: 0; transition: opacity .35s;
-      display: flex; align-items: flex-end; padding: 1.2rem;
-    }
+    .g-overlay { position: absolute; inset: 0; background: rgba(12,8,4,.45); opacity: 0; transition: opacity .35s; display: flex; align-items: flex-end; padding: 1.2rem; }
     .g-item:hover .g-overlay { opacity: 1; }
-    .g-overlay p {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic; font-size: 1.05rem;
-      color: rgba(242,232,217,.85);
-    }
-
-    /* Gradient placeholders */
+    .g-overlay p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.05rem; color: rgba(242,232,217,.85); }
     .gp-1 { background: linear-gradient(145deg,#3d2b1f,#8b5a2b 60%,#c8965a); }
     .gp-2 { background: linear-gradient(145deg,#4a6741,#1a1008 70%); }
     .gp-3 { background: linear-gradient(145deg,#8b5a2b,#3d2b1f); }
@@ -382,119 +348,92 @@
     .gp-7 { background: linear-gradient(145deg,#8b5a2b,#2c1a0e); }
     .gp-8 { background: linear-gradient(145deg,#4a6741,#c8965a 70%); }
 
-    /* ── VISIT ───────────────────────────────────────── */
-    #visit {
-      background: linear-gradient(180deg, var(--espresso) 0%, var(--dark) 100%);
-    }
+    /* ── VISIT ───────────────────────────────────── */
+    #visit { background: linear-gradient(180deg, var(--espresso) 0%, var(--dark) 100%); }
     .visit-top { max-width: 1240px; margin: 0 auto 4rem; }
-
-    .visit-grid {
-      max-width: 1240px; margin: 0 auto;
-      display: grid; grid-template-columns: 1fr 1.6fr 1fr; gap: 1.5rem;
-    }
-
-    .v-card {
-      background: rgba(61,43,31,.2);
-      border: 1px solid rgba(200,150,90,.1);
-      border-radius: 10px; padding: 2.6rem;
-    }
+    .visit-grid { max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.6fr 1fr; gap: 1.5rem; }
+    .v-card { background: rgba(61,43,31,.2); border: 1px solid rgba(200,150,90,.1); border-radius: 10px; padding: 2.6rem; }
     .v-card-icon { font-size: 1.6rem; margin-bottom: 1.1rem; display: block; }
-    .v-card h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem; font-weight: 400;
-      color: var(--caramel); margin-bottom: 1.5rem;
-    }
-
+    .v-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; color: var(--caramel); margin-bottom: 1.5rem; }
     .hours-list { list-style: none; display: flex; flex-direction: column; }
     .hours-list li {
-      display: flex; justify-content: space-between;
+      display: flex; justify-content: space-between; align-items: baseline;
       font-size: .88rem; color: rgba(242,232,217,.7);
       padding: .6rem 0; border-bottom: 1px solid rgba(200,150,90,.08);
+      gap: .5rem;
     }
     .hours-list li:last-child { border-bottom: none; }
-    .h-day { color: rgba(242,232,217,.4); }
-
-    .map-card {
-      border-radius: 10px; overflow: hidden;
-      border: 1px solid rgba(200,150,90,.12);
-    }
-    .map-card iframe {
-      width: 100%; height: 100%; min-height: 320px;
-      display: block; filter: grayscale(25%) sepia(20%) brightness(.9);
-    }
-
+    /* Fix Saturday wrap: prevent day name and time from breaking mid-content */
+    .h-day { color: rgba(242,232,217,.4); white-space: nowrap; flex-shrink: 0; }
+    .h-time { white-space: nowrap; }
+    .map-card { border-radius: 10px; overflow: hidden; border: 1px solid rgba(200,150,90,.12); }
+    .map-card iframe { width: 100%; height: 100%; min-height: 320px; display: block; filter: grayscale(25%) sepia(20%) brightness(.9); }
     .contact-list { list-style: none; display: flex; flex-direction: column; gap: 1.4rem; }
-    .contact-list li {}
-    .c-label {
-      font-size: .62rem; letter-spacing: .2em; text-transform: uppercase;
-      color: rgba(242,232,217,.35); display: block; margin-bottom: .3rem;
-    }
-    .c-val {
-      font-size: .9rem; color: rgba(242,232,217,.75);
-    }
+    .c-label { font-size: .62rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(242,232,217,.35); display: block; margin-bottom: .3rem; }
+    .c-val { font-size: .9rem; color: rgba(242,232,217,.75); }
     .c-val a { color: var(--caramel); text-decoration: none; transition: opacity .3s; }
     .c-val a:hover { opacity: .7; }
 
-    /* ── FOOTER ──────────────────────────────────────── */
-    footer {
-      background: var(--dark);
-      border-top: 1px solid rgba(200,150,90,.1);
-      padding: 5rem 5vw 3rem;
-    }
-    .footer-top {
-      max-width: 1240px; margin: 0 auto;
-      display: grid; grid-template-columns: 1fr auto 1fr; gap: 3rem; align-items: start;
-    }
-    .footer-logo-wrap {}
-    .footer-logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.4rem; font-weight: 300; letter-spacing: .06em;
-    }
+    /* ── FOOTER ──────────────────────────────────── */
+    footer { background: var(--dark); border-top: 1px solid rgba(200,150,90,.1); padding: 5rem 5vw 3rem; }
+    .footer-top { max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto 1fr; gap: 3rem; align-items: start; }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 300; letter-spacing: .06em; }
     .footer-logo span { color: var(--caramel); }
     .footer-tagline { font-size: .78rem; color: rgba(242,232,217,.38); margin-top: .4rem; letter-spacing: .1em; }
-
+    /* footer-links is now a div, not nav — no fixed-position bleed */
     .footer-links { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
-    .footer-links a {
-      color: rgba(242,232,217,.45); text-decoration: none;
-      font-size: .78rem; letter-spacing: .12em; text-transform: uppercase;
-      transition: color .3s;
-    }
+    .footer-links a { color: rgba(242,232,217,.45); text-decoration: none; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; transition: color .3s; }
     .footer-links a:hover { color: var(--caramel); }
-
     .footer-social { display: flex; gap: 1rem; justify-content: flex-end; align-items: flex-start; }
-    .social-btn {
-      width: 44px; height: 44px; border-radius: 50%;
-      border: 1px solid rgba(200,150,90,.2);
-      display: flex; align-items: center; justify-content: center;
-      color: rgba(242,232,217,.5); text-decoration: none;
-      transition: all .3s;
-    }
+    .social-btn { width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(200,150,90,.2); display: flex; align-items: center; justify-content: center; color: rgba(242,232,217,.5); text-decoration: none; transition: all .3s; }
     .social-btn:hover { border-color: var(--caramel); color: var(--caramel); transform: translateY(-2px); }
+    .footer-bottom { max-width: 1240px; margin: 3rem auto 0; padding-top: 2rem; border-top: 1px solid rgba(200,150,90,.07); display: flex; justify-content: space-between; font-size: .73rem; color: rgba(242,232,217,.25); }
 
-    .footer-bottom {
-      max-width: 1240px; margin: 3rem auto 0;
-      padding-top: 2rem; border-top: 1px solid rgba(200,150,90,.07);
-      display: flex; justify-content: space-between;
-      font-size: .73rem; color: rgba(242,232,217,.25);
+    /* ── KEYFRAMES ───────────────────────────────── */
+    @keyframes fadeUp { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
+
+    /* ── REDUCED MOTION ──────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; }
     }
 
-    /* ── KEYFRAMES ───────────────────────────────────── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(28px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ── RESPONSIVE ──────────────────────────────────── */
+    /* ── RESPONSIVE ──────────────────────────────── */
     @media (max-width: 900px) {
-      nav { padding: 1.4rem 5vw; }
-      nav.scrolled { padding: 1rem 5vw; }
-      .nav-links, .nav-cta { display: none; }
+      #nav { padding: 1.4rem 5vw; }
+      #nav.scrolled { padding: 1rem 5vw; }
+
+      /* Show hamburger, hide desktop links */
+      .hamburger { display: flex; }
+      .nav-cta { display: none; }
+
+      /* Mobile dropdown */
+      .nav-links {
+        position: absolute; top: 100%; left: 0; right: 0;
+        flex-direction: column; gap: 0;
+        background: rgba(12,8,4,.96);
+        backdrop-filter: blur(24px);
+        max-height: 0; overflow: hidden;
+        transition: max-height .4s ease;
+        border-bottom: 1px solid rgba(200,150,90,0);
+      }
+      #nav.menu-open .nav-links {
+        max-height: 320px;
+        border-color: rgba(200,150,90,.1);
+      }
+      .nav-links li { border-bottom: 1px solid rgba(200,150,90,.07); }
+      .nav-links a { display: block; padding: 1rem 5vw; font-size: .85rem; }
+
       section { padding: 5rem 5vw; }
       .about-wrap { grid-template-columns: 1fr; gap: 3rem; }
-      .about-accent-img { display: none; }
-      .about-ring { display: none; }
+      .about-accent-img, .about-ring { display: none; }
       .visit-grid { grid-template-columns: 1fr; }
-      .map-card { min-height: 250px; }
+      .map-card { min-height: 260px; }
       .gallery-grid { grid-template-columns: repeat(3,1fr); }
       .g-item:nth-child(1) { grid-column: span 1; grid-row: span 1; }
       .g-item:nth-child(5) { grid-column: span 1; }
@@ -502,57 +441,63 @@
       .footer-social { justify-content: flex-start; }
       .footer-bottom { flex-direction: column; gap: .5rem; }
     }
+
+    @media (max-width: 480px) {
+      .about-stats { gap: 1.8rem; }
+      .menu-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: repeat(2,1fr); }
+      .g-item:nth-child(1) { grid-column: span 2; grid-row: span 1; }
+    }
   </style>
 </head>
 <body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
 
 <div id="progress"></div>
 <div id="cur-dot"></div>
 <div id="cur-ring"></div>
 
 <!-- ═══════════════════════════════════ NAV -->
-<nav id="nav">
+<nav id="nav" aria-label="Main navigation">
   <a href="#" class="nav-logo">Zenius<span>.</span></a>
-  <ul class="nav-links">
+  <ul class="nav-links" id="nav-links">
     <li><a href="#about">Story</a></li>
     <li><a href="#menu">Menu</a></li>
     <li><a href="#gallery">Gallery</a></li>
     <li><a href="#visit">Visit</a></li>
   </ul>
   <a href="#visit" class="nav-cta">Find Us</a>
+  <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<main id="main">
 
 <!-- ═══════════════════════════════════ HERO -->
 <section class="hero" id="home">
-  <canvas id="particle-canvas"></canvas>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
 
   <div class="hero-inner">
     <div class="hero-badge">Specialty Coffee &nbsp;·&nbsp; Chippendale, Sydney</div>
 
-    <h1 class="hero-title">The Art<br>of <em>Coffee</em></h1>
+    <h1 class="hero-title">The Art of <em>Coffee</em></h1>
 
     <p class="hero-sub">96 Abercrombie Street &nbsp;·&nbsp; Mon–Fri 7am–3pm &nbsp;·&nbsp; Sat–Sun 8am–3pm</p>
 
-    <!-- Animated coffee cup -->
-    <div class="hero-cup">
+    <div class="hero-cup" aria-hidden="true">
       <svg width="130" height="110" viewBox="0 0 130 110" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- Steam wisps -->
         <g>
           <path class="steam-path" d="M47 40 Q44 30 47 21 Q50 13 47 5" stroke="#C8965A" stroke-width="1.6" stroke-linecap="round" fill="none"/>
           <path class="steam-path" d="M65 42 Q62 32 65 23 Q68 15 65 7" stroke="#C8965A" stroke-width="1.6" stroke-linecap="round" fill="none"/>
           <path class="steam-path" d="M83 40 Q80 30 83 21 Q86 13 83 5" stroke="#C8965A" stroke-width="1.6" stroke-linecap="round" fill="none"/>
         </g>
-        <!-- Cup body -->
         <path d="M22 52 L34 96 H96 L108 52 Z" fill="#3D2B1F" stroke="#C8965A" stroke-width="1"/>
-        <!-- Rim -->
         <rect x="19" y="46" width="92" height="9" rx="4.5" fill="#4D3A2A" stroke="#C8965A" stroke-width="1"/>
-        <!-- Coffee surface -->
         <ellipse cx="65" cy="50.5" rx="43" ry="5.5" fill="#8B5A2B" opacity="0.85"/>
-        <!-- Latte art (heart) -->
         <path d="M55 50 Q55 46 59 46 Q65 46 65 52 Q65 46 71 46 Q75 46 75 50 Q75 56 65 62 Q55 56 55 50Z" fill="#C8965A" opacity="0.55"/>
-        <!-- Handle -->
         <path d="M108 58 Q126 58 126 69 Q126 80 108 80" stroke="#C8965A" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-        <!-- Saucer -->
         <ellipse cx="65" cy="99" rx="52" ry="7" fill="#3D2B1F" stroke="#C8965A" stroke-width="1"/>
       </svg>
     </div>
@@ -563,15 +508,15 @@
     </div>
   </div>
 
-  <div class="hero-scroll">
+  <div class="hero-scroll" aria-hidden="true">
     <div class="scroll-line"></div>
     <span>Scroll</span>
   </div>
 </section>
 
 <!-- ═══════════════════════════════════ MARQUEE -->
-<div class="marquee-bar">
-  <div class="marquee-track" aria-hidden="true">
+<div class="marquee-bar" aria-hidden="true">
+  <div class="marquee-track">
     <span>Specialty Coffee</span><s>✦</s>
     <span>Latte Art</span><s>✦</s>
     <span>Brunch All Day</span><s>✦</s>
@@ -580,7 +525,6 @@
     <span>Dog Friendly</span><s>✦</s>
     <span>Ranked #2 in Chippendale</span><s>✦</s>
     <span>Open 7 Days</span><s>✦</s>
-    <!-- duplicate for seamless loop -->
     <span>Specialty Coffee</span><s>✦</s>
     <span>Latte Art</span><s>✦</s>
     <span>Brunch All Day</span><s>✦</s>
@@ -623,8 +567,8 @@
           <div class="stat-lbl">Open Weekdays</div>
         </div>
         <div>
-          <div class="stat-num">∞</div>
-          <div class="stat-lbl">Good Vibes</div>
+          <div class="stat-num">🐾</div>
+          <div class="stat-lbl">Dog Friendly</div>
         </div>
       </div>
     </div>
@@ -679,21 +623,21 @@
         <li><strong>Say Halloumi</strong><small>Grilled with poached eggs</small></li>
         <li><strong>The Best Fricken Sandwich</strong><small>Bold name, bolder taste</small></li>
         <li><strong>Avocado Toast</strong><small>Sourdough, feta, dukkah</small></li>
+        <li><strong>Hotcakes</strong><small>Seasonal fruit compote</small></li>
+        <li><strong>Reuben Sandwich</strong><small>Classic New York style</small></li>
         <li><strong>Mushroom &amp; Egg Roll</strong><small>Buttery brioche bun</small></li>
       </ul>
     </div>
 
     <div class="menu-card reveal" style="transition-delay:.3s">
       <span class="card-icon">🥣</span>
-      <div class="card-cat">Bowls &amp; Sweets</div>
+      <div class="card-cat">Bowls</div>
       <h3 class="card-title">Bowls</h3>
       <ul class="item-list">
         <li><strong>Beef Rendang Bowl</strong><small>Slow-cooked, deeply aromatic</small></li>
         <li><strong>Miso Pumpkin Bowl</strong><small>Caramel-like miso glaze</small></li>
         <li><strong>Acai Bowl</strong><small>Granola, honey, fresh fruit</small></li>
         <li><strong>Granola &amp; Yoghurt</strong><small>House-made toasted granola</small></li>
-        <li><strong>Hotcakes</strong><small>Seasonal fruit compote</small></li>
-        <li><strong>Reuben Sandwich</strong><small>Classic New York style</small></li>
       </ul>
     </div>
 
@@ -717,51 +661,35 @@
 
   <div class="gallery-grid">
     <div class="g-item reveal">
-      <div class="g-inner gp-1">
-        <img src="images/gallery-1.jpg" alt="Zenius latte art" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
-      </div>
+      <div class="g-inner gp-1"><img src="images/gallery-1.jpg" alt="Zenius latte art" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
       <div class="g-overlay"><p>Latte Art</p></div>
     </div>
     <div class="g-item reveal" style="transition-delay:.07s">
-      <div class="g-inner gp-2">
-        <img src="images/gallery-2.jpg" alt="Zenius brunch" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
-      </div>
+      <div class="g-inner gp-2"><img src="images/gallery-2.jpg" alt="Zenius brunch" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
       <div class="g-overlay"><p>Weekend Brunch</p></div>
     </div>
     <div class="g-item reveal" style="transition-delay:.14s">
-      <div class="g-inner gp-3">
-        <img src="images/gallery-3.jpg" alt="Morning coffee" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
-      </div>
+      <div class="g-inner gp-3"><img src="images/gallery-3.jpg" alt="Morning coffee" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
       <div class="g-overlay"><p>Morning Brew</p></div>
     </div>
     <div class="g-item reveal" style="transition-delay:.21s">
-      <div class="g-inner gp-4">
-        <img src="images/gallery-4.jpg" alt="Corn fritters" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
-      </div>
+      <div class="g-inner gp-4"><img src="images/gallery-4.jpg" alt="Corn fritters" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
       <div class="g-overlay"><p>Corn Fritters</p></div>
     </div>
     <div class="g-item reveal" style="transition-delay:.28s">
-      <div class="g-inner gp-5">
-        <img src="images/gallery-5.jpg" alt="Cafe atmosphere" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
-      </div>
+      <div class="g-inner gp-5"><img src="images/gallery-5.jpg" alt="Cafe atmosphere" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
       <div class="g-overlay"><p>Good Vibes</p></div>
     </div>
     <div class="g-item reveal" style="transition-delay:.35s">
-      <div class="g-inner gp-6">
-        <img src="images/gallery-6.jpg" alt="Alfresco seating" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
-      </div>
+      <div class="g-inner gp-6"><img src="images/gallery-6.jpg" alt="Alfresco seating" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
       <div class="g-overlay"><p>Alfresco</p></div>
     </div>
     <div class="g-item reveal" style="transition-delay:.42s">
-      <div class="g-inner gp-7">
-        <img src="images/gallery-7.jpg" alt="Acai bowl" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
-      </div>
+      <div class="g-inner gp-7"><img src="images/gallery-7.jpg" alt="Acai bowl" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
       <div class="g-overlay"><p>Acai Bowl</p></div>
     </div>
     <div class="g-item reveal" style="transition-delay:.49s">
-      <div class="g-inner gp-8">
-        <img src="images/gallery-8.jpg" alt="Coffee craft" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
-      </div>
+      <div class="g-inner gp-8"><img src="images/gallery-8.jpg" alt="Coffee craft" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
       <div class="g-overlay"><p>The Craft</p></div>
     </div>
   </div>
@@ -780,13 +708,13 @@
       <span class="v-card-icon">🕐</span>
       <h3>Hours</h3>
       <ul class="hours-list">
-        <li><span class="h-day">Monday</span>    <span>7:00 – 15:00</span></li>
-        <li><span class="h-day">Tuesday</span>   <span>7:00 – 15:00</span></li>
-        <li><span class="h-day">Wednesday</span> <span>7:00 – 15:00</span></li>
-        <li><span class="h-day">Thursday</span>  <span>7:00 – 15:00</span></li>
-        <li><span class="h-day">Friday</span>    <span>7:00 – 15:00</span></li>
-        <li><span class="h-day">Saturday</span>  <span>8:00 – 15:00</span></li>
-        <li><span class="h-day">Sunday</span>    <span>8:00 – 15:00</span></li>
+        <li><span class="h-day">Monday</span>    <span class="h-time">7am – 3pm</span></li>
+        <li><span class="h-day">Tuesday</span>   <span class="h-time">7am – 3pm</span></li>
+        <li><span class="h-day">Wednesday</span> <span class="h-time">7am – 3pm</span></li>
+        <li><span class="h-day">Thursday</span>  <span class="h-time">7am – 3pm</span></li>
+        <li><span class="h-day">Friday</span>    <span class="h-time">7am – 3pm</span></li>
+        <li><span class="h-day">Saturday</span>  <span class="h-time">8am – 3pm</span></li>
+        <li><span class="h-day">Sunday</span>    <span class="h-time">8am – 3pm</span></li>
       </ul>
     </div>
 
@@ -829,6 +757,8 @@
   </div>
 </section>
 
+</main>
+
 <!-- ═══════════════════════════════════ FOOTER -->
 <footer>
   <div class="footer-top">
@@ -837,156 +767,166 @@
       <div class="footer-tagline">Specialty Coffee &nbsp;·&nbsp; Chippendale, Sydney</div>
     </div>
 
-    <nav class="footer-links" aria-label="Footer navigation">
+    <!-- div, not nav — prevents the global #nav fixed-position rule from bleeding here -->
+    <div class="footer-links" aria-label="Footer links">
       <a href="#about">Story</a>
       <a href="#menu">Menu</a>
       <a href="#gallery">Gallery</a>
       <a href="#visit">Visit</a>
-    </nav>
+    </div>
 
     <div class="footer-social">
-      <!-- Instagram -->
       <a href="https://www.instagram.com/zeniuschippendale/" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-        </svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
       </a>
-      <!-- TikTok -->
       <a href="https://www.tiktok.com/@zeniuscoffee" target="_blank" rel="noopener" class="social-btn" aria-label="TikTok">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34l-.04-9.02a8.19 8.19 0 004.79 1.52V4.38a4.85 4.85 0 01-1-.31z"/>
-        </svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34l-.04-9.02a8.19 8.19 0 004.79 1.52V4.38a4.85 4.85 0 01-1-.31z"/></svg>
       </a>
-      <!-- Facebook -->
       <a href="https://www.facebook.com/zeniuscoffee/" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-        </svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
       </a>
     </div>
   </div>
 
   <div class="footer-bottom">
-    <span>&copy; 2024 Zenius Coffee. All rights reserved.</span>
+    <span>&copy; <span id="yr"></span> Zenius Coffee. All rights reserved.</span>
     <span>96 Abercrombie Street, Chippendale NSW 2008</span>
   </div>
 </footer>
 
-<!-- ═══════════════════════════════════ SCRIPTS -->
 <script>
+  /* ── Feature detection ──────────────────────── */
+  const isTouch          = window.matchMedia('(pointer: coarse)').matches;
+  const prefersReduced   = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ── Dynamic copyright year ─────────────────── */
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
   /* ── Scroll progress + nav ──────────────────── */
   const progressEl = document.getElementById('progress');
   const navEl      = document.getElementById('nav');
 
-  function onScroll() {
-    const scrolled = window.scrollY;
-    const total    = document.documentElement.scrollHeight - window.innerHeight;
+  window.addEventListener('scroll', function () {
+    var scrolled = window.scrollY;
+    var total    = document.documentElement.scrollHeight - window.innerHeight;
     progressEl.style.width = (scrolled / total * 100) + '%';
     navEl.classList.toggle('scrolled', scrolled > 60);
+  }, { passive: true });
+
+  /* ── Hamburger menu ─────────────────────────── */
+  var hamburger = document.getElementById('hamburger');
+  hamburger.addEventListener('click', function () {
+    var isOpen = navEl.classList.toggle('menu-open');
+    hamburger.setAttribute('aria-expanded', String(isOpen));
+  });
+  /* Close on any nav link click */
+  document.querySelectorAll('.nav-links a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      navEl.classList.remove('menu-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  /* ── Custom cursor (mouse only) ─────────────── */
+  if (!isTouch) {
+    var dot = document.getElementById('cur-dot');
+    var ring = document.getElementById('cur-ring');
+    var mx = 0, my = 0, rx = 0, ry = 0;
+
+    document.addEventListener('mousemove', function (e) { mx = e.clientX; my = e.clientY; });
+    document.addEventListener('mouseleave', function () { dot.style.opacity = '0'; ring.style.opacity = '0'; });
+    document.addEventListener('mouseenter', function () { dot.style.opacity = '1'; ring.style.opacity = '1'; });
+
+    (function trackRing() {
+      rx += (mx - rx) * 0.11;
+      ry += (my - ry) * 0.11;
+      dot.style.left  = mx + 'px'; dot.style.top  = my + 'px';
+      ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+      requestAnimationFrame(trackRing);
+    })();
   }
-  window.addEventListener('scroll', onScroll, { passive: true });
 
-  /* ── Custom cursor ──────────────────────────── */
-  const dot  = document.getElementById('cur-dot');
-  const ring = document.getElementById('cur-ring');
-  let mx = 0, my = 0, rx = 0, ry = 0;
-
-  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
-  document.addEventListener('mouseleave', () => { dot.style.opacity = '0'; ring.style.opacity = '0'; });
-  document.addEventListener('mouseenter', () => { dot.style.opacity = '1'; ring.style.opacity = '1'; });
-
-  (function trackRing() {
-    rx += (mx - rx) * 0.11;
-    ry += (my - ry) * 0.11;
-    dot.style.left  = mx + 'px';  dot.style.top  = my + 'px';
-    ring.style.left = rx + 'px';  ring.style.top = ry + 'px';
-    requestAnimationFrame(trackRing);
-  })();
-
-  /* ── Intersection observer (scroll reveal) ──── */
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  /* ── Scroll reveal ──────────────────────────── */
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
 
-  /* ── Particle canvas ────────────────────────── */
-  const canvas = document.getElementById('particle-canvas');
-  const ctx    = canvas.getContext('2d');
+  /* ── Particle canvas (mouse + no reduced motion) */
+  if (!isTouch && !prefersReduced) {
+    var canvas = document.getElementById('particle-canvas');
+    var ctx    = canvas.getContext('2d');
+    var W, H;
 
-  let W, H;
-  function resize() {
-    W = canvas.width  = window.innerWidth;
-    H = canvas.height = window.innerHeight;
-  }
-  resize();
-  window.addEventListener('resize', resize);
+    function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+    resize();
+    window.addEventListener('resize', resize);
 
-  const BEANS = Array.from({ length: 45 }, () => ({
-    x:    Math.random() * window.innerWidth,
-    y:    Math.random() * window.innerHeight,
-    r:    Math.random() * 2.8 + 1,
-    vx:   (Math.random() - 0.5) * 0.25,
-    vy:   -(Math.random() * 0.45 + 0.15),
-    rot:  Math.random() * Math.PI * 2,
-    rspd: (Math.random() - 0.5) * 0.018,
-    a:    Math.random() * 0.38 + 0.04,
-    dot:  Math.random() > 0.55,
-  }));
-
-  function drawBean(x, y, r, rot, a) {
-    ctx.save();
-    ctx.translate(x, y);
-    ctx.rotate(rot);
-    ctx.globalAlpha = a;
-    ctx.beginPath();
-    ctx.ellipse(0, 0, r * 2.4, r * 1.4, 0, 0, Math.PI * 2);
-    ctx.fillStyle = '#8B5A2B';
-    ctx.fill();
-    ctx.beginPath();
-    ctx.moveTo(-r * 2, 0);
-    ctx.lineTo(r * 2, 0);
-    ctx.strokeStyle = 'rgba(12,8,4,.5)';
-    ctx.lineWidth = 0.6;
-    ctx.stroke();
-    ctx.restore();
-  }
-
-  (function animate() {
-    ctx.clearRect(0, 0, W, H);
-    BEANS.forEach(p => {
-      p.x   += p.vx; p.y += p.vy; p.rot += p.rspd;
-      if (p.y < -15) p.y = H + 15;
-      if (p.x < -15) p.x = W + 15;
-      if (p.x > W + 15) p.x = -15;
-      if (p.dot) {
-        ctx.save(); ctx.globalAlpha = p.a;
-        ctx.beginPath(); ctx.arc(p.x, p.y, p.r * .7, 0, Math.PI * 2);
-        ctx.fillStyle = '#C8965A'; ctx.fill(); ctx.restore();
-      } else {
-        drawBean(p.x, p.y, p.r, p.rot, p.a);
-      }
+    var BEANS = Array.from({ length: 45 }, function () {
+      return {
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        r: Math.random() * 2.8 + 1,
+        vx: (Math.random() - 0.5) * 0.25,
+        vy: -(Math.random() * 0.45 + 0.15),
+        rot: Math.random() * Math.PI * 2,
+        rspd: (Math.random() - 0.5) * 0.018,
+        a: Math.random() * 0.38 + 0.04,
+        dot: Math.random() > 0.55
+      };
     });
-    requestAnimationFrame(animate);
-  })();
+
+    function drawBean(x, y, r, rot, a) {
+      ctx.save();
+      ctx.translate(x, y); ctx.rotate(rot); ctx.globalAlpha = a;
+      ctx.beginPath(); ctx.ellipse(0, 0, r * 2.4, r * 1.4, 0, 0, Math.PI * 2);
+      ctx.fillStyle = '#8B5A2B'; ctx.fill();
+      ctx.beginPath(); ctx.moveTo(-r * 2, 0); ctx.lineTo(r * 2, 0);
+      ctx.strokeStyle = 'rgba(12,8,4,.5)'; ctx.lineWidth = 0.6; ctx.stroke();
+      ctx.restore();
+    }
+
+    (function animate() {
+      ctx.clearRect(0, 0, W, H);
+      BEANS.forEach(function (p) {
+        p.x += p.vx; p.y += p.vy; p.rot += p.rspd;
+        if (p.y < -15) p.y = H + 15;
+        if (p.x < -15) p.x = W + 15;
+        if (p.x > W + 15) p.x = -15;
+        if (p.dot) {
+          ctx.save(); ctx.globalAlpha = p.a;
+          ctx.beginPath(); ctx.arc(p.x, p.y, p.r * 0.7, 0, Math.PI * 2);
+          ctx.fillStyle = '#C8965A'; ctx.fill(); ctx.restore();
+        } else {
+          drawBean(p.x, p.y, p.r, p.rot, p.a);
+        }
+      });
+      requestAnimationFrame(animate);
+    })();
+  }
 
   /* ── Smooth anchor scroll ───────────────────── */
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const target = document.querySelector(a.getAttribute('href'));
+  document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var target = document.querySelector(a.getAttribute('href'));
       if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
     });
   });
 
-  /* ── Parallax on hero title ─────────────────── */
-  const heroTitle = document.querySelector('.hero-title');
-  window.addEventListener('scroll', () => {
-    const y = window.scrollY;
-    if (y < window.innerHeight && heroTitle) {
-      heroTitle.style.transform = `translateY(${y * 0.18}px)`;
-      heroTitle.style.opacity   = String(1 - y / (window.innerHeight * 0.7));
-    }
-  }, { passive: true });
+  /* ── Hero parallax (no reduced motion only) ─── */
+  if (!prefersReduced) {
+    var heroTitle = document.querySelector('.hero-title');
+    window.addEventListener('scroll', function () {
+      var y = window.scrollY;
+      if (y < window.innerHeight && heroTitle) {
+        heroTitle.style.transform = 'translateY(' + (y * 0.18) + 'px)';
+        heroTitle.style.opacity   = String(Math.max(0, 1 - y / (window.innerHeight * 0.7)));
+      }
+    }, { passive: true });
+  }
 </script>
 </body>
 </html>
