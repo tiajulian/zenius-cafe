@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Table — Zenius Coffee</title>
+  <meta name="description" content="Book a table at Zenius Coffee, 96 Abercrombie Street Chippendale. Open 7 days.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☕</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg:      #FBF7F2;
+      --surface: #F4EDE3;
+      --white:   #FFFFFF;
+      --border:  #E5D8C5;
+      --brown:   #2A1A0E;
+      --mid:     #7A4E30;
+      --caramel: #C8855A;
+      --terra:   #C4654A;
+      --sage:    #5C7A4E;
+      --pandan:  #6B9B5E;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--brown); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+
+    /* ── NAV ── */
+    nav {
+      background: rgba(251,247,242,.96);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 1.2rem 5vw;
+      display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 1px 20px rgba(42,26,14,.05);
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem; font-weight: 600;
+      color: var(--brown); text-decoration: none; letter-spacing: .06em;
+    }
+    .nav-logo span { color: var(--caramel); }
+    .nav-back {
+      font-size: .78rem; letter-spacing: .12em; text-transform: uppercase;
+      color: rgba(42,26,14,.5); text-decoration: none;
+      transition: color .3s; display: flex; align-items: center; gap: .4rem;
+    }
+    .nav-back:hover { color: var(--caramel); }
+    .nav-back svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* ── PAGE HEADER ── */
+    .page-hero {
+      padding: 5rem 5vw 3.5rem;
+      text-align: center;
+      background: linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
+      border-bottom: 1px solid var(--border);
+    }
+    .page-label { font-size: .68rem; letter-spacing: .32em; text-transform: uppercase; color: var(--sage); margin-bottom: .9rem; font-weight: 500; }
+    .page-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 300; color: var(--brown); line-height: 1.05; }
+    .page-title em { font-style: italic; color: var(--caramel); }
+    .page-sub { margin-top: 1rem; font-size: .88rem; color: rgba(42,26,14,.45); letter-spacing: .08em; line-height: 1.7; }
+
+    /* ── FORM LAYOUT ── */
+    .form-wrap { max-width: 660px; margin: 0 auto; padding: 3rem 5vw 6rem; }
+
+    .form-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 2.6rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 24px rgba(42,26,14,.05);
+    }
+    .form-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem; font-weight: 400; color: var(--brown);
+      margin-bottom: 1.6rem; padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; gap: .7rem;
+    }
+    .form-card-title span { font-size: 1.1rem; }
+
+    /* ── FIELDS ── */
+    .field { margin-bottom: 1.3rem; }
+    .field:last-child { margin-bottom: 0; }
+    .field label {
+      display: block; font-size: .7rem; letter-spacing: .15em;
+      text-transform: uppercase; color: rgba(42,26,14,.45);
+      margin-bottom: .5rem; font-weight: 500;
+    }
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%; padding: .9rem 1.1rem;
+      border: 1.5px solid var(--border); border-radius: 10px;
+      background: var(--bg); color: var(--brown);
+      font-family: 'DM Sans', sans-serif; font-size: .95rem;
+      transition: border-color .2s, box-shadow .2s;
+      appearance: none; -webkit-appearance: none;
+    }
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      outline: none;
+      border-color: var(--caramel);
+      box-shadow: 0 0 0 3px rgba(200,133,90,.12);
+    }
+    .field input::placeholder,
+    .field textarea::placeholder { color: rgba(42,26,14,.3); }
+    .field textarea { resize: vertical; min-height: 90px; line-height: 1.6; }
+    .field select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%237A4E30' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 1rem center;
+      padding-right: 2.8rem; cursor: pointer;
+    }
+    .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    /* ── TIME GRID ── */
+    .times-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: .5rem;
+      margin-top: .5rem;
+    }
+    .time-btn {
+      padding: .7rem .3rem .6rem;
+      border: 1.5px solid var(--border); border-radius: 10px;
+      background: var(--bg); color: rgba(42,26,14,.75);
+      font-family: 'DM Sans', sans-serif; font-size: .8rem;
+      cursor: pointer; transition: all .2s;
+      display: flex; flex-direction: column; align-items: center;
+      gap: .2rem; line-height: 1.2; text-align: center;
+    }
+    .time-btn:hover:not(:disabled) { border-color: var(--caramel); color: var(--caramel); background: rgba(200,133,90,.04); }
+    .time-btn.selected { background: var(--caramel); border-color: var(--caramel); color: var(--white); font-weight: 500; }
+    .time-btn.unavailable { opacity: .32; cursor: not-allowed; pointer-events: none; }
+
+    .time-label { font-size: .8rem; }
+    .time-badge { font-size: .58rem; letter-spacing: .06em; text-transform: uppercase; font-weight: 600; line-height: 1; }
+    .full-badge     { color: var(--terra); }
+    .cant-fit-badge { color: var(--terra); }
+    .low-badge      { color: #B07A30; }
+
+    .time-hint {
+      font-size: .8rem; color: rgba(42,26,14,.4);
+      margin-top: .7rem; line-height: 1.5;
+      display: none;
+    }
+    .time-hint.error { color: var(--terra); }
+    .time-hint.loading { color: rgba(42,26,14,.4); }
+
+    /* ── NOTICE BOX ── */
+    .notice {
+      background: rgba(92,122,78,.07);
+      border: 1px solid rgba(92,122,78,.2);
+      border-radius: 10px; padding: 1rem 1.2rem;
+      font-size: .85rem; color: rgba(42,26,14,.65);
+      line-height: 1.65;
+    }
+    .notice strong { color: var(--sage); }
+
+    /* ── SUBMIT BUTTON ── */
+    .btn-submit {
+      width: 100%; padding: 1.1rem;
+      background: var(--brown); color: var(--bg);
+      border: none; border-radius: 100px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .9rem; font-weight: 500;
+      letter-spacing: .1em; text-transform: uppercase;
+      cursor: pointer; transition: background .3s, transform .3s, box-shadow .3s;
+      margin-top: .5rem;
+    }
+    .btn-submit:hover:not(:disabled) {
+      background: var(--caramel);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(200,133,90,.28);
+    }
+    .btn-submit:disabled { opacity: .55; cursor: not-allowed; transform: none; box-shadow: none; }
+
+    .spinner {
+      display: inline-block; width: 14px; height: 14px;
+      border: 2px solid rgba(251,247,242,.35);
+      border-top-color: var(--bg);
+      border-radius: 50%; animation: spin .7s linear infinite;
+      vertical-align: middle; margin-right: .5rem;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── SUCCESS STATE ── */
+    #state-success {
+      display: none; text-align: center; padding: 3rem 2rem;
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 18px; box-shadow: 0 2px 24px rgba(42,26,14,.05);
+    }
+    .success-check {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: rgba(107,155,94,.12);
+      border: 2px solid rgba(107,155,94,.3);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.5rem;
+    }
+    .success-check svg { width: 28px; height: 28px; stroke: var(--pandan); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .success-title { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 300; color: var(--brown); margin-bottom: .6rem; }
+    .success-title em { font-style: italic; color: var(--caramel); }
+    .success-sub { font-size: .92rem; color: rgba(42,26,14,.55); line-height: 1.7; margin-bottom: 2rem; }
+    .success-detail {
+      display: inline-block;
+      background: var(--surface); border-radius: 12px;
+      padding: 1.2rem 2rem; margin-bottom: 2rem;
+      text-align: left; font-size: .9rem; color: rgba(42,26,14,.7);
+      line-height: 1.8;
+    }
+    .success-detail strong { color: var(--brown); }
+    .btn-back { display: inline-block; color: var(--caramel); text-decoration: none; font-size: .82rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 500; border-bottom: 1px solid rgba(200,133,90,.3); padding-bottom: .15rem; transition: all .3s; }
+    .btn-back:hover { border-color: var(--caramel); }
+
+    /* ── ERROR STATE ── */
+    #state-error {
+      display: none; text-align: center; padding: 2.5rem 2rem;
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 18px;
+    }
+    .error-title { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; color: var(--brown); margin-bottom: .6rem; }
+    .error-sub { font-size: .9rem; color: rgba(42,26,14,.55); line-height: 1.7; margin-bottom: 1.5rem; }
+    .btn-retry { background: none; border: 1.5px solid var(--border); border-radius: 100px; padding: .7rem 1.8rem; font-family: 'DM Sans', sans-serif; font-size: .82rem; letter-spacing: .1em; text-transform: uppercase; cursor: pointer; color: var(--brown); transition: all .3s; }
+    .btn-retry:hover { border-color: var(--caramel); color: var(--caramel); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .form-card { padding: 1.8rem 1.4rem; }
+      .field-row { grid-template-columns: 1fr; }
+      .times-grid { grid-template-columns: repeat(3, 1fr); }
+      .page-hero { padding: 3.5rem 5vw 2.5rem; }
+    }
+    @media (max-width: 380px) {
+      .times-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">Zenius<span>.</span></a>
+  <a href="index.html" class="nav-back">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Back to home
+  </a>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-hero">
+  <div class="page-label">Reserve your spot</div>
+  <h1 class="page-title">Book a <em>Table</em></h1>
+  <p class="page-sub">
+    96 Abercrombie Street, Chippendale &nbsp;·&nbsp; Open 7 days<br>
+    Mon to Fri 7am to 3pm &nbsp;·&nbsp; Sat to Sun 8am to 3pm
+  </p>
+</div>
+
+<div class="form-wrap">
+
+  <!-- SUCCESS STATE -->
+  <div id="state-success">
+    <div class="success-check">
+      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <h2 class="success-title">You're all <em>booked in!</em></h2>
+    <p class="success-sub">A confirmation has been sent to your email. We can't wait to see you.</p>
+    <div class="success-detail" id="success-detail">
+      <!-- populated by JS -->
+    </div>
+    <br>
+    <a href="index.html" class="btn-back">Back to home</a>
+  </div>
+
+  <!-- ERROR STATE -->
+  <div id="state-error">
+    <h2 class="error-title">Something went wrong</h2>
+    <p class="error-sub" id="error-msg">
+      Please try again or call us on <a href="tel:+61289578415" style="color:var(--caramel)">+61 2 8957 8415</a>
+    </p>
+    <button class="btn-retry" onclick="resetToForm()">Try again</button>
+  </div>
+
+  <!-- BOOKING FORM -->
+  <form id="booking-form" novalidate>
+
+    <!-- Your details -->
+    <div class="form-card">
+      <div class="form-card-title">
+        <span>👤</span> Your details
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="f-name">Full name *</label>
+          <input id="f-name" name="name" type="text" placeholder="Jane Smith" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="f-phone">Phone number *</label>
+          <input id="f-phone" name="phone" type="tel" placeholder="04xx xxx xxx" autocomplete="tel" required>
+        </div>
+      </div>
+      <div class="field">
+        <label for="f-email">Email address *</label>
+        <input id="f-email" name="email" type="email" placeholder="jane@example.com" autocomplete="email" required>
+      </div>
+    </div>
+
+    <!-- Reservation details -->
+    <div class="form-card">
+      <div class="form-card-title">
+        <span>📅</span> Reservation details
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="f-date">Date *</label>
+          <input id="f-date" name="date" type="date" required>
+        </div>
+        <div class="field">
+          <label for="f-guests">Number of guests *</label>
+          <select id="f-guests" name="guests" required>
+            <option value="" disabled selected>Select</option>
+            <option value="1">1 person</option>
+            <option value="2">2 people</option>
+            <option value="3">3 people</option>
+            <option value="4">4 people</option>
+            <option value="5">5 people</option>
+            <option value="6">6 people</option>
+            <option value="7">7 people</option>
+            <option value="8">8 people</option>
+            <option value="9">9 people</option>
+            <option value="10">10 people (max)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Preferred time *</label>
+        <div class="times-grid" id="times-grid">
+          <!-- populated after date is chosen -->
+        </div>
+        <input type="hidden" id="f-time" name="time">
+        <p class="time-hint" id="time-hint">Select a date first to see available times</p>
+      </div>
+    </div>
+
+    <!-- Special requests -->
+    <div class="form-card">
+      <div class="form-card-title">
+        <span>📝</span> Anything else?
+      </div>
+      <div class="field">
+        <label for="f-notes">Special requests <span style="font-size:.7rem;color:rgba(42,26,14,.3);text-transform:none;letter-spacing:0">(optional)</span></label>
+        <textarea id="f-notes" name="notes" placeholder="Dietary requirements, high chair needed, celebrating a birthday..."></textarea>
+      </div>
+      <div class="notice">
+        <strong>Good to know:</strong> Bookings are for 60 minutes. Walk-ins are always welcome too.
+        For groups larger than 10 people, please call us directly on
+        <strong><a href="tel:+61289578415" style="color:var(--sage);text-decoration:none">+61 2 8957 8415</a></strong>
+      </div>
+    </div>
+
+    <button type="submit" class="btn-submit" id="submit-btn">Confirm Booking</button>
+
+  </form>
+</div>
+
+<script>
+  /* ══════════════════════════════════════════════
+     CONFIG — fill these in once setup is complete
+     ══════════════════════════════════════════════ */
+  var APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzQpwxiJi3ryPE6ngbrtPl768bM5RfbPp1r8OHLuZF99aL6vxC2i8QIorYc4wFwZkp0lA/exec';
+  var CAPACITY        = 14;   // total cafe seats
+  var MAX_PER_BOOKING = 10;   // max guests per single booking
+  /* ══════════════════════════════════════════════ */
+
+  var WEEKDAY_SLOTS = [
+    '7:30am','8:00am','8:30am','9:00am','9:30am','10:00am','10:30am',
+    '11:00am','11:30am','12:00pm','12:30pm','1:00pm','1:30pm','2:00pm'
+  ];
+  var WEEKEND_SLOTS = [
+    '8:00am','8:30am','9:00am','9:30am','10:00am','10:30am',
+    '11:00am','11:30am','12:00pm','12:30pm','1:00pm','1:30pm','2:00pm'
+  ];
+
+  var currentSlotInfo  = {};
+  var submittedDetails = {};
+
+  /* ── Date: min = tomorrow ── */
+  var dateInput = document.getElementById('f-date');
+  var tomorrow  = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  dateInput.min = tomorrow.toISOString().split('T')[0];
+
+  /* ── Date change: fetch availability ── */
+  dateInput.addEventListener('change', function () {
+    var date      = this.value;
+    var d         = new Date(date + 'T12:00:00');
+    var isWeekend = d.getDay() === 0 || d.getDay() === 6;
+    var slots     = isWeekend ? WEEKEND_SLOTS : WEEKDAY_SLOTS;
+
+    document.getElementById('f-time').value = '';
+    document.getElementById('times-grid').innerHTML = '';
+    showHint('Checking availability...', 'loading');
+
+    fetch(APPS_SCRIPT_URL + '?action=slots&date=' + date)
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        currentSlotInfo = data.slots || {};
+        hideHint();
+        var guests = parseInt(document.getElementById('f-guests').value) || 1;
+        renderTimes(slots, currentSlotInfo, guests);
+      })
+      .catch(function () {
+        currentSlotInfo = {};
+        hideHint();
+        renderTimes(slots, {}, 1);
+      });
+  });
+
+  /* ── Guest count change: re-render times ── */
+  document.getElementById('f-guests').addEventListener('change', function () {
+    var date = dateInput.value;
+    if (!date) return;
+    var d         = new Date(date + 'T12:00:00');
+    var isWeekend = d.getDay() === 0 || d.getDay() === 6;
+    var slots     = isWeekend ? WEEKEND_SLOTS : WEEKDAY_SLOTS;
+    var guests    = parseInt(this.value) || 1;
+
+    /* clear selected time if it no longer fits */
+    var currentTime = document.getElementById('f-time').value;
+    if (currentTime) {
+      var info = currentSlotInfo[currentTime];
+      if (info && info.remaining < guests) {
+        document.getElementById('f-time').value = '';
+      }
+    }
+    renderTimes(slots, currentSlotInfo, guests);
+  });
+
+  /* ── Render time slot buttons ── */
+  function renderTimes(slots, slotInfo, requestedGuests) {
+    var grid         = document.getElementById('times-grid');
+    var selectedTime = document.getElementById('f-time').value;
+    grid.innerHTML   = '';
+
+    slots.forEach(function (t) {
+      var time24   = to24h(t);
+      var info     = slotInfo[time24] || { booked: 0, remaining: CAPACITY, full: false };
+      var cantFit  = info.remaining < requestedGuests;
+      var unavail  = info.full || cantFit;
+
+      var btn = document.createElement('button');
+      btn.type      = 'button';
+      btn.className = 'time-btn' + (unavail ? ' unavailable' : '') + (time24 === selectedTime && !unavail ? ' selected' : '');
+      btn.disabled  = unavail;
+
+      var badge = '';
+      if (info.full) {
+        badge = '<span class="time-badge full-badge">Full</span>';
+      } else if (cantFit && info.remaining > 0) {
+        badge = '<span class="time-badge cant-fit-badge">' + info.remaining + ' left</span>';
+      } else if (!info.full && info.remaining <= 6) {
+        badge = '<span class="time-badge low-badge">' + info.remaining + ' left</span>';
+      }
+
+      btn.innerHTML = '<span class="time-label">' + t + '</span>' + badge;
+
+      if (!unavail) {
+        btn.addEventListener('click', function () {
+          grid.querySelectorAll('.time-btn').forEach(function (b) { b.classList.remove('selected'); });
+          btn.classList.add('selected');
+          document.getElementById('f-time').value = time24;
+          hideHint();
+        });
+      }
+      grid.appendChild(btn);
+    });
+  }
+
+  /* ── Form submit ── */
+  document.getElementById('booking-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    var name   = document.getElementById('f-name').value.trim();
+    var email  = document.getElementById('f-email').value.trim();
+    var phone  = document.getElementById('f-phone').value.trim();
+    var date   = document.getElementById('f-date').value;
+    var time   = document.getElementById('f-time').value;
+    var guests = document.getElementById('f-guests').value;
+    var notes  = document.getElementById('f-notes').value.trim() || 'None';
+
+    /* Basic validation */
+    if (!name)   { highlightField('f-name',   'Please enter your name');   return; }
+    if (!email)  { highlightField('f-email',  'Please enter your email');  return; }
+    if (!phone)  { highlightField('f-phone',  'Please enter your phone');  return; }
+    if (!date)   { highlightField('f-date',   'Please select a date');     return; }
+    if (!guests) { highlightField('f-guests', 'Please select guest count'); return; }
+    if (!time)   { showHint('Please select a time slot above', 'error'); return; }
+
+    /* Save for success screen */
+    submittedDetails = { name: name, date: date, time: time, guests: guests };
+
+    setLoading(true);
+
+    var payload = JSON.stringify({ name: name, email: email, phone: phone, date: date, time: time, guests: guests, notes: notes });
+
+    fetch(APPS_SCRIPT_URL, {
+      method:  'POST',
+      mode:    'cors',
+      headers: { 'Content-Type': 'text/plain' },
+      body:    payload
+    })
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      if (data.ok) {
+        showSuccess();
+      } else if (data.error === 'SLOT_FULL') {
+        handleCapacityError('That time slot just became fully booked. Please choose another time.');
+      } else if (data.error && data.error.startsWith('NOT_ENOUGH_SPACE')) {
+        var left = data.error.split(':')[1];
+        handleCapacityError('Only ' + left + ' seat' + (left === '1' ? '' : 's') + ' left at that time. Please choose a different time or reduce your group size.');
+      } else if (data.error && data.error.startsWith('EXCEEDS_MAX')) {
+        setLoading(false);
+        showHint('Maximum ' + MAX_PER_BOOKING + ' people per booking. For larger groups please call us on +61 2 8957 8415.', 'error');
+      } else {
+        throw new Error(data.error || 'Unknown error');
+      }
+    })
+    .catch(function (err) {
+      console.warn('CORS mode failed, trying no-cors fallback:', err);
+      /* no-cors fallback — script still runs, we just assume success */
+      fetch(APPS_SCRIPT_URL, {
+        method:  'POST',
+        mode:    'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body:    new URLSearchParams({ name: name, email: email, phone: phone, date: date, time: time, guests: guests, notes: notes }).toString()
+      })
+      .then(function () { showSuccess(); })
+      .catch(function () {
+        setLoading(false);
+        document.getElementById('state-error').style.display = 'block';
+        document.getElementById('booking-form').style.display = 'none';
+      });
+    });
+  });
+
+  /* ── Capacity error: refresh times + show message ── */
+  function handleCapacityError(msg) {
+    setLoading(false);
+    var date = document.getElementById('f-date').value;
+    fetch(APPS_SCRIPT_URL + '?action=slots&date=' + date)
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        currentSlotInfo = data.slots || {};
+        var d         = new Date(date + 'T12:00:00');
+        var isWeekend = d.getDay() === 0 || d.getDay() === 6;
+        var slots     = isWeekend ? WEEKEND_SLOTS : WEEKDAY_SLOTS;
+        var guests    = parseInt(document.getElementById('f-guests').value) || 1;
+        document.getElementById('f-time').value = '';
+        renderTimes(slots, currentSlotInfo, guests);
+      })
+      .catch(function () {});
+
+    showHint(msg, 'error');
+    document.getElementById('times-grid').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  /* ── Show success screen ── */
+  function showSuccess() {
+    var d = submittedDetails;
+    document.getElementById('success-detail').innerHTML =
+      '<strong>Date:</strong> '   + formatDate(d.date)   + '<br>' +
+      '<strong>Time:</strong> '   + format12h(d.time)    + '<br>' +
+      '<strong>Guests:</strong> ' + d.guests + (d.guests === '1' ? ' person' : ' people') + '<br>' +
+      '<strong>Where:</strong> 96 Abercrombie St, Chippendale';
+
+    document.getElementById('booking-form').style.display  = 'none';
+    document.getElementById('state-success').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  /* ── Reset back to form ── */
+  function resetToForm() {
+    document.getElementById('state-error').style.display  = 'none';
+    document.getElementById('booking-form').style.display = 'block';
+    setLoading(false);
+  }
+
+  /* ── UI helpers ── */
+  function setLoading(on) {
+    var btn = document.getElementById('submit-btn');
+    btn.disabled  = on;
+    btn.innerHTML = on
+      ? '<span class="spinner"></span>Confirming your booking...'
+      : 'Confirm Booking';
+  }
+
+  function showHint(msg, type) {
+    var h = document.getElementById('time-hint');
+    h.textContent  = msg;
+    h.className    = 'time-hint ' + (type || '');
+    h.style.display = 'block';
+  }
+  function hideHint() {
+    var h = document.getElementById('time-hint');
+    h.style.display = 'none';
+  }
+
+  function highlightField(id, msg) {
+    var el = document.getElementById(id);
+    el.style.borderColor = 'var(--terra)';
+    el.focus();
+    setTimeout(function () { el.style.borderColor = ''; }, 2500);
+    showHint(msg, 'error');
+  }
+
+  /* ── Converters ── */
+  function to24h(t) {
+    var m = t.match(/^(\d+):(\d+)(am|pm)$/i);
+    if (!m) return '09:00';
+    var h = parseInt(m[1]), min = m[2], ap = m[3].toLowerCase();
+    if (ap === 'pm' && h !== 12) h += 12;
+    if (ap === 'am' && h === 12) h = 0;
+    return (h < 10 ? '0' : '') + h + ':' + min;
+  }
+
+  function format12h(t) {
+    var parts = t.split(':');
+    var h = parseInt(parts[0]), m = parts[1];
+    var ap = h >= 12 ? 'pm' : 'am';
+    return (h % 12 || 12) + ':' + m + ap;
+  }
+
+  function formatDate(iso) {
+    var d      = new Date(iso + 'T12:00:00');
+    var days   = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    return days[d.getDay()] + ', ' + d.getDate() + ' ' + months[d.getMonth()] + ' ' + d.getFullYear();
+  }
+</script>
+
+</body>
+</html>
