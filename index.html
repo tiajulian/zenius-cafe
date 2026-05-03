@@ -368,6 +368,73 @@
     }
     .feature-desc { font-size: .85rem; color: rgba(251,247,242,.5); line-height: 1.65; }
 
+    /* ── REVIEWS ────────────────────────────── */
+    #reviews { background: var(--white); }
+    .reviews-top {
+      max-width: 1240px; margin: 0 auto 4rem;
+      display: flex; justify-content: space-between; align-items: flex-end;
+      flex-wrap: wrap; gap: 1.5rem;
+    }
+    .reviews-rating {
+      display: flex; align-items: center; gap: 1.5rem;
+    }
+    .rating-score {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4.5rem; font-weight: 300; color: var(--brown); line-height: 1;
+    }
+    .rating-meta { display: flex; flex-direction: column; gap: .3rem; }
+    .rating-stars { color: #F5A623; font-size: 1.1rem; letter-spacing: .05em; }
+    .rating-count { font-size: .78rem; color: rgba(42,26,14,.45); letter-spacing: .04em; }
+    .rating-source {
+      display: flex; align-items: center; gap: .4rem;
+      font-size: .72rem; color: rgba(42,26,14,.4); margin-top: .2rem;
+    }
+    .google-g {
+      width: 16px; height: 16px; border-radius: 50%;
+      background: linear-gradient(135deg,#4285F4 0%,#34A853 35%,#FBBC05 65%,#EA4335 100%);
+      display: inline-block; flex-shrink: 0;
+    }
+    .reviews-link {
+      display: inline-flex; align-items: center; gap: .5rem;
+      color: var(--sage); text-decoration: none;
+      font-size: .8rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase;
+      border-bottom: 1px solid rgba(92,122,78,.3);
+      padding-bottom: .15rem; transition: color .3s, border-color .3s;
+    }
+    .reviews-link:hover { color: var(--caramel); border-color: rgba(200,133,90,.4); }
+
+    .reviews-grid {
+      max-width: 1240px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+    }
+    .review-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 14px; padding: 2.2rem;
+      display: flex; flex-direction: column; gap: 1.2rem;
+      transition: transform .35s, box-shadow .35s;
+    }
+    .review-card:hover { transform: translateY(-4px); box-shadow: 0 10px 32px rgba(42,26,14,.08); }
+    .review-stars { color: #F5A623; font-size: 1rem; letter-spacing: .06em; }
+    .review-text {
+      font-size: .95rem; line-height: 1.75; color: rgba(42,26,14,.72);
+      font-style: italic;
+      flex: 1;
+    }
+    .review-text::before { content: '\201C'; }
+    .review-text::after  { content: '\201D'; }
+    .review-author { display: flex; align-items: center; gap: .9rem; margin-top: auto; }
+    .review-avatar {
+      width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 600;
+      color: var(--white);
+    }
+    .av-1 { background: linear-gradient(135deg, var(--caramel), var(--terra)); }
+    .av-2 { background: linear-gradient(135deg, var(--sage), var(--pandan)); }
+    .av-3 { background: linear-gradient(135deg, var(--mid), var(--caramel)); }
+    .review-name { font-size: .88rem; font-weight: 500; color: var(--brown); }
+    .review-date { font-size: .75rem; color: rgba(42,26,14,.38); margin-top: .1rem; }
+
     /* ── GALLERY ────────────────────────────── */
     #gallery { padding-bottom: 0; background: var(--bg); }
     .gallery-top { max-width: 1240px; margin: 0 auto 3rem; display: flex; justify-content: space-between; align-items: flex-end; }
@@ -494,6 +561,8 @@
       .about-wrap { grid-template-columns: 1fr; gap: 3rem; }
       .about-accent-img, .about-ring { display: none; }
       .feature-inner { grid-template-columns: 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .reviews-top { flex-direction: column; align-items: flex-start; }
       .visit-grid { grid-template-columns: 1fr; }
       .map-card { min-height: 260px; }
       .gallery-grid { grid-template-columns: repeat(3,1fr); }
@@ -714,6 +783,73 @@
     </div>
   </div>
 </div>
+
+<!-- ══════════════════════════ REVIEWS -->
+<section id="reviews">
+  <div class="reviews-top">
+    <div>
+      <div class="sec-label reveal">What People Say</div>
+      <h2 class="sec-title reveal">Google <em>Reviews</em></h2>
+    </div>
+    <div class="reviews-rating reveal">
+      <div class="rating-score">4.8</div>
+      <div class="rating-meta">
+        <div class="rating-stars">★★★★★</div>
+        <div class="rating-count">Based on 250+ reviews</div>
+        <div class="rating-source">
+          <span class="google-g"></span> Google Reviews
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reviews-grid">
+
+    <div class="review-card reveal">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Hands down the best coffee in Chippendale. Poppy and Enzen are both amazing — warm, friendly, and they somehow remembered my order after just two days. The vibe is always welcoming, and the coffee is consistently perfect. Zenius has definitely become my go-to spot.</p>
+      <div class="review-author">
+        <div class="review-avatar av-3">S</div>
+        <div>
+          <div class="review-name">Saul Edwards</div>
+          <div class="review-date">6 months ago · Google</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card reveal" style="transition-delay:.1s">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">The matcha was yum!! My friend loved her burger too. WiFi and seating was perfect to do some work at. Thanks to the staff for being so beyond kind.</p>
+      <div class="review-author">
+        <div class="review-avatar av-1">S</div>
+        <div>
+          <div class="review-name">Sophie Jullienne</div>
+          <div class="review-date">1 month ago · Google</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card reveal" style="transition-delay:.2s">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">My favourite shakshouka! And they're always really nice when I need vegetarian menu accommodations. Consistently great food and a genuinely welcoming atmosphere every single visit.</p>
+      <div class="review-author">
+        <div class="review-avatar av-2">M</div>
+        <div>
+          <div class="review-name">Mik</div>
+          <div class="review-date">1 month ago · Google</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="text-align:center; margin-top:3rem;" class="reveal" style="transition-delay:.3s">
+    <a href="https://www.google.com/maps/place/ZENIUS/@-33.8919618,151.1953813,17z/data=!4m8!3m7!1s0x6b12b00af7f93765:0xe3d77d3b2b3f4a4a!8m2!3d-33.8919618!4d151.1953813!9m1!1b1" target="_blank" rel="noopener" class="reviews-link">
+      Read all reviews on Google
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+    </a>
+  </div>
+</section>
 
 <!-- ══════════════════════════ GALLERY -->
 <section id="gallery">
