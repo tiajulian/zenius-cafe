@@ -338,10 +338,13 @@
     .card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 400; margin-bottom: 1.6rem; color: var(--brown); }
 
     .item-list { list-style: none; display: flex; flex-direction: column; }
-    .item-list li { padding: .6rem 0; border-bottom: 1px solid var(--border); font-size: .88rem; color: rgba(42,26,14,.65); }
+    .item-list li { padding: .62rem 0; border-bottom: 1px solid var(--border); font-size: .88rem; color: rgba(42,26,14,.65); display: flex; justify-content: space-between; align-items: flex-start; gap: .8rem; }
     .item-list li:last-child { border-bottom: none; }
+    .item-name { flex: 1; }
     .item-list li strong { display: block; color: var(--brown); font-weight: 400; }
-    .item-list li small { font-size: .75rem; color: rgba(42,26,14,.38); margin-top: .12rem; display: block; }
+    .item-list li small { font-size: .74rem; color: rgba(42,26,14,.38); margin-top: .12rem; display: block; }
+    .item-price { color: var(--caramel); font-size: .85rem; font-weight: 500; white-space: nowrap; padding-top: .1rem; flex-shrink: 0; }
+    .item-tag { font-size: .6rem; letter-spacing: .08em; text-transform: uppercase; background: rgba(92,122,78,.12); color: var(--sage); border-radius: 4px; padding: .15rem .4rem; margin-left: .4rem; vertical-align: middle; font-weight: 600; }
 
     /* ── FEATURE STRIP ──────────────────────── */
     .feature-strip {
@@ -852,60 +855,81 @@
   </div>
   <div class="menu-grid">
 
+    <!-- Coffee & Hot Drinks -->
     <div class="menu-card reveal">
       <img class="card-icon-img" src="https://images.unsplash.com/vector-1739984382388-03d3e9f44aa1?w=200&q=80" alt="Coffee">
       <div class="card-cat">Drinks</div>
-      <h3 class="card-title">Coffee</h3>
+      <h3 class="card-title">Coffee &amp; Hot</h3>
       <ul class="item-list">
-        <li><strong>Flat White</strong><small>Deluca beans, silky steamed milk</small></li>
-        <li><strong>Piccolo Latte</strong><small>Intense &amp; concentrated</small></li>
-        <li><strong>Latte</strong><small>With signature latte art</small></li>
-        <li><strong>Cappuccino</strong><small>Classic &amp; creamy</small></li>
-        <li><strong>Cold Brew</strong><small>18-hour slow steep</small></li>
-        <li><strong>Long Black</strong><small>Double ristretto over water</small></li>
+        <li><div class="item-name"><strong>Black / Long Black</strong></div><span class="item-price">$5 / $5.5</span></li>
+        <li><div class="item-name"><strong>White / Flat White</strong></div><span class="item-price">$5 / $5.5</span></li>
+        <li><div class="item-name"><strong>Dirty Chai</strong></div><span class="item-price">$5.5 / $6</span></li>
+        <li><div class="item-name"><strong>Mocha</strong></div><span class="item-price">$5.5 / $6</span></li>
+        <li><div class="item-name"><strong>Hot Chocolate</strong></div><span class="item-price">$5 / $5.5</span></li>
+        <li><div class="item-name"><strong>Sticky Chai on Soy</strong></div><span class="item-price">$6.5</span></li>
+        <li><div class="item-name"><strong>Taro / Ube Latte</strong></div><span class="item-price">$6.5</span></li>
+        <li><div class="item-name"><strong>Red Velvet Latte</strong></div><span class="item-price">$6.5</span></li>
+        <li><div class="item-name"><strong>Turmeric Latte</strong></div><span class="item-price">$6.5</span></li>
+        <li><div class="item-name"><strong>Affogato</strong></div><span class="item-price">$6.5</span></li>
+        <li><div class="item-name"><strong>Matcha Hikari</strong><small>Japanese specialty, unsweetened</small></div><span class="item-price">$6.5</span></li>
+        <li><div class="item-name"><strong>Iced Matcha / Hojicha</strong></div><span class="item-price">$8</span></li>
+        <li><div class="item-name"><strong>Tea</strong><small>Earl Grey, English Breakfast, Green, Peppermint, Chamomile, Lemongrass Ginger</small></div><span class="item-price">$4.5</span></li>
       </ul>
     </div>
 
+    <!-- Cold Drinks -->
     <div class="menu-card reveal" style="transition-delay:.1s">
-      <img class="card-icon-img" src="https://images.unsplash.com/vector-1768808722591-dd648eb55075?w=200&q=80" alt="Matcha latte">
-      <div class="card-cat">Specialty</div>
-      <h3 class="card-title">Alt Drinks</h3>
+      <img class="card-icon-img" src="https://images.unsplash.com/vector-1768808722591-dd648eb55075?w=200&q=80" alt="Cold drinks">
+      <div class="card-cat">Cold</div>
+      <h3 class="card-title">Cold Drinks</h3>
       <ul class="item-list">
-        <li><strong>Matcha Latte</strong><small>Ceremonial grade matcha</small></li>
-        <li><strong>Turmeric Latte</strong><small>Golden &amp; warming</small></li>
-        <li><strong>Chai Latte</strong><small>House-spiced blend</small></li>
-        <li><strong>Smoothies</strong><small>Fresh seasonal fruit</small></li>
-        <li><strong>Juices</strong><small>Cold-pressed daily</small></li>
-        <li><strong>Mocktails</strong><small>Creative non-alcoholic sips</small></li>
+        <li><div class="item-name"><strong>Cold Brew</strong></div><span class="item-price">$6.5</span></li>
+        <li><div class="item-name"><strong>Iced Latte</strong></div><span class="item-price">$6.5</span></li>
+        <li><div class="item-name"><strong>Iced Long Black</strong></div><span class="item-price">$6.5</span></li>
+        <li><div class="item-name"><strong>Iced Mocha / Chocolate</strong></div><span class="item-price">$7</span></li>
+        <li><div class="item-name"><strong>Iced Chai / Taro / Ube</strong></div><span class="item-price">$7</span></li>
+        <li><div class="item-name"><strong>Milkshakes</strong><small>Chocolate, Strawberry, Caramel, Peanut Butter, Nutella, Banana, Coffee</small></div><span class="item-price">$7</span></li>
+        <li><div class="item-name"><strong>Fresh Juices</strong><small>Immunity, Detox, Liver Scrubber</small></div><span class="item-price">$8.5</span></li>
+        <li><div class="item-name"><strong>Smoothies</strong><small>Banana, Mix Berries</small></div><span class="item-price">$9</span></li>
       </ul>
     </div>
 
+    <!-- Brunch -->
     <div class="menu-card reveal" style="transition-delay:.2s">
       <img class="card-icon-img" src="https://images.unsplash.com/vector-1753248836371-f35d1044d920?w=200&q=80" alt="Brunch">
       <div class="card-cat">Food</div>
       <h3 class="card-title">Brunch</h3>
       <ul class="item-list">
-        <li><strong>Brekkie Rock N Roll</strong><small>Zenius signature, must try</small></li>
-        <li><strong>Pandan Hotcakes</strong><small>Kaya jam, fresh berries</small></li>
-        <li><strong>Corn Fritters</strong><small>Stack with smashed avo</small></li>
-        <li><strong>Say Halloumi</strong><small>Grilled with poached eggs</small></li>
-        <li><strong>The Best Fricken Sandwich</strong><small>Bold name, bolder taste</small></li>
-        <li><strong>Avocado Toast</strong><small>Sourdough, feta, dukkah</small></li>
-        <li><strong>Reuben Sandwich</strong><small>Classic New York style</small></li>
-        <li><strong>Mushroom &amp; Egg Roll</strong><small>Buttery brioche bun</small></li>
+        <li><div class="item-name"><strong>Avocado on Toast</strong><small>Add egg $3.5, bacon $5, halloumi $5</small></div><span class="item-price">$9</span></li>
+        <li><div class="item-name"><strong>Brekkie Rock N Roll</strong><small>Potato bun, bacon, egg, spinach, avo, cheese, hashbrown</small></div><span class="item-price">$17.9</span></li>
+        <li><div class="item-name"><strong>Say Haloumi</strong><small>Potato bun, haloumi, egg, avo, caramelised onions, spinach, hashbrown</small></div><span class="item-price">$17.9</span></li>
+        <li><div class="item-name"><strong>Secret Corn</strong><small>Haloumi fritters, avo, poached egg, tomato salsa, green goddess dressing</small></div><span class="item-price">$22.9</span></li>
+        <li><div class="item-name"><strong>Pandan Pancake</strong><small>Seasonal fruits, pistachio, maple syrup, rainbow ice cream</small></div><span class="item-price">$22.9</span></li>
+        <li><div class="item-name"><strong>Best Fricken Burger</strong><small>Buttermilk fried chicken, pickles, coleslaw, jack cheese, sriracha hollandaise</small></div><span class="item-price">$21.9</span></li>
+        <li><div class="item-name"><strong>Avo and Smoked Trout on Toast</strong><small>Smashed avo, smoked trout, goat feta, poached egg, tomato salsa, dukkah</small></div><span class="item-price">$25.9</span></li>
+        <li><div class="item-name"><strong>Benedict</strong><small>Smoked trout, spinach, 2 poached eggs, sriracha hollandaise on turkish</small></div><span class="item-price">$25.9</span></li>
+        <li><div class="item-name"><strong>Shakshuka</strong><small>Baked eggs, tomato, capsicum, goat feta, mild chorizo, garlic sourdough</small></div><span class="item-price">$25.9</span></li>
+        <li><div class="item-name"><strong>Chilli Billy</strong><small>Scrambled eggs, Zenius chilli sambal, mushrooms, goat feta, roti paratha</small></div><span class="item-price">$26.9</span></li>
+        <li><div class="item-name"><strong>I'm Starving</strong><small>2 poached eggs, kale, grilled tomato, mushrooms, avo, chorizo, bacon, hashbrown w/ sourdough</small></div><span class="item-price">$31.9</span></li>
       </ul>
     </div>
 
+    <!-- Bowls -->
     <div class="menu-card reveal" style="transition-delay:.3s">
       <img class="card-icon-img" src="https://images.unsplash.com/vector-1773466975995-31ba8b871cb1?w=200&q=80" alt="Bowls">
       <div class="card-cat">Bowls</div>
       <h3 class="card-title">Bowls</h3>
       <ul class="item-list">
-        <li><strong>Beef Rendang Bowl</strong><small>Slow-cooked, deeply aromatic</small></li>
-        <li><strong>Miso Pumpkin Bowl</strong><small>Caramel-like miso glaze</small></li>
-        <li><strong>Acai Bowl</strong><small>Granola, honey, fresh fruit</small></li>
-        <li><strong>Granola &amp; Yoghurt</strong><small>House-made toasted granola</small></li>
+        <li><div class="item-name"><strong>Famous Beef Rendang Bowl</strong><small>Slow cooked beef, indo spices, broccoli, pickled cucumber, fried egg, brown rice</small></div><span class="item-price">$24.9</span></li>
+        <li><div class="item-name"><strong>Cauliflower Bowl</strong><small>Fried cauliflower, quinoa, almond, pomegranate, crispy kale, beetroot hummus, avocado <span class="item-tag">V GF</span></small></div><span class="item-price">$22.9</span></li>
+        <li><div class="item-name"><strong>Soba Salmon Bowl</strong><small>Cold soba noodles, sesame dressing, pickle cucumber, avocado, edamame, ponzu grilled salmon</small></div><span class="item-price">$26.9</span></li>
+        <li><div class="item-name"><strong>Green Bowl</strong><small>Sauteed quinoa, broccoli, asparagus, kale, labneh, poached egg, edamame, chermoula <span class="item-tag">V GF</span></small></div><span class="item-price">$22.9</span></li>
+        <li style="flex-direction:column;gap:.5rem;border-top:1px solid var(--border);margin-top:.3rem;">
+          <strong style="color:var(--sage);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;">Sides</strong>
+          <small>Bacon / Chorizo / Halloumi $5 &nbsp;·&nbsp; Mushroom / Goat Feta / Avocado $4.5 &nbsp;·&nbsp; Egg / Cheese / Hashbrown $3.5 &nbsp;·&nbsp; Chicken $6 &nbsp;·&nbsp; Smoked Trout $7 &nbsp;·&nbsp; Grilled Salmon $7 &nbsp;·&nbsp; Fries $7 &nbsp;·&nbsp; Sweet Potato Fries $9</small>
+        </li>
       </ul>
+      <p style="font-size:.7rem;color:rgba(42,26,14,.32);margin-top:1.2rem;line-height:1.65;">15% surcharge on weekends and public holidays &nbsp;·&nbsp; Free range eggs only &nbsp;·&nbsp; Menu items cannot be substituted</p>
     </div>
 
   </div>
