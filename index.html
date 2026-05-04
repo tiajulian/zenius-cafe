@@ -310,45 +310,6 @@
     .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 300; color: var(--caramel); line-height: 1; }
     .stat-lbl { font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: rgba(42,26,14,.4); margin-top: .3rem; }
 
-    /* Award badge */
-    .award-badge {
-      display: inline-flex; align-items: center; gap: 1rem;
-      background: linear-gradient(135deg, #2A1A0E 0%, #7A4E30 100%);
-      border-radius: 14px; padding: 1.1rem 1.6rem;
-      margin-top: 2rem; position: relative; overflow: hidden;
-    }
-    .award-badge::before {
-      content: ''; position: absolute; inset: 0;
-      background: linear-gradient(135deg, rgba(200,133,90,.15) 0%, transparent 60%);
-    }
-    .award-trophy {
-      font-size: 2rem; flex-shrink: 0; position: relative; z-index: 1;
-    }
-    .award-text { position: relative; z-index: 1; }
-    .award-place {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.3rem; font-weight: 600;
-      color: var(--caramel); letter-spacing: .04em; line-height: 1.1;
-    }
-    .award-name {
-      font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;
-      color: rgba(251,247,242,.55); margin-top: .25rem;
-    }
-    .award-divider {
-      width: 1px; height: 36px; background: rgba(200,133,90,.25);
-      flex-shrink: 0; position: relative; z-index: 1;
-    }
-    .award-sub-text { position: relative; z-index: 1; }
-    .award-sub-label {
-      font-size: .62rem; letter-spacing: .2em; text-transform: uppercase;
-      color: rgba(251,247,242,.35); margin-bottom: .2rem;
-    }
-    .award-sub-value {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1rem; font-style: italic;
-      color: rgba(251,247,242,.75);
-    }
-
     /* ── MENU ───────────────────────────────── */
     #menu { background: var(--surface); }
     .menu-top { max-width: 1240px; margin: 0 auto 4rem; }
@@ -797,7 +758,7 @@
 <section class="hero" id="home">
   <canvas id="particle-canvas" aria-hidden="true"></canvas>
   <div class="hero-inner">
-    <div class="hero-badge">🏆 Award Winning &nbsp;·&nbsp; Brunch &nbsp;·&nbsp; Specialty Coffee &nbsp;·&nbsp; Chippendale, Sydney</div>
+    <div class="hero-badge">Specialty Coffee &nbsp;·&nbsp; Brunch </div>
     <h1 class="hero-title">Good coffee.<br><em>Great mornings.</em></h1>
     <p class="hero-sub">96 Abercrombie Street Chippendale, Sydney &nbsp;·&nbsp; Mon to Fri 7am to 3pm &nbsp;·&nbsp; Sat to Sun 8am to 3pm</p>
 
@@ -839,7 +800,6 @@
     <span>Dog Friendly</span><s>✦</s>
     <span>Ranked #2 in Chippendale</span><s>✦</s>
     <span>Open 7 Days</span><s>✦</s>
-    <span>🏆 Almond Breeze Aus-NZ 1st Place</span><s>✦</s>
     <span>Specialty Coffee</span><s>✦</s>
     <span>Latte Art</span><s>✦</s>
     <span>Brunch All Day</span><s>✦</s>
@@ -848,7 +808,6 @@
     <span>Dog Friendly</span><s>✦</s>
     <span>Ranked #2 in Chippendale</span><s>✦</s>
     <span>Open 7 Days</span><s>✦</s>
-    <span>🏆 Almond Breeze Aus-NZ 1st Place</span><s>✦</s>
   </div>
 </div>
 
@@ -884,20 +843,6 @@
           <div class="stat-lbl">Dog Friendly</div>
         </div>
       </div>
-
-      <div class="award-badge reveal" style="transition-delay:.68s">
-        <div class="award-trophy">🏆</div>
-        <div class="award-text">
-          <div class="award-place">1st Place</div>
-          <div class="award-name">Award Winning</div>
-        </div>
-        <div class="award-divider"></div>
-        <div class="award-sub-text">
-          <div class="award-sub-label">Competition</div>
-          <div class="award-sub-value">Almond Breeze Aus-NZ</div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
