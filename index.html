@@ -70,7 +70,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
     rel="stylesheet">
 
   <style>
@@ -669,19 +669,28 @@
 
     .about-stats {
       display: flex;
+      align-items: flex-end;
       gap: 2.5rem;
       margin-top: 3rem;
       padding-top: 2.5rem;
       border-top: 1px solid var(--border);
     }
 
+    .about-stats > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
     .stat-num {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 2.6rem;
+      font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+      font-size: 2.8rem;
       font-weight: 400;
-      letter-spacing: -0.02em;
       color: var(--caramel);
       line-height: 1;
+      height: 48px;
+      display: flex;
+      align-items: flex-end;
     }
 
     .stat-lbl {
@@ -689,7 +698,8 @@
       letter-spacing: .1em;
       text-transform: uppercase;
       color: rgba(42, 26, 14, .4);
-      margin-top: .3rem;
+      margin-top: .45rem;
+      white-space: nowrap;
     }
 
     /* ── MENU ───────────────────────────────── */
@@ -1470,14 +1480,14 @@
     }
 
     .stat-icon-img {
-      width: 56px;
-      height: 56px;
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
       object-fit: contain;
-      padding: 6px;
+      padding: 5px;
       background: var(--surface);
       display: block;
-      margin-bottom: .45rem;
+      margin-bottom: 0;
     }
 
     .v-card-icon-img {
@@ -1804,6 +1814,12 @@
 
       .stat-num {
         font-size: 2.5rem;
+        height: 44px;
+      }
+
+      .stat-icon-img {
+        width: 44px;
+        height: 44px;
       }
 
       .stat-lbl {
@@ -2020,6 +2036,12 @@
 
       .stat-num {
         font-size: 2.2rem;
+        height: 40px;
+      }
+
+      .stat-icon-img {
+        width: 40px;
+        height: 40px;
       }
 
       .menu-card {
