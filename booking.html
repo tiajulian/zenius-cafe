@@ -239,9 +239,82 @@
     @media (max-width: 380px) {
       .times-grid { grid-template-columns: repeat(2, 1fr); }
     }
+
+    /* ── Renovation notice modal ───────────────── */
+    .reno-overlay {
+      display: none;
+      position: fixed; inset: 0; z-index: 10050;
+      background: rgba(42,26,14,.55);
+      align-items: center; justify-content: center;
+      padding: 1.5rem;
+    }
+    .reno-box {
+      position: relative;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      max-width: 420px; width: 100%;
+      padding: 2.6rem 2.2rem 2.2rem;
+      text-align: center;
+      box-shadow: 0 24px 64px rgba(42,26,14,.3);
+    }
+    .reno-icon { font-size: 2.2rem; margin-bottom: 1rem; display: block; }
+    .reno-box h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.9rem; font-weight: 500; color: var(--brown);
+      margin-bottom: .9rem;
+    }
+    .reno-box p {
+      font-size: .92rem; line-height: 1.7; color: rgba(42,26,14,.7);
+      margin-bottom: 1.6rem;
+    }
+    .reno-box p strong { color: var(--caramel); }
+    .reno-btn {
+      background: var(--brown); color: var(--bg);
+      padding: .8rem 2.2rem; border-radius: 100px; border: none;
+      font-family: 'DM Sans', sans-serif; font-size: .8rem;
+      font-weight: 500; letter-spacing: .1em; text-transform: uppercase;
+      cursor: pointer; transition: background .3s, transform .3s;
+    }
+    .reno-btn:hover { background: var(--caramel); transform: translateY(-2px); }
+    .reno-close {
+      position: absolute; top: .8rem; right: .9rem;
+      background: none; border: none; cursor: pointer;
+      font-size: 1.4rem; line-height: 1; color: rgba(42,26,14,.4);
+      padding: .3rem;
+    }
+    .reno-close:hover { color: var(--terra); }
   </style>
 </head>
 <body>
+
+<div class="reno-overlay" id="reno-overlay" role="dialog" aria-modal="true" aria-labelledby="reno-title">
+  <div class="reno-box">
+    <button class="reno-close" id="reno-close" aria-label="Close notice">&times;</button>
+    <span class="reno-icon" aria-hidden="true">🛠️</span>
+    <h2 id="reno-title">We're renovating!</h2>
+    <p>Zenius Coffee is temporarily closed for renovations and will reopen on <strong>26 September 2026</strong>. Thanks for your patience — we can't wait to welcome you back!</p>
+    <button class="reno-btn" id="reno-dismiss">Got it</button>
+  </div>
+</div>
+<script>
+(function () {
+  var CLOSE_UNTIL = new Date('2026-09-26T23:59:59+10:00');
+  if (new Date() > CLOSE_UNTIL) return;
+  var overlay = document.getElementById('reno-overlay');
+  if (!overlay) return;
+  function closeReno() {
+    overlay.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+  overlay.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+  document.getElementById('reno-close').addEventListener('click', closeReno);
+  document.getElementById('reno-dismiss').addEventListener('click', closeReno);
+  overlay.addEventListener('click', function (e) { if (e.target === overlay) closeReno(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeReno(); });
+})();
+</script>
 
 <!-- NAV -->
 <nav>
