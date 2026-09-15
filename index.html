@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zenius Coffee | Best Cafe in Chippendale, Sydney</title>
-  <meta name="description" content="Zenius Coffee — specialty coffee and brunch at 96 Abercrombie St, Chippendale, Sydney. Rated 4.8 stars from 250+ Google reviews. Dog friendly. Open Mon-Fri 7am-3pm, Sat-Sun 8am-3pm.">
+  <meta name="description"
+    content="Zenius Coffee — specialty coffee and brunch at 96 Abercrombie St, Chippendale, Sydney. Rated 4.8 stars from 250+ Google reviews. Dog friendly. Open Mon-Fri 7am-3pm, Sat-Sun 8am-3pm.">
   <link rel="canonical" href="https://zenius.au/">
   <meta name="robots" content="index, follow">
   <meta name="geo.region" content="AU-NSW">
@@ -15,7 +17,8 @@
   <!-- Open Graph -->
   <meta property="og:type" content="restaurant">
   <meta property="og:title" content="Zenius Coffee | Best Cafe in Chippendale, Sydney">
-  <meta property="og:description" content="Specialty coffee, latte art &amp; brunch in the heart of Chippendale. Rated 4.8 stars from 250+ reviews. Open 7 days.">
+  <meta property="og:description"
+    content="Specialty coffee, latte art &amp; brunch in the heart of Chippendale. Rated 4.8 stars from 250+ reviews. Open 7 days.">
   <meta property="og:url" content="https://zenius.au/">
   <meta property="og:image" content="https://zenius.au/images/main.jpg">
   <meta property="og:site_name" content="Zenius Coffee">
@@ -62,1335 +65,2764 @@
   }
   </script>
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☕</text></svg>">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☕</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+    rel="stylesheet">
 
   <style>
     :root {
-      --bg:       #FBF7F2;
-      --surface:  #F4EDE3;
-      --white:    #FFFFFF;
-      --border:   #E5D8C5;
-      --brown:    #2A1A0E;
-      --mid:      #7A4E30;
-      --caramel:  #C8855A;
-      --terra:    #C4654A;
-      --sage:     #5C7A4E;
-      --mint:     #8DAF7E;
-      --pandan:   #6B9B5E;
+      --bg: #FBF7F2;
+      --surface: #F4EDE3;
+      --white: #FFFFFF;
+      --border: #E5D8C5;
+      --brown: #2A1A0E;
+      --mid: #7A4E30;
+      --caramel: #C8855A;
+      --terra: #C4654A;
+      --sage: #5C7A4E;
+      --mint: #8DAF7E;
+      --pandan: #6B9B5E;
     }
 
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { background: var(--bg); color: var(--brown); font-family: 'DM Sans', sans-serif; overflow-x: hidden; }
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--brown);
+      font-family: 'DM Sans', sans-serif;
+      overflow-x: hidden;
+    }
 
     /* ── Skip link ──────────────────────────── */
     .skip-link {
-      position: absolute; top: -100%; left: 1rem;
-      background: var(--caramel); color: var(--white);
-      padding: .5rem 1.2rem; border-radius: 4px;
-      font-size: .85rem; font-weight: 500; z-index: 10000;
-      text-decoration: none; transition: top .2s;
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      background: var(--caramel);
+      color: var(--white);
+      padding: .5rem 1.2rem;
+      border-radius: 4px;
+      font-size: .85rem;
+      font-weight: 500;
+      z-index: 10000;
+      text-decoration: none;
+      transition: top .2s;
     }
-    .skip-link:focus { top: 1rem; }
+
+    .skip-link:focus {
+      top: 1rem;
+    }
 
     /* ── Grain texture overlay ──────────────── */
     body::after {
-      content: ''; position: fixed; inset: 0;
+      content: '';
+      position: fixed;
+      inset: 0;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
-      opacity: 0.025; pointer-events: none; z-index: 9990;
+      opacity: 0.025;
+      pointer-events: none;
+      z-index: 9990;
     }
 
     /* ── Scroll progress ────────────────────── */
     #progress {
-      position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0%;
       background: linear-gradient(90deg, var(--caramel), var(--pandan));
-      z-index: 9999; transition: width 0.08s linear;
+      z-index: 9999;
+      transition: width 0.08s linear;
     }
 
     /* ── Custom cursor ──────────────────────── */
     #cur-dot {
-      position: fixed; width: 8px; height: 8px;
-      background: var(--terra); border-radius: 50%;
-      pointer-events: none; z-index: 9998;
+      position: fixed;
+      width: 8px;
+      height: 8px;
+      background: var(--terra);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9998;
       transform: translate(-50%, -50%);
     }
+
     #cur-ring {
-      position: fixed; width: 40px; height: 40px;
-      border: 1.5px solid rgba(196,101,74,.4); border-radius: 50%;
-      pointer-events: none; z-index: 9997;
+      position: fixed;
+      width: 40px;
+      height: 40px;
+      border: 1.5px solid rgba(196, 101, 74, .4);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9997;
       transform: translate(-50%, -50%);
       transition: width .25s, height .25s, border-color .25s;
     }
+
     body:has(a:hover) #cur-ring,
-    body:has(button:hover) #cur-ring { width: 56px; height: 56px; border-color: rgba(196,101,74,.7); }
-    @media (pointer: coarse) { #cur-dot, #cur-ring { display: none; } }
-    @media (pointer: fine)   { body { cursor: none; } }
+    body:has(button:hover) #cur-ring {
+      width: 56px;
+      height: 56px;
+      border-color: rgba(196, 101, 74, .7);
+    }
+
+    @media (pointer: coarse) {
+
+      #cur-dot,
+      #cur-ring {
+        display: none;
+      }
+    }
+
+    @media (pointer: fine) {
+      body {
+        cursor: none;
+      }
+    }
 
     /* ── NAV ────────────────────────────────── */
     #nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 500;
-      display: flex; align-items: center; justify-content: space-between;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 500;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       padding: 1.8rem 5vw;
       transition: padding .4s, background .4s, border-color .4s, box-shadow .4s;
       border-bottom: 1px solid transparent;
     }
+
     #nav.scrolled {
       padding: 1rem 5vw;
-      background: rgba(251,247,242,.92);
+      background: rgba(251, 247, 242, .92);
       backdrop-filter: blur(20px) saturate(160%);
       border-color: var(--border);
-      box-shadow: 0 1px 24px rgba(42,26,14,.06);
+      box-shadow: 0 1px 24px rgba(42, 26, 14, .06);
     }
+
     .nav-logo {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.9rem; font-weight: 600;
-      letter-spacing: .06em; color: var(--brown); text-decoration: none;
+      font-size: 1.9rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      color: var(--brown);
+      text-decoration: none;
     }
-    .nav-logo span { color: var(--caramel); }
-    .nav-links { list-style: none; display: flex; gap: 2.8rem; }
+
+    .nav-logo span {
+      color: var(--caramel);
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2.8rem;
+    }
+
     .nav-links a {
-      color: rgba(42,26,14,.6); text-decoration: none;
-      font-size: .78rem; letter-spacing: .14em; text-transform: uppercase;
+      color: rgba(42, 26, 14, .6);
+      text-decoration: none;
+      font-size: .78rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
       transition: color .3s;
     }
-    .nav-links a:hover { color: var(--caramel); }
+
+    .nav-links a:hover {
+      color: var(--caramel);
+    }
+
     .nav-cta {
-      background: var(--brown); color: var(--bg);
-      padding: .6rem 1.5rem; border-radius: 100px;
-      font-size: .75rem; font-weight: 500; letter-spacing: .1em;
-      text-transform: uppercase; text-decoration: none;
+      background: var(--brown);
+      color: var(--bg);
+      padding: .6rem 1.5rem;
+      border-radius: 100px;
+      font-size: .75rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      text-decoration: none;
       transition: transform .3s, background .3s, box-shadow .3s;
     }
-    .nav-cta:hover { background: var(--caramel); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(200,133,90,.3); }
+
+    .nav-cta:hover {
+      background: var(--caramel);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(200, 133, 90, .3);
+    }
 
     /* Hamburger */
     .hamburger {
-      display: none; flex-direction: column; justify-content: center;
-      gap: 5px; background: none; border: none; cursor: pointer; padding: .4rem; z-index: 10;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: .4rem;
+      z-index: 10;
     }
+
     .hamburger span {
-      display: block; width: 24px; height: 2px;
-      background: var(--brown); border-radius: 2px;
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--brown);
+      border-radius: 2px;
       transition: transform .3s, opacity .3s;
     }
-    #nav.menu-open .hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    #nav.menu-open .hamburger span:nth-child(2) { opacity: 0; }
-    #nav.menu-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    #nav.menu-open .hamburger span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    #nav.menu-open .hamburger span:nth-child(2) {
+      opacity: 0;
+    }
+
+    #nav.menu-open .hamburger span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
 
     /* ── HERO ───────────────────────────────── */
     .hero {
       min-height: 100vh;
-      display: flex; align-items: center; justify-content: center;
-      position: relative; overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
       background: radial-gradient(ellipse 110% 90% at 50% 0%, #F4EDE3 0%, var(--bg) 65%);
     }
 
     /* Warm sun streak top-right */
     .hero::before {
       content: '';
-      position: absolute; top: -10%; right: -5%;
-      width: 55vw; height: 55vw; border-radius: 50%;
-      background: radial-gradient(circle, rgba(200,133,90,.18) 0%, rgba(200,133,90,0) 70%);
+      position: absolute;
+      top: -10%;
+      right: -5%;
+      width: 55vw;
+      height: 55vw;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(200, 133, 90, .18) 0%, rgba(200, 133, 90, 0) 70%);
       pointer-events: none;
     }
 
-    #particle-canvas { position: absolute; inset: 0; pointer-events: none; }
+    #particle-canvas {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
 
     .hero-inner {
-      text-align: center; z-index: 2; padding: 2rem;
-      display: flex; flex-direction: column; align-items: center;
+      text-align: center;
+      z-index: 2;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       padding-top: 7rem;
     }
+
     .hero-badge {
-      display: inline-block; opacity: 0;
+      display: inline-block;
+      opacity: 0;
       animation: fadeUp .8s .3s ease forwards;
-      font-size: .68rem; letter-spacing: .32em; text-transform: uppercase;
-      color: var(--sage); border: 1.5px solid rgba(92,122,78,.3);
-      padding: .4rem 1.3rem; border-radius: 100px; margin-bottom: 2rem;
-      background: rgba(92,122,78,.06);
+      font-size: .68rem;
+      letter-spacing: .32em;
+      text-transform: uppercase;
+      color: var(--sage);
+      border: 1.5px solid rgba(92, 122, 78, .3);
+      padding: .4rem 1.3rem;
+      border-radius: 100px;
+      margin-bottom: 2rem;
+      background: rgba(92, 122, 78, .06);
     }
+
     h1.hero-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(4rem, 10vw, 8.5rem);
-      font-weight: 300; line-height: .92; letter-spacing: -.02em;
-      color: var(--brown); margin-bottom: .35em;
-      opacity: 0; animation: fadeUp 1s .5s ease forwards;
+      font-weight: 300;
+      line-height: .92;
+      letter-spacing: -.02em;
+      color: var(--brown);
+      margin-bottom: .35em;
+      opacity: 0;
+      animation: fadeUp 1s .5s ease forwards;
     }
-    h1.hero-title em { font-style: italic; color: var(--caramel); }
+
+    h1.hero-title em {
+      font-style: italic;
+      color: var(--caramel);
+    }
 
     .hero-sub {
-      font-size: .82rem; letter-spacing: .2em; text-transform: uppercase;
-      color: rgba(42,26,14,.45);
-      opacity: 0; animation: fadeUp .8s .85s ease forwards;
+      font-size: .82rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: rgba(42, 26, 14, .45);
+      opacity: 0;
+      animation: fadeUp .8s .85s ease forwards;
       margin-bottom: 2.8rem;
     }
-    .hero-cup { opacity: 0; animation: fadeUp .8s 1s ease forwards; margin-bottom: 2.5rem; }
-    .steam-path { animation: steam 3s ease-in-out infinite; transform-origin: bottom center; }
-    .steam-path:nth-child(2) { animation-delay: .4s; }
-    .steam-path:nth-child(3) { animation-delay: .8s; }
+
+    .hero-cup {
+      opacity: 0;
+      animation: fadeUp .8s 1s ease forwards;
+      margin-bottom: 2.5rem;
+    }
+
+    .steam-path {
+      animation: steam 3s ease-in-out infinite;
+      transform-origin: bottom center;
+    }
+
+    .steam-path:nth-child(2) {
+      animation-delay: .4s;
+    }
+
+    .steam-path:nth-child(3) {
+      animation-delay: .8s;
+    }
+
     @keyframes steam {
-      0%   { opacity: 0; transform: translateY(0) scaleX(1); }
-      40%  { opacity: .5; }
-      100% { opacity: 0; transform: translateY(-16px) scaleX(1.3); }
+      0% {
+        opacity: 0;
+        transform: translateY(0) scaleX(1);
+      }
+
+      40% {
+        opacity: .5;
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateY(-16px) scaleX(1.3);
+      }
     }
+
     .hero-btns {
-      display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;
-      opacity: 0; animation: fadeUp .8s 1.15s ease forwards;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      opacity: 0;
+      animation: fadeUp .8s 1.15s ease forwards;
     }
+
     .btn-fill {
-      background: var(--brown); color: var(--bg);
-      padding: .9rem 2.4rem; border-radius: 100px; border: none;
-      font-family: 'DM Sans', sans-serif; font-size: .82rem;
-      font-weight: 500; letter-spacing: .1em; text-transform: uppercase;
-      text-decoration: none; transition: transform .3s, background .3s, box-shadow .3s;
+      background: var(--brown);
+      color: var(--bg);
+      padding: .9rem 2.4rem;
+      border-radius: 100px;
+      border: none;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .82rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: transform .3s, background .3s, box-shadow .3s;
     }
-    .btn-fill:hover { background: var(--caramel); transform: translateY(-3px); box-shadow: 0 12px 32px rgba(200,133,90,.3); }
+
+    .btn-fill:hover {
+      background: var(--caramel);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(200, 133, 90, .3);
+    }
+
     .btn-ghost {
-      background: transparent; color: var(--brown);
-      padding: .9rem 2.4rem; border-radius: 100px;
-      border: 1.5px solid rgba(42,26,14,.2);
-      font-family: 'DM Sans', sans-serif; font-size: .82rem;
-      letter-spacing: .1em; text-transform: uppercase;
-      text-decoration: none; transition: all .3s;
+      background: transparent;
+      color: var(--brown);
+      padding: .9rem 2.4rem;
+      border-radius: 100px;
+      border: 1.5px solid rgba(42, 26, 14, .2);
+      font-family: 'DM Sans', sans-serif;
+      font-size: .82rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all .3s;
     }
-    .btn-ghost:hover { border-color: var(--caramel); color: var(--caramel); }
+
+    .btn-ghost:hover {
+      border-color: var(--caramel);
+      color: var(--caramel);
+    }
 
     .hero-scroll {
-      position: absolute; bottom: 2.8rem; left: 50%; transform: translateX(-50%);
-      display: flex; flex-direction: column; align-items: center; gap: .5rem;
-      opacity: 0; animation: fadeUp .8s 1.6s ease forwards;
+      position: absolute;
+      bottom: 2.8rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .5rem;
+      opacity: 0;
+      animation: fadeUp .8s 1.6s ease forwards;
     }
-    .hero-scroll span { font-size: .62rem; letter-spacing: .22em; text-transform: uppercase; color: rgba(42,26,14,.3); }
+
+    .hero-scroll span {
+      font-size: .62rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: rgba(42, 26, 14, .3);
+    }
+
     .scroll-line {
-      width: 1px; height: 48px;
-      background: linear-gradient(to bottom, rgba(92,122,78,.7), transparent);
+      width: 1px;
+      height: 48px;
+      background: linear-gradient(to bottom, rgba(92, 122, 78, .7), transparent);
       animation: scrollPulse 2.2s ease infinite;
     }
-    @keyframes scrollPulse { 0%,100%{opacity:.3;transform:scaleY(1)} 50%{opacity:1;transform:scaleY(1.15)} }
+
+    @keyframes scrollPulse {
+
+      0%,
+      100% {
+        opacity: .3;
+        transform: scaleY(1)
+      }
+
+      50% {
+        opacity: 1;
+        transform: scaleY(1.15)
+      }
+    }
 
     /* ── MARQUEE ────────────────────────────── */
-    .marquee-bar { background: var(--sage); padding: .75rem 0; overflow: hidden; }
-    .marquee-track { display: flex; white-space: nowrap; animation: marquee 28s linear infinite; }
+    .marquee-bar {
+      background: var(--sage);
+      padding: .75rem 0;
+      overflow: hidden;
+    }
+
+    .marquee-track {
+      display: flex;
+      white-space: nowrap;
+      animation: marquee 28s linear infinite;
+    }
+
     .marquee-track span {
       font-family: 'Cormorant Garamond', serif;
-      font-style: italic; font-size: .9rem; letter-spacing: .06em;
-      color: rgba(255,255,255,.9); padding: 0 1.8rem;
+      font-style: italic;
+      font-size: .9rem;
+      letter-spacing: .06em;
+      color: rgba(255, 255, 255, .9);
+      padding: 0 1.8rem;
     }
-    .marquee-track s { text-decoration: none; color: rgba(255,255,255,.35); padding: 0 .4rem; }
-    @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+    .marquee-track s {
+      text-decoration: none;
+      color: rgba(255, 255, 255, .35);
+      padding: 0 .4rem;
+    }
+
+    @keyframes marquee {
+      from {
+        transform: translateX(0)
+      }
+
+      to {
+        transform: translateX(-50%)
+      }
+    }
 
     /* ── SECTIONS ───────────────────────────── */
-    section { padding: 8rem 5vw; }
+    section {
+      padding: 8rem 5vw;
+    }
 
-    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
-    .reveal.in { opacity: 1; transform: translateY(0); }
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
 
-    .sec-label { font-size: .68rem; letter-spacing: .3em; text-transform: uppercase; color: var(--sage); margin-bottom: .9rem; font-weight: 500; }
-    .sec-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem, 5.5vw, 5rem); font-weight: 300; line-height: 1.05; color: var(--brown); }
-    .sec-title em { font-style: italic; color: var(--caramel); }
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .sec-label {
+      font-size: .68rem;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: .9rem;
+      font-weight: 500;
+    }
+
+    .sec-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 5.5vw, 5rem);
+      font-weight: 300;
+      line-height: 1.05;
+      color: var(--brown);
+    }
+
+    .sec-title em {
+      font-style: italic;
+      color: var(--caramel);
+    }
 
     /* ── ABOUT ──────────────────────────────── */
-    #about { background: var(--white); }
-    .about-wrap { max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.1fr; gap: 6rem; align-items: center; }
+    #about {
+      background: var(--white);
+    }
 
-    .about-visual { position: relative; }
+    .about-wrap {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+
+    .about-visual {
+      position: relative;
+    }
+
     .about-main-img {
-      width: 100%; aspect-ratio: 4/5; border-radius: 12px; overflow: hidden;
+      width: 100%;
+      aspect-ratio: 4/5;
+      border-radius: 12px;
+      overflow: hidden;
       background: linear-gradient(145deg, #E8C89A 0%, #C8855A 50%, #8DAF7E 100%);
       position: relative;
     }
-    .about-main-img img { width: 100%; height: 100%; object-fit: cover; }
+
+    .about-main-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     .about-ring {
-      position: absolute; top: -2rem; left: -2rem;
-      width: 110px; height: 110px; border-radius: 50%;
-      border: 1.5px solid rgba(92,122,78,.25);
+      position: absolute;
+      top: -2rem;
+      left: -2rem;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(92, 122, 78, .25);
     }
-    .about-ring::after { content: ''; position: absolute; inset: 10px; border-radius: 50%; border: 1.5px solid rgba(92,122,78,.12); }
+
+    .about-ring::after {
+      content: '';
+      position: absolute;
+      inset: 10px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(92, 122, 78, .12);
+    }
+
     .about-accent-img {
-      position: absolute; bottom: -2.5rem; right: -2.5rem;
-      width: 50%; aspect-ratio: 1; border-radius: 12px; overflow: hidden;
+      position: absolute;
+      bottom: -2.5rem;
+      right: -2.5rem;
+      width: 50%;
+      aspect-ratio: 1;
+      border-radius: 12px;
+      overflow: hidden;
       background: linear-gradient(135deg, #6B9B5E 0%, #5C7A4E 100%);
-      border: 5px solid var(--white); box-shadow: 0 8px 32px rgba(42,26,14,.12);
+      border: 5px solid var(--white);
+      box-shadow: 0 8px 32px rgba(42, 26, 14, .12);
     }
-    .about-accent-img img { width: 100%; height: 100%; object-fit: cover; }
 
-    .about-copy { padding: 1.5rem 0; }
-    .about-copy p { font-size: 1.02rem; line-height: 1.9; color: rgba(42,26,14,.68); margin-bottom: 1.5rem; }
+    .about-accent-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-    .about-stats { display: flex; gap: 2.5rem; margin-top: 3rem; padding-top: 2.5rem; border-top: 1px solid var(--border); }
-    .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 300; color: var(--caramel); line-height: 1; }
-    .stat-lbl { font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: rgba(42,26,14,.4); margin-top: .3rem; }
+    .about-copy {
+      padding: 1.5rem 0;
+    }
+
+    .about-copy p {
+      font-size: 1.02rem;
+      line-height: 1.9;
+      color: rgba(42, 26, 14, .68);
+      margin-bottom: 1.5rem;
+    }
+
+    .about-stats {
+      display: flex;
+      gap: 2.5rem;
+      margin-top: 3rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem;
+      font-weight: 300;
+      color: var(--caramel);
+      line-height: 1;
+    }
+
+    .stat-lbl {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: rgba(42, 26, 14, .4);
+      margin-top: .3rem;
+    }
 
     /* ── MENU ───────────────────────────────── */
-    #menu { background: var(--surface); }
-    .menu-top { max-width: 1240px; margin: 0 auto 4rem; }
-    .menu-grid { max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 1.5rem; }
+    #menu {
+      background: var(--surface);
+    }
+
+    .menu-top {
+      max-width: 1240px;
+      margin: 0 auto 4rem;
+    }
+
+    .menu-grid {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 1.5rem;
+    }
 
     .menu-card {
       background: var(--white);
       border: 1px solid var(--border);
-      border-radius: 14px; padding: 2.5rem 2.2rem;
-      position: relative; overflow: hidden;
-      box-shadow: 0 2px 16px rgba(42,26,14,.05);
+      border-radius: 14px;
+      padding: 2.5rem 2.2rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(42, 26, 14, .05);
       transition: transform .4s, box-shadow .4s;
     }
+
     .menu-card::after {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
       border-radius: 14px 14px 0 0;
     }
-    .menu-card:nth-child(1)::after { background: var(--caramel); }
-    .menu-card:nth-child(2)::after { background: var(--sage); }
-    .menu-card:nth-child(3)::after { background: var(--terra); }
-    .menu-card:nth-child(4)::after { background: var(--pandan); }
-    .menu-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(42,26,14,.1); }
 
-    .card-icon { font-size: 2rem; display: block; margin-bottom: 1.2rem; }
-    .card-cat { font-size: .62rem; letter-spacing: .3em; text-transform: uppercase; color: var(--sage); margin-bottom: .4rem; font-weight: 500; }
-    .card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 400; margin-bottom: 1.6rem; color: var(--brown); }
+    .menu-card:nth-child(1)::after {
+      background: var(--caramel);
+    }
 
-    .item-list { list-style: none; display: flex; flex-direction: column; }
-    .item-list li { padding: .62rem 0; border-bottom: 1px solid var(--border); font-size: .88rem; color: rgba(42,26,14,.65); display: flex; justify-content: space-between; align-items: flex-start; gap: .8rem; }
-    .item-list li:last-child { border-bottom: none; }
-    .item-name { flex: 1; }
-    .item-list li strong { display: block; color: var(--brown); font-weight: 400; }
-    .item-list li small { font-size: .74rem; color: rgba(42,26,14,.38); margin-top: .12rem; display: block; }
-    .item-price { color: var(--caramel); font-size: .85rem; font-weight: 500; white-space: nowrap; padding-top: .1rem; flex-shrink: 0; }
-    .item-tag { font-size: .6rem; letter-spacing: .08em; text-transform: uppercase; background: rgba(92,122,78,.12); color: var(--sage); border-radius: 4px; padding: .15rem .4rem; margin-left: .4rem; vertical-align: middle; font-weight: 600; }
+    .menu-card:nth-child(2)::after {
+      background: var(--sage);
+    }
+
+    .menu-card:nth-child(3)::after {
+      background: var(--terra);
+    }
+
+    .menu-card:nth-child(4)::after {
+      background: var(--pandan);
+    }
+
+    .menu-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(42, 26, 14, .1);
+    }
+
+    .card-icon {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 1.2rem;
+    }
+
+    .card-cat {
+      font-size: .62rem;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: .4rem;
+      font-weight: 500;
+    }
+
+    .card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.7rem;
+      font-weight: 400;
+      margin-bottom: 1.6rem;
+      color: var(--brown);
+    }
+
+    .item-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .item-list li {
+      padding: .62rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: .88rem;
+      color: rgba(42, 26, 14, .65);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: .8rem;
+    }
+
+    .item-list li:last-child {
+      border-bottom: none;
+    }
+
+    .item-name {
+      flex: 1;
+    }
+
+    .item-list li strong {
+      display: block;
+      color: var(--brown);
+      font-weight: 400;
+    }
+
+    .item-list li small {
+      font-size: .74rem;
+      color: rgba(42, 26, 14, .38);
+      margin-top: .12rem;
+      display: block;
+    }
+
+    .item-price {
+      color: var(--caramel);
+      font-size: .85rem;
+      font-weight: 500;
+      white-space: nowrap;
+      padding-top: .1rem;
+      flex-shrink: 0;
+    }
+
+    .item-tag {
+      font-size: .6rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      background: rgba(92, 122, 78, .12);
+      color: var(--sage);
+      border-radius: 4px;
+      padding: .15rem .4rem;
+      margin-left: .4rem;
+      vertical-align: middle;
+      font-weight: 600;
+    }
 
     /* ── FEATURE STRIP ──────────────────────── */
     .feature-strip {
       background: var(--brown);
       padding: 5rem 5vw;
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
+
     .feature-inner {
-      max-width: 1240px; width: 100%;
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 1px; background: rgba(255,255,255,.1);
-      border-radius: 16px; overflow: hidden;
+      max-width: 1240px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(255, 255, 255, .1);
+      border-radius: 16px;
+      overflow: hidden;
     }
+
     .feature-item {
-      background: rgba(255,255,255,.04);
-      padding: 3rem 2.5rem; text-align: center;
+      background: rgba(255, 255, 255, .04);
+      padding: 3rem 2.5rem;
+      text-align: center;
       transition: background .3s;
     }
-    .feature-item:hover { background: rgba(255,255,255,.08); }
-    .feature-emoji { font-size: 2.5rem; display: block; margin-bottom: 1.2rem; }
+
+    .feature-item:hover {
+      background: rgba(255, 255, 255, .08);
+    }
+
+    .feature-emoji {
+      font-size: 2.5rem;
+      display: block;
+      margin-bottom: 1.2rem;
+    }
+
     .feature-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem; font-weight: 300; color: var(--bg); margin-bottom: .5rem;
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: var(--bg);
+      margin-bottom: .5rem;
     }
-    .feature-desc { font-size: .85rem; color: rgba(251,247,242,.5); line-height: 1.65; }
+
+    .feature-desc {
+      font-size: .85rem;
+      color: rgba(251, 247, 242, .5);
+      line-height: 1.65;
+    }
 
     /* ── REVIEWS ────────────────────────────── */
-    #reviews { background: var(--white); }
+    #reviews {
+      background: var(--white);
+    }
+
     .reviews-top {
-      max-width: 1240px; margin: 0 auto 4rem;
-      display: flex; justify-content: space-between; align-items: flex-end;
-      flex-wrap: wrap; gap: 1.5rem;
+      max-width: 1240px;
+      margin: 0 auto 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 1.5rem;
     }
+
     .reviews-rating {
-      display: flex; align-items: center; gap: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
     }
+
     .rating-score {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 4.5rem; font-weight: 300; color: var(--brown); line-height: 1;
+      font-size: 4.5rem;
+      font-weight: 300;
+      color: var(--brown);
+      line-height: 1;
     }
-    .rating-meta { display: flex; flex-direction: column; gap: .3rem; }
-    .rating-stars { color: #F5A623; font-size: 1.1rem; letter-spacing: .05em; }
-    .rating-count { font-size: .78rem; color: rgba(42,26,14,.45); letter-spacing: .04em; }
+
+    .rating-meta {
+      display: flex;
+      flex-direction: column;
+      gap: .3rem;
+    }
+
+    .rating-stars {
+      color: #F5A623;
+      font-size: 1.1rem;
+      letter-spacing: .05em;
+    }
+
+    .rating-count {
+      font-size: .78rem;
+      color: rgba(42, 26, 14, .45);
+      letter-spacing: .04em;
+    }
+
     .rating-source {
-      display: flex; align-items: center; gap: .4rem;
-      font-size: .72rem; color: rgba(42,26,14,.4); margin-top: .2rem;
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+      font-size: .72rem;
+      color: rgba(42, 26, 14, .4);
+      margin-top: .2rem;
     }
+
     .google-g {
-      width: 16px; height: 16px; border-radius: 50%;
-      background: linear-gradient(135deg,#4285F4 0%,#34A853 35%,#FBBC05 65%,#EA4335 100%);
-      display: inline-block; flex-shrink: 0;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #4285F4 0%, #34A853 35%, #FBBC05 65%, #EA4335 100%);
+      display: inline-block;
+      flex-shrink: 0;
     }
+
     .reviews-link {
-      display: inline-flex; align-items: center; gap: .5rem;
-      color: var(--sage); text-decoration: none;
-      font-size: .8rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase;
-      border-bottom: 1px solid rgba(92,122,78,.3);
-      padding-bottom: .15rem; transition: color .3s, border-color .3s;
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      color: var(--sage);
+      text-decoration: none;
+      font-size: .8rem;
+      font-weight: 500;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(92, 122, 78, .3);
+      padding-bottom: .15rem;
+      transition: color .3s, border-color .3s;
     }
-    .reviews-link:hover { color: var(--caramel); border-color: rgba(200,133,90,.4); }
+
+    .reviews-link:hover {
+      color: var(--caramel);
+      border-color: rgba(200, 133, 90, .4);
+    }
 
     .reviews-grid {
-      max-width: 1240px; margin: 0 auto;
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
     }
+
     .review-card {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 14px; padding: 2.2rem;
-      display: flex; flex-direction: column; gap: 1.2rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
       transition: transform .35s, box-shadow .35s;
     }
-    .review-card:hover { transform: translateY(-4px); box-shadow: 0 10px 32px rgba(42,26,14,.08); }
-    .review-stars { color: #F5A623; font-size: 1rem; letter-spacing: .06em; }
+
+    .review-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 32px rgba(42, 26, 14, .08);
+    }
+
+    .review-stars {
+      color: #F5A623;
+      font-size: 1rem;
+      letter-spacing: .06em;
+    }
+
     .review-text {
-      font-size: .95rem; line-height: 1.75; color: rgba(42,26,14,.72);
+      font-size: .95rem;
+      line-height: 1.75;
+      color: rgba(42, 26, 14, .72);
       font-style: italic;
       flex: 1;
     }
-    .review-text::before { content: '\201C'; }
-    .review-text::after  { content: '\201D'; }
-    .review-author { display: flex; align-items: center; gap: .9rem; margin-top: auto; }
+
+    .review-text::before {
+      content: '\201C';
+    }
+
+    .review-text::after {
+      content: '\201D';
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: .9rem;
+      margin-top: auto;
+    }
+
     .review-avatar {
-      width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0;
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 600;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-weight: 600;
       color: var(--white);
     }
-    .av-1 { background: linear-gradient(135deg, var(--caramel), var(--terra)); }
-    .av-2 { background: linear-gradient(135deg, var(--sage), var(--pandan)); }
-    .av-3 { background: linear-gradient(135deg, var(--mid), var(--caramel)); }
-    .review-name { font-size: .88rem; font-weight: 500; color: var(--brown); }
-    .review-date { font-size: .75rem; color: rgba(42,26,14,.38); margin-top: .1rem; }
+
+    .av-1 {
+      background: linear-gradient(135deg, var(--caramel), var(--terra));
+    }
+
+    .av-2 {
+      background: linear-gradient(135deg, var(--sage), var(--pandan));
+    }
+
+    .av-3 {
+      background: linear-gradient(135deg, var(--mid), var(--caramel));
+    }
+
+    .review-name {
+      font-size: .88rem;
+      font-weight: 500;
+      color: var(--brown);
+    }
+
+    .review-date {
+      font-size: .75rem;
+      color: rgba(42, 26, 14, .38);
+      margin-top: .1rem;
+    }
 
     /* ── GALLERY ────────────────────────────── */
-    #gallery { padding-bottom: 0; background: var(--bg); }
-    .gallery-top { max-width: 1240px; margin: 0 auto 3rem; display: flex; justify-content: space-between; align-items: flex-end; }
-    .ig-link {
-      display: flex; align-items: center; gap: .5rem;
-      color: var(--sage); text-decoration: none;
-      font-size: .82rem; letter-spacing: .1em;
-      font-weight: 500; transition: opacity .3s;
+    #gallery {
+      padding-bottom: 0;
+      background: var(--bg);
     }
-    .ig-link:hover { opacity: .7; }
 
-    .gallery-grid { display: grid; grid-template-columns: repeat(6,1fr); gap: 6px; }
-    .g-item { position: relative; overflow: hidden; aspect-ratio: 1; cursor: pointer; border-radius: 4px; }
-    .g-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
-    .g-item:nth-child(5) { grid-column: span 2; }
+    .gallery-top {
+      max-width: 1240px;
+      margin: 0 auto 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
 
-    .g-inner { width: 100%; height: 100%; transition: transform .6s cubic-bezier(.25,.46,.45,.94); }
-    .g-item:hover .g-inner { transform: scale(1.06); }
+    .ig-link {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      color: var(--sage);
+      text-decoration: none;
+      font-size: .82rem;
+      letter-spacing: .1em;
+      font-weight: 500;
+      transition: opacity .3s;
+    }
 
-    .g-overlay {
-      position: absolute; inset: 0;
-      background: rgba(42,26,14,.35);
-      opacity: 0; transition: opacity .35s;
-      display: flex; align-items: flex-end; padding: 1.2rem;
+    .ig-link:hover {
+      opacity: .7;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 6px;
+    }
+
+    .g-item {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 1;
+      cursor: pointer;
       border-radius: 4px;
     }
-    .g-item:hover .g-overlay { opacity: 1; }
-    .g-overlay p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.05rem; color: rgba(255,255,255,.9); }
+
+    .g-item:nth-child(1) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    .g-item:nth-child(5) {
+      grid-column: span 2;
+    }
+
+    .g-inner {
+      width: 100%;
+      height: 100%;
+      transition: transform .6s cubic-bezier(.25, .46, .45, .94);
+    }
+
+    .g-item:hover .g-inner {
+      transform: scale(1.06);
+    }
+
+    .g-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(42, 26, 14, .35);
+      opacity: 0;
+      transition: opacity .35s;
+      display: flex;
+      align-items: flex-end;
+      padding: 1.2rem;
+      border-radius: 4px;
+    }
+
+    .g-item:hover .g-overlay {
+      opacity: 1;
+    }
+
+    .g-overlay p {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, .9);
+    }
 
     /* Warm, bright cafe-feel gradients */
-    .gp-1  { background: linear-gradient(145deg,#E8C49A,#C8855A 55%,#8B5A2B); }
-    .gp-2  { background: linear-gradient(145deg,#A8CB94,#6B9B5E 60%,#4A7040); }
-    .gp-3  { background: linear-gradient(145deg,#F2D9B8,#E8A870 55%,#C4754A); }
-    .gp-4  { background: linear-gradient(145deg,#D4E8C8,#8DAF7E 60%,#5C7A4E); }
-    .gp-5  { background: linear-gradient(145deg,#E8B898,#C4654A 55%,#9A3A2A); }
-    .gp-6  { background: linear-gradient(145deg,#C8E0B8,#8DAF7E 60%,#5C7A4E); }
-    .gp-7  { background: linear-gradient(145deg,#F0D8A8,#C8A060 55%,#8B5A2B); }
-    .gp-8  { background: linear-gradient(145deg,#BACEA8,#7A9A6A 60%,#4A6741); }
-    .gp-9  { background: linear-gradient(145deg,#F4D0A0,#C8855A 60%,#A06040); }
-    .gp-10 { background: linear-gradient(145deg,#B8D8A8,#5C7A4E 60%,#3A5A30); }
-    .gp-11 { background: linear-gradient(145deg,#EAC8A0,#C47A50 55%,#8B4A2A); }
-    .gp-12 { background: linear-gradient(145deg,#CCE0B8,#7A9A6A 60%,#4A6741); }
-    .gp-13 { background: linear-gradient(145deg,#F0C8A0,#D4854A 55%,#A05030); }
-    .gp-14 { background: linear-gradient(145deg,#B8CCA8,#6A8A5A 60%,#4A6741); }
+    .gp-1 {
+      background: linear-gradient(145deg, #E8C49A, #C8855A 55%, #8B5A2B);
+    }
+
+    .gp-2 {
+      background: linear-gradient(145deg, #A8CB94, #6B9B5E 60%, #4A7040);
+    }
+
+    .gp-3 {
+      background: linear-gradient(145deg, #F2D9B8, #E8A870 55%, #C4754A);
+    }
+
+    .gp-4 {
+      background: linear-gradient(145deg, #D4E8C8, #8DAF7E 60%, #5C7A4E);
+    }
+
+    .gp-5 {
+      background: linear-gradient(145deg, #E8B898, #C4654A 55%, #9A3A2A);
+    }
+
+    .gp-6 {
+      background: linear-gradient(145deg, #C8E0B8, #8DAF7E 60%, #5C7A4E);
+    }
+
+    .gp-7 {
+      background: linear-gradient(145deg, #F0D8A8, #C8A060 55%, #8B5A2B);
+    }
+
+    .gp-8 {
+      background: linear-gradient(145deg, #BACEA8, #7A9A6A 60%, #4A6741);
+    }
+
+    .gp-9 {
+      background: linear-gradient(145deg, #F4D0A0, #C8855A 60%, #A06040);
+    }
+
+    .gp-10 {
+      background: linear-gradient(145deg, #B8D8A8, #5C7A4E 60%, #3A5A30);
+    }
+
+    .gp-11 {
+      background: linear-gradient(145deg, #EAC8A0, #C47A50 55%, #8B4A2A);
+    }
+
+    .gp-12 {
+      background: linear-gradient(145deg, #CCE0B8, #7A9A6A 60%, #4A6741);
+    }
+
+    .gp-13 {
+      background: linear-gradient(145deg, #F0C8A0, #D4854A 55%, #A05030);
+    }
+
+    .gp-14 {
+      background: linear-gradient(145deg, #B8CCA8, #6A8A5A 60%, #4A6741);
+    }
 
     /* ── VISIT ──────────────────────────────── */
-    #visit { background: var(--white); }
-    .visit-top { max-width: 1240px; margin: 0 auto 4rem; }
-    .visit-grid { max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.6fr 1fr; gap: 1.5rem; }
+    #visit {
+      background: var(--white);
+    }
+
+    .visit-top {
+      max-width: 1240px;
+      margin: 0 auto 4rem;
+    }
+
+    .visit-grid {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.6fr 1fr;
+      gap: 1.5rem;
+    }
 
     .v-card {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 14px; padding: 2.6rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2.6rem;
     }
-    .v-card-icon { font-size: 1.6rem; margin-bottom: 1rem; display: block; }
-    .v-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; color: var(--brown); margin-bottom: 1.5rem; }
 
-    .hours-list { list-style: none; display: flex; flex-direction: column; }
+    .v-card-icon {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .v-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--brown);
+      margin-bottom: 1.5rem;
+    }
+
+    .hours-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+    }
+
     .hours-list li {
-      display: flex; justify-content: space-between; align-items: baseline;
-      font-size: .88rem; color: rgba(42,26,14,.68);
-      padding: .6rem 0; border-bottom: 1px solid var(--border); gap: .5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: .88rem;
+      color: rgba(42, 26, 14, .68);
+      padding: .6rem 0;
+      border-bottom: 1px solid var(--border);
+      gap: .5rem;
     }
-    .hours-list li:last-child { border-bottom: none; }
-    .h-day { color: rgba(42,26,14,.38); white-space: nowrap; flex-shrink: 0; }
-    .h-time { white-space: nowrap; }
 
-    .map-card { border-radius: 14px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 2px 16px rgba(42,26,14,.06); }
-    .map-card iframe { width: 100%; height: 100%; min-height: 320px; display: block; filter: saturate(80%) brightness(1.05); }
+    .hours-list li:last-child {
+      border-bottom: none;
+    }
 
-    .contact-list { list-style: none; display: flex; flex-direction: column; gap: 1.4rem; }
-    .c-label { font-size: .62rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(42,26,14,.35); display: block; margin-bottom: .3rem; }
-    .c-val { font-size: .9rem; color: rgba(42,26,14,.75); }
-    .c-val a { color: var(--caramel); text-decoration: none; transition: color .3s; }
-    .c-val a:hover { color: var(--terra); }
+    .h-day {
+      color: rgba(42, 26, 14, .38);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .h-time {
+      white-space: nowrap;
+    }
+
+    .map-card {
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 2px 16px rgba(42, 26, 14, .06);
+    }
+
+    .map-card iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+      display: block;
+      filter: saturate(80%) brightness(1.05);
+    }
+
+    .contact-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+
+    .c-label {
+      font-size: .62rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: rgba(42, 26, 14, .35);
+      display: block;
+      margin-bottom: .3rem;
+    }
+
+    .c-val {
+      font-size: .9rem;
+      color: rgba(42, 26, 14, .75);
+    }
+
+    .c-val a {
+      color: var(--caramel);
+      text-decoration: none;
+      transition: color .3s;
+    }
+
+    .c-val a:hover {
+      color: var(--terra);
+    }
 
     /* ── FOOTER ─────────────────────────────── */
-    footer { background: var(--brown); padding: 5rem 5vw 3rem; }
-    .footer-top { max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto 1fr; gap: 3rem; align-items: start; }
-    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 300; letter-spacing: .06em; color: var(--bg); }
-    .footer-logo span { color: var(--caramel); }
-    .footer-tagline { font-size: .78rem; color: rgba(251,247,242,.35); margin-top: .4rem; letter-spacing: .1em; }
-    .footer-links { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
-    .footer-links a { color: rgba(251,247,242,.4); text-decoration: none; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; transition: color .3s; }
-    .footer-links a:hover { color: var(--caramel); }
-    .footer-social { display: flex; gap: 1rem; justify-content: flex-end; align-items: flex-start; }
-    .social-btn {
-      width: 44px; height: 44px; border-radius: 50%;
-      border: 1px solid rgba(251,247,242,.15);
-      display: flex; align-items: center; justify-content: center;
-      color: rgba(251,247,242,.45); text-decoration: none; transition: all .3s;
+    footer {
+      background: var(--brown);
+      padding: 5rem 5vw 3rem;
     }
-    .social-btn:hover { border-color: var(--caramel); color: var(--caramel); transform: translateY(-2px); }
+
+    .footer-top {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      font-weight: 300;
+      letter-spacing: .06em;
+      color: var(--bg);
+    }
+
+    .footer-logo span {
+      color: var(--caramel);
+    }
+
+    .footer-tagline {
+      font-size: .78rem;
+      color: rgba(251, 247, 242, .35);
+      margin-top: .4rem;
+      letter-spacing: .1em;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .footer-links a {
+      color: rgba(251, 247, 242, .4);
+      text-decoration: none;
+      font-size: .78rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      transition: color .3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--caramel);
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 1rem;
+      justify-content: flex-end;
+      align-items: flex-start;
+    }
+
+    .social-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid rgba(251, 247, 242, .15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(251, 247, 242, .45);
+      text-decoration: none;
+      transition: all .3s;
+    }
+
+    .social-btn:hover {
+      border-color: var(--caramel);
+      color: var(--caramel);
+      transform: translateY(-2px);
+    }
+
     .footer-bottom {
-      max-width: 1240px; margin: 3rem auto 0;
-      padding-top: 2rem; border-top: 1px solid rgba(251,247,242,.08);
-      display: flex; justify-content: space-between;
-      font-size: .73rem; color: rgba(251,247,242,.22);
+      max-width: 1240px;
+      margin: 3rem auto 0;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(251, 247, 242, .08);
+      display: flex;
+      justify-content: space-between;
+      font-size: .73rem;
+      color: rgba(251, 247, 242, .22);
     }
 
     /* ── KEYFRAMES ──────────────────────────── */
-    @keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(24px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
 
     /* ── REDUCED MOTION ─────────────────────── */
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
-      html { scroll-behavior: auto; }
-      .reveal { opacity: 1; transform: none; }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
     }
 
     /* ── Unsplash illustration icons ───────────── */
     .card-icon-img {
-      width: 64px; height: 64px; border-radius: 12px;
-      object-fit: contain; padding: 6px;
+      width: 64px;
+      height: 64px;
+      border-radius: 12px;
+      object-fit: contain;
+      padding: 6px;
       background: var(--surface);
-      display: block; margin-bottom: 1.3rem;
+      display: block;
+      margin-bottom: 1.3rem;
     }
+
     .feature-img {
-      width: 88px; height: 88px; border-radius: 50%;
-      object-fit: contain; padding: 10px;
-      background: rgba(251,247,242,.12);
-      display: block; margin: 0 auto 1.2rem;
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      object-fit: contain;
+      padding: 10px;
+      background: rgba(251, 247, 242, .12);
+      display: block;
+      margin: 0 auto 1.2rem;
     }
+
     .stat-icon-img {
-      width: 56px; height: 56px; border-radius: 50%;
-      object-fit: contain; padding: 6px;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: contain;
+      padding: 6px;
       background: var(--surface);
-      display: block; margin-bottom: .45rem;
+      display: block;
+      margin-bottom: .45rem;
     }
+
     .v-card-icon-img {
-      width: 52px; height: 52px; border-radius: 12px;
-      object-fit: contain; padding: 6px;
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      object-fit: contain;
+      padding: 6px;
       background: var(--bg);
-      display: block; margin-bottom: 1rem;
+      display: block;
+      margin-bottom: 1rem;
     }
 
     /* ── Renovation notice modal ───────────────── */
     .reno-overlay {
       display: none;
-      position: fixed; inset: 0; z-index: 10050;
-      background: rgba(42,26,14,.55);
-      align-items: center; justify-content: center;
+      position: fixed;
+      inset: 0;
+      z-index: 10050;
+      background: rgba(42, 26, 14, .55);
+      align-items: center;
+      justify-content: center;
       padding: 1.5rem;
     }
+
     .reno-box {
       position: relative;
       background: var(--bg);
       border: 1px solid var(--border);
       border-radius: 16px;
-      max-width: 420px; width: 100%;
+      max-width: 420px;
+      width: 100%;
       padding: 2.6rem 2.2rem 2.2rem;
       text-align: center;
-      box-shadow: 0 24px 64px rgba(42,26,14,.3);
+      box-shadow: 0 24px 64px rgba(42, 26, 14, .3);
     }
-    .reno-icon { font-size: 2.2rem; margin-bottom: 1rem; display: block; }
+
+    .reno-icon {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
     .reno-box h2 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.9rem; font-weight: 500; color: var(--brown);
+      font-size: 1.9rem;
+      font-weight: 500;
+      color: var(--brown);
       margin-bottom: .9rem;
     }
+
     .reno-box p {
-      font-size: .92rem; line-height: 1.7; color: rgba(42,26,14,.7);
+      font-size: .92rem;
+      line-height: 1.7;
+      color: rgba(42, 26, 14, .7);
       margin-bottom: 1.6rem;
     }
-    .reno-box p strong { color: var(--caramel); }
-    .reno-btn {
-      background: var(--brown); color: var(--bg);
-      padding: .8rem 2.2rem; border-radius: 100px; border: none;
-      font-family: 'DM Sans', sans-serif; font-size: .8rem;
-      font-weight: 500; letter-spacing: .1em; text-transform: uppercase;
-      cursor: pointer; transition: background .3s, transform .3s;
+
+    .reno-box p strong {
+      color: var(--caramel);
     }
-    .reno-btn:hover { background: var(--caramel); transform: translateY(-2px); }
+
+    .reno-btn {
+      background: var(--brown);
+      color: var(--bg);
+      padding: .8rem 2.2rem;
+      border-radius: 100px;
+      border: none;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .8rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background .3s, transform .3s;
+    }
+
+    .reno-btn:hover {
+      background: var(--caramel);
+      transform: translateY(-2px);
+    }
+
     .reno-close {
-      position: absolute; top: .8rem; right: .9rem;
-      background: none; border: none; cursor: pointer;
-      font-size: 1.4rem; line-height: 1; color: rgba(42,26,14,.4);
+      position: absolute;
+      top: .8rem;
+      right: .9rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.4rem;
+      line-height: 1;
+      color: rgba(42, 26, 14, .4);
       padding: .3rem;
     }
-    .reno-close:hover { color: var(--terra); }
+
+    .reno-close:hover {
+      color: var(--terra);
+    }
 
     /* ── Gallery overlays always visible on touch ── */
     @media (pointer: coarse) {
       .g-overlay {
         opacity: 1;
-        background: linear-gradient(to top, rgba(42,26,14,.55) 0%, transparent 60%);
+        background: linear-gradient(to top, rgba(42, 26, 14, .55) 0%, transparent 60%);
         align-items: flex-end;
       }
     }
 
     /* ── Tablet and below (≤900px) ──────────────── */
     @media (max-width: 900px) {
+
       /* Nav */
-      #nav { padding: 1.2rem 5vw; }
-      #nav.scrolled { padding: .9rem 5vw; }
-      .hamburger { display: flex; }
-      .nav-cta { display: none; }
+      #nav {
+        padding: 1.2rem 5vw;
+      }
+
+      #nav.scrolled {
+        padding: .9rem 5vw;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
       .nav-links {
-        position: absolute; top: 100%; left: 0; right: 0;
-        flex-direction: column; gap: 0;
-        background: rgba(251,247,242,.98);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: rgba(251, 247, 242, .98);
         backdrop-filter: blur(20px);
-        max-height: 0; overflow: hidden;
+        max-height: 0;
+        overflow: hidden;
         transition: max-height .4s ease;
         border-bottom: 1px solid transparent;
       }
-      #nav.menu-open .nav-links { max-height: 380px; border-color: var(--border); }
-      .nav-links li { border-bottom: 1px solid var(--border); }
-      .nav-links a { display: block; padding: 1.1rem 6vw; font-size: 1rem; color: var(--brown); letter-spacing: .1em; }
+
+      #nav.menu-open .nav-links {
+        max-height: 380px;
+        border-color: var(--border);
+      }
+
+      .nav-links li {
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 1.1rem 6vw;
+        font-size: 1rem;
+        color: var(--brown);
+        letter-spacing: .1em;
+      }
 
       /* Sections */
-      section { padding: 4rem 5vw; }
+      section {
+        padding: 4rem 5vw;
+      }
 
       /* About */
-      .about-wrap { grid-template-columns: 1fr; gap: 2.5rem; }
-      .about-accent-img, .about-ring { display: none; }
+      .about-wrap {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .about-accent-img,
+      .about-ring {
+        display: none;
+      }
 
       /* Feature strip */
-      .feature-strip { padding: 3.5rem 5vw; }
-      .feature-inner { grid-template-columns: 1fr; }
-      .feature-item { padding: 2rem 2rem; }
+      .feature-strip {
+        padding: 3.5rem 5vw;
+      }
+
+      .feature-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-item {
+        padding: 2rem 2rem;
+      }
 
       /* Reviews */
-      .reviews-grid { grid-template-columns: 1fr; }
-      .reviews-top { flex-direction: column; align-items: flex-start; }
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .reviews-top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
       /* Gallery */
-      .gallery-grid { grid-template-columns: repeat(3, 1fr); gap: 4px; }
-      .g-item:nth-child(1) { grid-column: span 1; grid-row: span 1; }
-      .g-item:nth-child(5) { grid-column: span 1; }
+      .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4px;
+      }
+
+      .g-item:nth-child(1) {
+        grid-column: span 1;
+        grid-row: span 1;
+      }
+
+      .g-item:nth-child(5) {
+        grid-column: span 1;
+      }
 
       /* Visit */
-      .visit-grid { grid-template-columns: 1fr; }
-      .map-card { min-height: 260px; }
+      .visit-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .map-card {
+        min-height: 260px;
+      }
 
       /* Footer */
-      footer { padding: 3.5rem 5vw 2.5rem; }
-      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
-      .footer-social { justify-content: flex-start; }
-      .footer-bottom { flex-direction: column; gap: .5rem; }
+      footer {
+        padding: 3.5rem 5vw 2.5rem;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .footer-social {
+        justify-content: flex-start;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: .5rem;
+      }
     }
 
     /* ── Phone (≤600px) ─────────────────────────── */
     @media (max-width: 600px) {
+
       /* Nav */
-      .nav-logo { font-size: 1.65rem; }
+      .nav-logo {
+        font-size: 1.65rem;
+      }
 
       /* Hero */
-      .hero-inner { padding-top: 5.5rem; padding-left: 5vw; padding-right: 5vw; }
-      h1.hero-title { font-size: clamp(2.8rem, 11vw, 4.2rem); line-height: .95; }
-      .hero-sub { font-size: .7rem; letter-spacing: .1em; }
-      .hero-badge { font-size: .62rem; letter-spacing: .2em; margin-bottom: 1.6rem; }
-      .hero-cup svg { width: 95px; height: 80px; }
-      .hero-btns { flex-direction: column; width: 100%; max-width: 300px; }
-      .btn-fill, .btn-ghost { width: 100%; text-align: center; padding: 1rem 2rem; font-size: .88rem; }
+      .hero-inner {
+        padding-top: 5.5rem;
+        padding-left: 5vw;
+        padding-right: 5vw;
+      }
+
+      h1.hero-title {
+        font-size: clamp(2.8rem, 11vw, 4.2rem);
+        line-height: .95;
+      }
+
+      .hero-sub {
+        font-size: .7rem;
+        letter-spacing: .1em;
+      }
+
+      .hero-badge {
+        font-size: .62rem;
+        letter-spacing: .2em;
+        margin-bottom: 1.6rem;
+      }
+
+      .hero-cup svg {
+        width: 95px;
+        height: 80px;
+      }
+
+      .hero-btns {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .btn-fill,
+      .btn-ghost {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 2rem;
+        font-size: .88rem;
+      }
 
       /* Sections */
-      section { padding: 3.5rem 5vw; }
+      section {
+        padding: 3.5rem 5vw;
+      }
 
       /* Section headings */
-      .sec-title { font-size: clamp(2rem, 9vw, 2.8rem); }
-      .sec-label { font-size: .64rem; letter-spacing: .24em; }
+      .sec-title {
+        font-size: clamp(2rem, 9vw, 2.8rem);
+      }
+
+      .sec-label {
+        font-size: .64rem;
+        letter-spacing: .24em;
+      }
 
       /* About */
-      .about-main-img { aspect-ratio: 3/2; }
-      .about-copy p { font-size: .97rem; line-height: 1.85; }
-      .about-stats { flex-wrap: wrap; gap: 1.5rem; padding-top: 1.8rem; }
-      .stat-num { font-size: 2.5rem; }
-      .stat-lbl { font-size: .68rem; }
+      .about-main-img {
+        aspect-ratio: 3/2;
+      }
+
+      .about-copy p {
+        font-size: .97rem;
+        line-height: 1.85;
+      }
+
+      .about-stats {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        padding-top: 1.8rem;
+      }
+
+      .stat-num {
+        font-size: 2.5rem;
+      }
+
+      .stat-lbl {
+        font-size: .68rem;
+      }
 
       /* Menu */
-      .menu-card { padding: 1.8rem 1.5rem; }
-      .card-icon { font-size: 1.8rem; margin-bottom: 1rem; }
-      .card-title { font-size: 1.5rem; margin-bottom: 1.3rem; }
-      .item-list li { font-size: .92rem; padding: .7rem 0; }
-      .item-list li small { font-size: .78rem; }
+      .menu-card {
+        padding: 1.8rem 1.5rem;
+      }
+
+      .card-icon {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+      }
+
+      .card-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.3rem;
+      }
+
+      .item-list li {
+        font-size: .92rem;
+        padding: .7rem 0;
+      }
+
+      .item-list li small {
+        font-size: .78rem;
+      }
 
       /* Feature strip */
-      .feature-strip { padding: 3rem 5vw; }
-      .feature-item { padding: 1.8rem 1.5rem; }
-      .feature-emoji { font-size: 2rem; margin-bottom: .9rem; }
-      .feature-title { font-size: 1.3rem; }
-      .feature-desc { font-size: .9rem; }
+      .feature-strip {
+        padding: 3rem 5vw;
+      }
+
+      .feature-item {
+        padding: 1.8rem 1.5rem;
+      }
+
+      .feature-emoji {
+        font-size: 2rem;
+        margin-bottom: .9rem;
+      }
+
+      .feature-title {
+        font-size: 1.3rem;
+      }
+
+      .feature-desc {
+        font-size: .9rem;
+      }
 
       /* Reviews */
-      .reviews-rating { gap: 1.2rem; }
-      .rating-score { font-size: 3.5rem; }
-      .rating-stars { font-size: 1rem; }
-      .rating-count { font-size: .75rem; }
-      .review-card { padding: 1.6rem; }
-      .review-stars { font-size: .95rem; }
-      .review-text { font-size: .93rem; line-height: 1.75; }
-      .review-name { font-size: .85rem; }
-      .review-date { font-size: .72rem; }
-      .review-avatar { width: 34px; height: 34px; font-size: .9rem; }
+      .reviews-rating {
+        gap: 1.2rem;
+      }
+
+      .rating-score {
+        font-size: 3.5rem;
+      }
+
+      .rating-stars {
+        font-size: 1rem;
+      }
+
+      .rating-count {
+        font-size: .75rem;
+      }
+
+      .review-card {
+        padding: 1.6rem;
+      }
+
+      .review-stars {
+        font-size: .95rem;
+      }
+
+      .review-text {
+        font-size: .93rem;
+        line-height: 1.75;
+      }
+
+      .review-name {
+        font-size: .85rem;
+      }
+
+      .review-date {
+        font-size: .72rem;
+      }
+
+      .review-avatar {
+        width: 34px;
+        height: 34px;
+        font-size: .9rem;
+      }
 
       /* Gallery */
-      .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 4px; }
-      .g-item:nth-child(1) { grid-column: span 2; }
-      .g-item:nth-child(5) { grid-column: span 1; }
-      .gallery-top { flex-direction: column; gap: .8rem; align-items: flex-start; }
-      .g-overlay p { font-size: .9rem; }
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4px;
+      }
+
+      .g-item:nth-child(1) {
+        grid-column: span 2;
+      }
+
+      .g-item:nth-child(5) {
+        grid-column: span 1;
+      }
+
+      .gallery-top {
+        flex-direction: column;
+        gap: .8rem;
+        align-items: flex-start;
+      }
+
+      .g-overlay p {
+        font-size: .9rem;
+      }
 
       /* Visit */
-      .v-card { padding: 1.6rem; }
-      .v-card-icon { font-size: 1.4rem; }
-      .v-card h3 { font-size: 1.3rem; margin-bottom: 1.2rem; }
-      .hours-list li { font-size: .92rem; padding: .65rem 0; }
-      .c-label { font-size: .6rem; }
-      .c-val { font-size: .9rem; }
-      .map-card iframe { min-height: 220px; }
+      .v-card {
+        padding: 1.6rem;
+      }
+
+      .v-card-icon {
+        font-size: 1.4rem;
+      }
+
+      .v-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1.2rem;
+      }
+
+      .hours-list li {
+        font-size: .92rem;
+        padding: .65rem 0;
+      }
+
+      .c-label {
+        font-size: .6rem;
+      }
+
+      .c-val {
+        font-size: .9rem;
+      }
+
+      .map-card iframe {
+        min-height: 220px;
+      }
 
       /* Footer */
-      footer { padding: 3rem 5vw 2rem; }
-      .footer-logo { font-size: 2rem; }
-      .footer-tagline { font-size: .75rem; }
-      .footer-links a { font-size: .75rem; }
-      .footer-bottom { font-size: .7rem; }
-      .social-btn { width: 40px; height: 40px; }
+      footer {
+        padding: 3rem 5vw 2rem;
+      }
+
+      .footer-logo {
+        font-size: 2rem;
+      }
+
+      .footer-tagline {
+        font-size: .75rem;
+      }
+
+      .footer-links a {
+        font-size: .75rem;
+      }
+
+      .footer-bottom {
+        font-size: .7rem;
+      }
+
+      .social-btn {
+        width: 40px;
+        height: 40px;
+      }
     }
 
     /* ── Small phone (≤390px) ───────────────────── */
     @media (max-width: 390px) {
-      #nav { padding: 1rem 4vw; }
-      .nav-logo { font-size: 1.5rem; }
-      section { padding: 3rem 4vw; }
-      h1.hero-title { font-size: clamp(2.4rem, 12vw, 3.2rem); }
-      .hero-sub { letter-spacing: .06em; font-size: .67rem; }
-      .hero-cup { margin-bottom: 1.8rem; }
-      .hero-cup svg { width: 85px; height: 72px; }
-      .about-stats { gap: 1.2rem; }
-      .stat-num { font-size: 2.2rem; }
-      .menu-card { padding: 1.5rem 1.2rem; }
-      .v-card { padding: 1.4rem; }
+      #nav {
+        padding: 1rem 4vw;
+      }
+
+      .nav-logo {
+        font-size: 1.5rem;
+      }
+
+      section {
+        padding: 3rem 4vw;
+      }
+
+      h1.hero-title {
+        font-size: clamp(2.4rem, 12vw, 3.2rem);
+      }
+
+      .hero-sub {
+        letter-spacing: .06em;
+        font-size: .67rem;
+      }
+
+      .hero-cup {
+        margin-bottom: 1.8rem;
+      }
+
+      .hero-cup svg {
+        width: 85px;
+        height: 72px;
+      }
+
+      .about-stats {
+        gap: 1.2rem;
+      }
+
+      .stat-num {
+        font-size: 2.2rem;
+      }
+
+      .menu-card {
+        padding: 1.5rem 1.2rem;
+      }
+
+      .v-card {
+        padding: 1.4rem;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<a href="#main" class="skip-link">Skip to main content</a>
+  <a href="#main" class="skip-link">Skip to main content</a>
 
-<div class="reno-overlay" id="reno-overlay" role="dialog" aria-modal="true" aria-labelledby="reno-title">
-  <div class="reno-box">
-    <button class="reno-close" id="reno-close" aria-label="Close notice">&times;</button>
-    <span class="reno-icon" aria-hidden="true">🛠️</span>
-    <h2 id="reno-title">We're renovating!</h2>
-    <p>Zenius Coffee is temporarily closed for renovations and will reopen on <strong>26 September 2026</strong>. Thanks for your patience, we can't wait to welcome you back!</p>
-    <button class="reno-btn" id="reno-dismiss">Got it</button>
-  </div>
-</div>
-<script>
-(function () {
-  var CLOSE_UNTIL = new Date('2026-09-26T23:59:59+10:00');
-  if (new Date() > CLOSE_UNTIL) return;
-  var overlay = document.getElementById('reno-overlay');
-  if (!overlay) return;
-  function closeReno() {
-    overlay.style.display = 'none';
-    document.body.style.overflow = '';
-  }
-  overlay.style.display = 'flex';
-  document.body.style.overflow = 'hidden';
-  document.getElementById('reno-close').addEventListener('click', closeReno);
-  document.getElementById('reno-dismiss').addEventListener('click', closeReno);
-  overlay.addEventListener('click', function (e) { if (e.target === overlay) closeReno(); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeReno(); });
-})();
-</script>
-
-<div id="progress"></div>
-<div id="cur-dot"></div>
-<div id="cur-ring"></div>
-
-<!-- ══════════════════════════ NAV -->
-<nav id="nav" aria-label="Main navigation">
-  <a href="#" class="nav-logo">Zenius<span>.</span></a>
-  <ul class="nav-links" id="nav-links">
-    <li><a href="#about">Story</a></li>
-    <li><a href="#menu">Menu</a></li>
-    <li><a href="#gallery">Gallery</a></li>
-    <li><a href="#visit">Visit</a></li>
-  </ul>
-  <a href="booking.html" class="nav-cta">Book a Table</a>
-  <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-<main id="main">
-
-<!-- ══════════════════════════ HERO -->
-<section class="hero" id="home">
-  <canvas id="particle-canvas" aria-hidden="true"></canvas>
-  <div class="hero-inner">
-    <div class="hero-badge">Specialty Coffee &nbsp;·&nbsp; Brunch </div>
-    <h1 class="hero-title">Good coffee.<br><em>Great mornings.</em></h1>
-    <p class="hero-sub">96 Abercrombie Street Chippendale, Sydney &nbsp;·&nbsp; Mon to Fri 7am to 3pm &nbsp;·&nbsp; Sat to Sun 8am to 3pm<br>Kitchen closes at 2pm</p>
-
-    <div class="hero-cup" aria-hidden="true">
-      <svg width="130" height="110" viewBox="0 0 130 110" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g>
-          <path class="steam-path" d="M47 40 Q44 30 47 21 Q50 13 47 5" stroke="#C8855A" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-          <path class="steam-path" d="M65 42 Q62 32 65 23 Q68 15 65 7" stroke="#C8855A" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-          <path class="steam-path" d="M83 40 Q80 30 83 21 Q86 13 83 5" stroke="#C8855A" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-        </g>
-        <path d="M22 52 L34 96 H96 L108 52 Z" fill="#E8C49A" stroke="#C8855A" stroke-width="1.2"/>
-        <rect x="19" y="46" width="92" height="9" rx="4.5" fill="#F2D9B8" stroke="#C8855A" stroke-width="1.2"/>
-        <ellipse cx="65" cy="50.5" rx="43" ry="5.5" fill="#C8855A" opacity="0.6"/>
-        <path d="M55 50 Q55 46 59 46 Q65 46 65 52 Q65 46 71 46 Q75 46 75 50 Q75 56 65 62 Q55 56 55 50Z" fill="#FFFFFF" opacity="0.7"/>
-        <path d="M108 58 Q126 58 126 69 Q126 80 108 80" stroke="#C8855A" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-        <ellipse cx="65" cy="99" rx="52" ry="7" fill="#E8C49A" stroke="#C8855A" stroke-width="1"/>
-      </svg>
-    </div>
-
-    <div class="hero-btns">
-      <a href="booking.html" class="btn-fill">Book a Table</a>
-      <a href="#menu"        class="btn-ghost">Explore Menu</a>
+  <div class="reno-overlay" id="reno-overlay" role="dialog" aria-modal="true" aria-labelledby="reno-title">
+    <div class="reno-box">
+      <button class="reno-close" id="reno-close" aria-label="Close notice">&times;</button>
+      <span class="reno-icon" aria-hidden="true">🛠️</span>
+      <h2 id="reno-title">We're renovating!</h2>
+      <p>Zenius Coffee is temporarily closed for renovations and will reopen on <strong>26 September 2026</strong>.
+        Thanks for your patience, we can't wait to welcome you back!</p>
+      <button class="reno-btn" id="reno-dismiss">Got it</button>
     </div>
   </div>
-  <div class="hero-scroll" aria-hidden="true">
-    <div class="scroll-line"></div>
-    <span>Scroll</span>
-  </div>
-</section>
-
-<!-- ══════════════════════════ MARQUEE -->
-<div class="marquee-bar" aria-hidden="true">
-  <div class="marquee-track">
-    <span>Specialty Coffee</span><s>✦</s>
-    <span>Latte Art</span><s>✦</s>
-    <span>Brunch All Day</span><s>✦</s>
-    <span>Chippendale's Finest</span><s>✦</s>
-    <span>Zenius Blend</span><s>✦</s>
-    <span>Dog Friendly</span><s>✦</s>
-    <span>Ranked #1 in Chippendale</span><s>✦</s>
-    <span>Open 7 Days</span><s>✦</s>
-    <span>Specialty Coffee</span><s>✦</s>
-    <span>Latte Art</span><s>✦</s>
-    <span>Brunch All Day</span><s>✦</s>
-    <span>Chippendale's Finest</span><s>✦</s>
-    <span>Zenius Blend</span><s>✦</s>
-    <span>Dog Friendly</span><s>✦</s>
-    <span>Ranked #1 in Chippendale</span><s>✦</s>
-    <span>Open 7 Days</span><s>✦</s>
-  </div>
-</div>
-
-<!-- ══════════════════════════ ABOUT -->
-<section id="about">
-  <div class="about-wrap">
-    <div class="about-visual reveal">
-      <div class="about-ring"></div>
-      <div class="about-main-img">
-        <img src="images/main.jpg" alt="Inside Zenius Coffee, Chippendale" onerror="this.style.display='none'">
-      </div>
-      <div class="about-accent-img">
-        <img src="images/latte-art.jpg" alt="Zenius latte art" onerror="this.style.display='none'">
-      </div>
-    </div>
-    <div class="about-copy">
-      <div class="sec-label reveal">Our Story</div>
-      <h2 class="sec-title reveal">A corner of<br><em>Chippendale</em> we call home</h2>
-      <p class="reveal" style="transition-delay:.15s">Big windows, warm bricks, the smell of fresh coffee and a community that feels like family. That's Zenius, your favourite morning stop on Abercrombie Street.</p>
-      <p class="reveal" style="transition-delay:.28s">Our baristas pour with purpose, crafting everything from silky flat whites to incredible latte art featuring seahorses, bunnies, bees and beyond, using premium Zenius blend beans.</p>
-      <p class="reveal" style="transition-delay:.41s">Pull up a seat out front, bring your dog, order the pandan hotcakes, and stay a while. This is what a good morning looks like.</p>
-      <div class="about-stats reveal" style="transition-delay:.55s">
-        <div>
-          <div class="stat-num">#2</div>
-          <div class="stat-lbl">In Chippendale</div>
-        </div>
-        <div>
-          <div class="stat-num">7am</div>
-          <div class="stat-lbl">Open Weekdays</div>
-        </div>
-        <div>
-          <img class="stat-icon-img" src="https://images.unsplash.com/vector-1740286698618-7f01b97f6899?w=200&q=80" alt="Dog friendly">
-          <div class="stat-lbl">Dog Friendly</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════ MENU -->
-<section id="menu">
-  <div class="menu-top">
-    <div class="sec-label reveal">What We Serve</div>
-    <h2 class="sec-title reveal">Our <em>Menu</em></h2>
-  </div>
-  <div class="menu-grid">
-
-    <!-- Coffee & Hot Drinks -->
-    <div class="menu-card reveal">
-      <img class="card-icon-img" src="https://images.unsplash.com/vector-1739984382388-03d3e9f44aa1?w=200&q=80" alt="Coffee">
-      <div class="card-cat">Drinks</div>
-      <h3 class="card-title">Coffee &amp; Hot</h3>
-      <ul class="item-list">
-        <li><div class="item-name"><strong>Black / Long Black</strong></div><span class="item-price">$5 / $5.5</span></li>
-        <li><div class="item-name"><strong>White / Flat White</strong></div><span class="item-price">$5 / $5.5</span></li>
-        <li><div class="item-name"><strong>Dirty Chai</strong></div><span class="item-price">$5.5 / $6</span></li>
-        <li><div class="item-name"><strong>Mocha</strong></div><span class="item-price">$5.5 / $6</span></li>
-        <li><div class="item-name"><strong>Hot Chocolate</strong></div><span class="item-price">$5 / $5.5</span></li>
-        <li><div class="item-name"><strong>Sticky Chai on Soy</strong></div><span class="item-price">$6.5</span></li>
-        <li><div class="item-name"><strong>Taro / Ube Latte</strong></div><span class="item-price">$6.5</span></li>
-        <li><div class="item-name"><strong>Red Velvet Latte</strong></div><span class="item-price">$6.5</span></li>
-        <li><div class="item-name"><strong>Turmeric Latte</strong></div><span class="item-price">$6.5</span></li>
-        <li><div class="item-name"><strong>Affogato</strong></div><span class="item-price">$6.5</span></li>
-        <li><div class="item-name"><strong>Matcha Hikari</strong><small>Japanese specialty, unsweetened</small></div><span class="item-price">$6.5</span></li>
-        <li><div class="item-name"><strong>Iced Matcha / Hojicha</strong></div><span class="item-price">$8</span></li>
-        <li><div class="item-name"><strong>Tea</strong><small>Earl Grey, English Breakfast, Green, Peppermint, Chamomile, Lemongrass Ginger</small></div><span class="item-price">$4.5</span></li>
-      </ul>
-    </div>
-
-    <!-- Cold Drinks -->
-    <div class="menu-card reveal" style="transition-delay:.1s">
-      <img class="card-icon-img" src="https://images.unsplash.com/vector-1768808722591-dd648eb55075?w=200&q=80" alt="Cold drinks">
-      <div class="card-cat">Cold</div>
-      <h3 class="card-title">Cold Drinks</h3>
-      <ul class="item-list">
-        <li><div class="item-name"><strong>Cold Brew</strong></div><span class="item-price">$6.5</span></li>
-        <li><div class="item-name"><strong>Iced Latte</strong></div><span class="item-price">$6.5</span></li>
-        <li><div class="item-name"><strong>Iced Long Black</strong></div><span class="item-price">$6.5</span></li>
-        <li><div class="item-name"><strong>Iced Mocha / Chocolate</strong></div><span class="item-price">$7</span></li>
-        <li><div class="item-name"><strong>Iced Chai / Taro / Ube</strong></div><span class="item-price">$7</span></li>
-        <li><div class="item-name"><strong>Milkshakes</strong><small>Chocolate, Strawberry, Caramel, Peanut Butter, Nutella, Banana, Coffee</small></div><span class="item-price">$7</span></li>
-        <li><div class="item-name"><strong>Fresh Juices</strong><small>Immunity, Detox, Liver Scrubber</small></div><span class="item-price">$8.5</span></li>
-        <li><div class="item-name"><strong>Smoothies</strong><small>Banana, Mix Berries</small></div><span class="item-price">$9</span></li>
-      </ul>
-    </div>
-
-    <!-- Brunch -->
-    <div class="menu-card reveal" style="transition-delay:.2s">
-      <img class="card-icon-img" src="https://images.unsplash.com/vector-1753248836371-f35d1044d920?w=200&q=80" alt="Brunch">
-      <div class="card-cat">Food</div>
-      <h3 class="card-title">Brunch</h3>
-      <ul class="item-list">
-        <li><div class="item-name"><strong>Avocado on Toast</strong><small>Add egg $3.5, bacon $5, halloumi $5</small></div><span class="item-price">$9</span></li>
-        <li><div class="item-name"><strong>Brekkie Rock N Roll</strong><small>Potato bun, bacon, egg, spinach, avo, cheese, hashbrown</small></div><span class="item-price">$17.9</span></li>
-        <li><div class="item-name"><strong>Say Haloumi</strong><small>Potato bun, haloumi, egg, avo, caramelised onions, spinach, hashbrown</small></div><span class="item-price">$17.9</span></li>
-        <li><div class="item-name"><strong>Secret Corn</strong><small>Haloumi fritters, avo, poached egg, tomato salsa, green goddess dressing</small></div><span class="item-price">$22.9</span></li>
-        <li><div class="item-name"><strong>Pandan Pancake</strong><small>Seasonal fruits, pistachio, maple syrup, rainbow ice cream</small></div><span class="item-price">$22.9</span></li>
-        <li><div class="item-name"><strong>Best Fricken Burger</strong><small>Buttermilk fried chicken, pickles, coleslaw, jack cheese, sriracha hollandaise</small></div><span class="item-price">$21.9</span></li>
-        <li><div class="item-name"><strong>Avo and Smoked Trout on Toast</strong><small>Smashed avo, smoked trout, goat feta, poached egg, tomato salsa, dukkah</small></div><span class="item-price">$25.9</span></li>
-        <li><div class="item-name"><strong>Benedict</strong><small>Smoked trout, spinach, 2 poached eggs, sriracha hollandaise on turkish</small></div><span class="item-price">$25.9</span></li>
-        <li><div class="item-name"><strong>Shakshuka</strong><small>Baked eggs, tomato, capsicum, goat feta, mild chorizo, garlic sourdough</small></div><span class="item-price">$25.9</span></li>
-        <li><div class="item-name"><strong>Chilli Billy</strong><small>Scrambled eggs, Zenius chilli sambal, mushrooms, goat feta, roti paratha</small></div><span class="item-price">$26.9</span></li>
-        <li><div class="item-name"><strong>I'm Starving</strong><small>2 poached eggs, kale, grilled tomato, mushrooms, avo, chorizo, bacon, hashbrown w/ sourdough</small></div><span class="item-price">$31.9</span></li>
-      </ul>
-    </div>
-
-    <!-- Bowls -->
-    <div class="menu-card reveal" style="transition-delay:.3s">
-      <img class="card-icon-img" src="https://images.unsplash.com/vector-1773466975995-31ba8b871cb1?w=200&q=80" alt="Bowls">
-      <div class="card-cat">Bowls</div>
-      <h3 class="card-title">Bowls</h3>
-      <ul class="item-list">
-        <li><div class="item-name"><strong>Famous Beef Rendang Bowl</strong><small>Slow cooked beef, indo spices, broccoli, pickled cucumber, fried egg, brown rice</small></div><span class="item-price">$24.9</span></li>
-        <li><div class="item-name"><strong>Cauliflower Bowl</strong><small>Fried cauliflower, quinoa, almond, pomegranate, crispy kale, beetroot hummus, avocado <span class="item-tag">V GF</span></small></div><span class="item-price">$22.9</span></li>
-        <li><div class="item-name"><strong>Soba Salmon Bowl</strong><small>Cold soba noodles, sesame dressing, pickle cucumber, avocado, edamame, ponzu grilled salmon</small></div><span class="item-price">$26.9</span></li>
-        <li><div class="item-name"><strong>Green Bowl</strong><small>Sauteed quinoa, broccoli, asparagus, kale, labneh, poached egg, edamame, chermoula <span class="item-tag">V GF</span></small></div><span class="item-price">$22.9</span></li>
-        <li style="flex-direction:column;gap:.5rem;border-top:1px solid var(--border);margin-top:.3rem;">
-          <strong style="color:var(--sage);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;">Sides</strong>
-          <small>Bacon / Chorizo / Halloumi $5 &nbsp;·&nbsp; Mushroom / Goat Feta / Avocado $4.5 &nbsp;·&nbsp; Egg / Cheese / Hashbrown $3.5 &nbsp;·&nbsp; Chicken $6 &nbsp;·&nbsp; Smoked Trout $7 &nbsp;·&nbsp; Grilled Salmon $7 &nbsp;·&nbsp; Fries $7 &nbsp;·&nbsp; Sweet Potato Fries $9</small>
-        </li>
-      </ul>
-      <p style="font-size:.7rem;color:rgba(42,26,14,.32);margin-top:1.2rem;line-height:1.65;">15% surcharge on weekends and public holidays &nbsp;·&nbsp; Free range eggs only &nbsp;·&nbsp; Menu items cannot be substituted</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- ══════════════════════════ FEATURE STRIP -->
-<div class="feature-strip">
-  <div class="feature-inner">
-    <div class="feature-item reveal">
-      <img class="feature-img" src="https://images.unsplash.com/vector-1758089442829-f7557849a4c4?w=200&q=80" alt="Latte art">
-      <div class="feature-title">Latte Art</div>
-      <div class="feature-desc">Every cup is handcrafted. Seahorses, bees, bunnies. Ask your barista.</div>
-    </div>
-    <div class="feature-item reveal" style="transition-delay:.12s">
-      <img class="feature-img" src="https://images.unsplash.com/vector-1771425300685-0388d3c401e6?w=200&q=80" alt="Outdoor seating">
-      <div class="feature-title">Outdoor Seating</div>
-      <div class="feature-desc">Spill out onto Abercrombie Street and soak up the Chippendale morning sun.</div>
-    </div>
-    <div class="feature-item reveal" style="transition-delay:.24s">
-      <img class="feature-img" src="https://images.unsplash.com/vector-1740286698618-7f01b97f6899?w=200&q=80" alt="Dog friendly">
-      <div class="feature-title">Dog Friendly</div>
-      <div class="feature-desc">Four-legged regulars welcome. Puppy cinos on the house.</div>
-    </div>
-  </div>
-</div>
-
-<!-- ══════════════════════════ REVIEWS -->
-<section id="reviews">
-  <div class="reviews-top">
-    <div>
-      <div class="sec-label reveal">What People Say</div>
-      <h2 class="sec-title reveal">Google <em>Reviews</em></h2>
-    </div>
-    <div class="reviews-rating reveal">
-      <div class="rating-score">4.8</div>
-      <div class="rating-meta">
-        <div class="rating-stars">★★★★★</div>
-        <div class="rating-count">Based on 250+ reviews</div>
-        <div class="rating-source">
-          <span class="google-g"></span> Google Reviews
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="reviews-grid">
-
-    <div class="review-card reveal">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">Hands down the best coffee in Chippendale. Poppy and Enzen are both amazing, warm, friendly, and they somehow remembered my order after just two days. The vibe is always welcoming, and the coffee is consistently perfect. Zenius has definitely become my go-to spot.</p>
-      <div class="review-author">
-        <div class="review-avatar av-3">S</div>
-        <div>
-          <div class="review-name">Saul Edwards</div>
-          <div class="review-date">6 months ago · Google</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="review-card reveal" style="transition-delay:.1s">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">The matcha was yum!! My friend loved her burger too. WiFi and seating was perfect to do some work at. Thanks to the staff for being so beyond kind.</p>
-      <div class="review-author">
-        <div class="review-avatar av-1">S</div>
-        <div>
-          <div class="review-name">Sophie Jullienne</div>
-          <div class="review-date">1 month ago · Google</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="review-card reveal" style="transition-delay:.2s">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">My favourite shakshouka! And they're always really nice when I need vegetarian menu accommodations. Consistently great food and a genuinely welcoming atmosphere every single visit.</p>
-      <div class="review-author">
-        <div class="review-avatar av-2">M</div>
-        <div>
-          <div class="review-name">Mik</div>
-          <div class="review-date">1 month ago · Google</div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <div style="text-align:center; margin-top:3rem;" class="reveal" style="transition-delay:.3s">
-    <a href="https://www.google.com/maps/place/ZENIUS/@-33.8919618,151.1953813,17z/data=!4m8!3m7!1s0x6b12b00af7f93765:0xe3d77d3b2b3f4a4a!8m2!3d-33.8919618!4d151.1953813!9m1!1b1" target="_blank" rel="noopener" class="reviews-link">
-      Read all reviews on Google
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-    </a>
-  </div>
-</section>
-
-<!-- ══════════════════════════ GALLERY -->
-<section id="gallery">
-  <div class="gallery-top">
-    <div>
-      <div class="sec-label reveal">From Our World</div>
-      <h2 class="sec-title reveal"><em>Gallery</em></h2>
-    </div>
-    <a href="https://www.instagram.com/zeniuschippendale/" target="_blank" rel="noopener" class="ig-link reveal">
-      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-      </svg>
-      @zeniuschippendale
-    </a>
-  </div>
-  <div class="gallery-grid">
-    <div class="g-item reveal">
-      <div class="g-inner gp-1"><img src="images/gallery-1.jpg" alt="Zenius latte art" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
-      <div class="g-overlay"><p>Latte Art</p></div>
-    </div>
-    <div class="g-item reveal" style="transition-delay:.07s">
-      <div class="g-inner gp-2"><img src="images/gallery-2.jpg" alt="Zenius brunch" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
-      <div class="g-overlay"><p>Weekend Brunch</p></div>
-    </div>
-    <div class="g-item reveal" style="transition-delay:.14s">
-      <div class="g-inner gp-3"><img src="images/gallery-3.jpg" alt="Morning coffee" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
-      <div class="g-overlay"><p>Morning Brew</p></div>
-    </div>
-    <div class="g-item reveal" style="transition-delay:.21s">
-      <div class="g-inner gp-4"><img src="images/gallery-4.jpg" alt="Pandan hotcakes" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
-      <div class="g-overlay"><p>Pandan Hotcakes</p></div>
-    </div>
-    <div class="g-item reveal" style="transition-delay:.28s">
-      <div class="g-inner gp-5"><img src="images/gallery-5.jpg" alt="Cafe atmosphere" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
-      <div class="g-overlay"><p>Good Vibes</p></div>
-    </div>
-    <div class="g-item reveal" style="transition-delay:.35s">
-      <div class="g-inner gp-6"><img src="images/gallery-6.jpg" alt="Alfresco seating" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
-      <div class="g-overlay"><p>Alfresco</p></div>
-    </div>
-    <div class="g-item reveal" style="transition-delay:.42s">
-      <div class="g-inner gp-7"><img src="images/gallery-7.jpg" alt="Acai bowl" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
-      <div class="g-overlay"><p>Acai Bowl</p></div>
-    </div>
-    <div class="g-item reveal" style="transition-delay:.49s">
-      <div class="g-inner gp-8"><img src="images/gallery-8.jpg" alt="Coffee craft" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
-      <div class="g-overlay"><p>The Craft</p></div>
-    </div>
-    <div class="g-item reveal" style="transition-delay:.56s">
-      <div class="g-inner gp-9"><img src="images/gallery-9.jpg" alt="Zenius cafe" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
-      <div class="g-overlay"><p>Morning Light</p></div>
-    </div>
-    <div class="g-item reveal" style="transition-delay:.63s">
-      <div class="g-inner gp-10"><img src="images/gallery-10.jpg" alt="Zenius coffee" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
-      <div class="g-overlay"><p>Fresh Brew</p></div>
-    </div>
-    <div class="g-item reveal" style="transition-delay:.70s">
-      <div class="g-inner gp-11"><img src="images/gallery-11.jpg" alt="Zenius food" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
-      <div class="g-overlay"><p>House Favourite</p></div>
-    </div>
-    <div class="g-item reveal" style="transition-delay:.77s">
-      <div class="g-inner gp-12"><img src="images/gallery-12.jpg" alt="Zenius brunch plate" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
-      <div class="g-overlay"><p>Weekend Plate</p></div>
-    </div>
-    <div class="g-item reveal" style="transition-delay:.91s">
-      <div class="g-inner gp-14"><img src="images/gallery-14.jpg" alt="Zenius vibes" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
-      <div class="g-overlay"><p>Chippendale Vibes</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════ VISIT -->
-<section id="visit">
-  <div class="visit-top">
-    <div class="sec-label reveal">Come Say Hi</div>
-    <h2 class="sec-title reveal">Find <em>Us</em></h2>
-  </div>
-  <div class="visit-grid">
-    <div class="v-card reveal">
-      <img class="v-card-icon-img" src="https://images.unsplash.com/vector-1743008344420-9eb252030d79?w=200&q=80" alt="Opening hours">
-      <h3>Hours</h3>
-      <ul class="hours-list">
-        <li><span class="h-day">Monday</span>    <span class="h-time">7am to 3pm</span></li>
-        <li><span class="h-day">Tuesday</span>   <span class="h-time">7am to 3pm</span></li>
-        <li><span class="h-day">Wednesday</span> <span class="h-time">7am to 3pm</span></li>
-        <li><span class="h-day">Thursday</span>  <span class="h-time">7am to 3pm</span></li>
-        <li><span class="h-day">Friday</span>    <span class="h-time">7am to 3pm</span></li>
-        <li><span class="h-day">Saturday</span>  <span class="h-time">8am to 3pm</span></li>
-        <li><span class="h-day">Sunday</span>    <span class="h-time">8am to 3pm</span></li>
-        <li style="border-top:1px solid var(--border);margin-top:.3rem;padding-top:.7rem;"><span class="h-day" style="color:var(--terra);">Kitchen</span> <span class="h-time" style="color:var(--terra);font-weight:500;">Closes at 2pm daily</span></li>
-      </ul>
-    </div>
-    <div class="map-card reveal" style="transition-delay:.12s">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.8551!2d151.19538!3d-33.89196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12b00af7f93765%3A0xe3d77d3b2b3f4a4a!2s96%20Abercrombie%20St%2C%20Chippendale%20NSW%202008!5e0!3m2!1sen!2sau!4v1"
-        loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-        title="Zenius Coffee at 96 Abercrombie St, Chippendale">
-      </iframe>
-    </div>
-    <div class="v-card reveal" style="transition-delay:.24s">
-      <img class="v-card-icon-img" src="https://images.unsplash.com/vector-1739952585073-547101f0eebd?w=200&q=80" alt="Location">
-      <h3>Contact</h3>
-      <ul class="contact-list">
-        <li>
-          <span class="c-label">Address</span>
-          <span class="c-val">96 Abercrombie Street<br>Chippendale NSW 2008</span>
-        </li>
-        <li>
-          <span class="c-label">Phone</span>
-          <span class="c-val"><a href="tel:+61289578415">+61 2 8957 8415</a></span>
-        </li>
-        <li>
-          <span class="c-label">Email</span>
-          <span class="c-val"><a href="mailto:zeniuscoffee@gmail.com">zeniuscoffee@gmail.com</a></span>
-        </li>
-        <li>
-          <span class="c-label">Instagram</span>
-          <span class="c-val"><a href="https://www.instagram.com/zeniuschippendale/" target="_blank" rel="noopener">@zeniuschippendale</a></span>
-        </li>
-        <li>
-          <span class="c-label">TikTok</span>
-          <span class="c-val"><a href="https://www.tiktok.com/@zeniuscoffee" target="_blank" rel="noopener">@zeniuscoffee</a></span>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<!-- ══════════════════════════ FOOTER -->
-<footer>
-  <div class="footer-top">
-    <div>
-      <div class="footer-logo">Zenius<span>.</span></div>
-      <div class="footer-tagline"> Specialty Coffee &nbsp;·&nbsp; Brunch</div>
-    </div>
-    <div class="footer-links" aria-label="Footer links">
-      <a href="#about">Story</a>
-      <a href="#menu">Menu</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#visit">Visit</a>
-    </div>
-    <div class="footer-social">
-      <a href="https://www.instagram.com/zeniuschippendale/" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-      </a>
-      <a href="https://www.tiktok.com/@zeniuscoffee" target="_blank" rel="noopener" class="social-btn" aria-label="TikTok">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34l-.04-9.02a8.19 8.19 0 004.79 1.52V4.38a4.85 4.85 0 01-1-.31z"/></svg>
-      </a>
-      <a href="https://www.facebook.com/zeniuscoffee/" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-      </a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>&copy; <span id="yr"></span> Zenius Coffee. All rights reserved.</span>
-    <span>96 Abercrombie Street, Chippendale NSW 2008</span>
-  </div>
-</footer>
-
-<script>
-  var isTouch        = window.matchMedia('(pointer: coarse)').matches;
-  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  document.getElementById('yr').textContent = new Date().getFullYear();
-
-  /* ── Scroll progress + nav ── */
-  var progressEl = document.getElementById('progress');
-  var navEl      = document.getElementById('nav');
-  window.addEventListener('scroll', function () {
-    var s = window.scrollY, t = document.documentElement.scrollHeight - window.innerHeight;
-    progressEl.style.width = (s / t * 100) + '%';
-    navEl.classList.toggle('scrolled', s > 60);
-  }, { passive: true });
-
-  /* ── Hamburger ── */
-  var hamburger = document.getElementById('hamburger');
-  hamburger.addEventListener('click', function () {
-    var open = navEl.classList.toggle('menu-open');
-    hamburger.setAttribute('aria-expanded', String(open));
-  });
-  document.querySelectorAll('.nav-links a').forEach(function (l) {
-    l.addEventListener('click', function () {
-      navEl.classList.remove('menu-open');
-      hamburger.setAttribute('aria-expanded', 'false');
-    });
-  });
-
-  /* ── Custom cursor ── */
-  if (!isTouch) {
-    var dot = document.getElementById('cur-dot'), ring = document.getElementById('cur-ring');
-    var mx = 0, my = 0, rx = 0, ry = 0;
-    document.addEventListener('mousemove', function (e) { mx = e.clientX; my = e.clientY; });
-    document.addEventListener('mouseleave', function () { dot.style.opacity = '0'; ring.style.opacity = '0'; });
-    document.addEventListener('mouseenter', function () { dot.style.opacity = '1'; ring.style.opacity = '1'; });
-    (function tick() {
-      rx += (mx - rx) * 0.11; ry += (my - ry) * 0.11;
-      dot.style.left = mx + 'px'; dot.style.top = my + 'px';
-      ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
-      requestAnimationFrame(tick);
+  <script>
+    (function () {
+      var CLOSE_UNTIL = new Date('2026-09-26T23:59:59+10:00');
+      if (new Date() > CLOSE_UNTIL) return;
+      var overlay = document.getElementById('reno-overlay');
+      if (!overlay) return;
+      function closeReno() {
+        overlay.style.display = 'none';
+        document.body.style.overflow = '';
+      }
+      overlay.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+      document.getElementById('reno-close').addEventListener('click', closeReno);
+      document.getElementById('reno-dismiss').addEventListener('click', closeReno);
+      overlay.addEventListener('click', function (e) { if (e.target === overlay) closeReno(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeReno(); });
     })();
-  }
+  </script>
 
-  /* ── Scroll reveal ── */
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  <div id="progress"></div>
+  <div id="cur-dot"></div>
+  <div id="cur-ring"></div>
 
-  /* ── Particle canvas (light-mode coffee beans) ── */
-  if (!isTouch && !prefersReduced) {
-    var canvas = document.getElementById('particle-canvas');
-    var ctx = canvas.getContext('2d');
-    var W, H;
-    function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
-    resize();
-    window.addEventListener('resize', resize);
+  <!-- ══════════════════════════ NAV -->
+  <nav id="nav" aria-label="Main navigation">
+    <a href="#" class="nav-logo">Zenius<span>.</span></a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">Story</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a href="booking.html" class="nav-cta">Book a Table</a>
+    <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="nav-links"
+      aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-    var BEANS = Array.from({ length: 35 }, function () {
-      return {
-        x: Math.random() * window.innerWidth,
-        y: Math.random() * window.innerHeight,
-        r: Math.random() * 2.5 + 0.8,
-        vx: (Math.random() - 0.5) * 0.2,
-        vy: -(Math.random() * 0.35 + 0.1),
-        rot: Math.random() * Math.PI * 2,
-        rspd: (Math.random() - 0.5) * 0.015,
-        a: Math.random() * 0.18 + 0.04,
-        dot: Math.random() > 0.6
-      };
+  <main id="main">
+
+    <!-- ══════════════════════════ HERO -->
+    <section class="hero" id="home">
+      <canvas id="particle-canvas" aria-hidden="true"></canvas>
+      <div class="hero-inner">
+        <div class="hero-badge">Specialty Coffee &nbsp;·&nbsp; Brunch </div>
+        <h1 class="hero-title">Good coffee.<br><em>Great mornings.</em></h1>
+        <p class="hero-sub">96 Abercrombie Street Chippendale, Sydney &nbsp;·&nbsp; Mon to Fri 7am to 3pm &nbsp;·&nbsp;
+          Sat to Sun 8am to 3pm<br>Kitchen closes at 2pm</p>
+
+        <div class="hero-cup" aria-hidden="true">
+          <svg width="130" height="110" viewBox="0 0 130 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g>
+              <path class="steam-path" d="M47 40 Q44 30 47 21 Q50 13 47 5" stroke="#C8855A" stroke-width="1.5"
+                stroke-linecap="round" fill="none" />
+              <path class="steam-path" d="M65 42 Q62 32 65 23 Q68 15 65 7" stroke="#C8855A" stroke-width="1.5"
+                stroke-linecap="round" fill="none" />
+              <path class="steam-path" d="M83 40 Q80 30 83 21 Q86 13 83 5" stroke="#C8855A" stroke-width="1.5"
+                stroke-linecap="round" fill="none" />
+            </g>
+            <path d="M22 52 L34 96 H96 L108 52 Z" fill="#E8C49A" stroke="#C8855A" stroke-width="1.2" />
+            <rect x="19" y="46" width="92" height="9" rx="4.5" fill="#F2D9B8" stroke="#C8855A" stroke-width="1.2" />
+            <ellipse cx="65" cy="50.5" rx="43" ry="5.5" fill="#C8855A" opacity="0.6" />
+            <path d="M55 50 Q55 46 59 46 Q65 46 65 52 Q65 46 71 46 Q75 46 75 50 Q75 56 65 62 Q55 56 55 50Z"
+              fill="#FFFFFF" opacity="0.7" />
+            <path d="M108 58 Q126 58 126 69 Q126 80 108 80" stroke="#C8855A" stroke-width="2.2" fill="none"
+              stroke-linecap="round" />
+            <ellipse cx="65" cy="99" rx="52" ry="7" fill="#E8C49A" stroke="#C8855A" stroke-width="1" />
+          </svg>
+        </div>
+
+        <div class="hero-btns">
+          <a href="booking.html" class="btn-fill">Book a Table</a>
+          <a href="#menu" class="btn-ghost">Explore Menu</a>
+        </div>
+      </div>
+      <div class="hero-scroll" aria-hidden="true">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ MARQUEE -->
+    <div class="marquee-bar" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Specialty Coffee</span><s>✦</s>
+        <span>Latte Art</span><s>✦</s>
+        <span>Brunch All Day</span><s>✦</s>
+        <span>Chippendale's Finest</span><s>✦</s>
+        <span>Zenius Blend</span><s>✦</s>
+        <span>Dog Friendly</span><s>✦</s>
+        <span>Ranked #1 in Chippendale</span><s>✦</s>
+        <span>Open 7 Days</span><s>✦</s>
+        <span>Specialty Coffee</span><s>✦</s>
+        <span>Latte Art</span><s>✦</s>
+        <span>Brunch All Day</span><s>✦</s>
+        <span>Chippendale's Finest</span><s>✦</s>
+        <span>Zenius Blend</span><s>✦</s>
+        <span>Dog Friendly</span><s>✦</s>
+        <span>Ranked #1 in Chippendale</span><s>✦</s>
+        <span>Open 7 Days</span><s>✦</s>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════ ABOUT -->
+    <section id="about">
+      <div class="about-wrap">
+        <div class="about-visual reveal">
+          <div class="about-ring"></div>
+          <div class="about-main-img">
+            <img src="images/main.jpg" alt="Inside Zenius Coffee, Chippendale" onerror="this.style.display='none'">
+          </div>
+          <div class="about-accent-img">
+            <img src="images/latte-art.jpg" alt="Zenius latte art" onerror="this.style.display='none'">
+          </div>
+        </div>
+        <div class="about-copy">
+          <div class="sec-label reveal">Our Story</div>
+          <h2 class="sec-title reveal">A corner of<br><em>Chippendale</em> we call home</h2>
+          <p class="reveal" style="transition-delay:.15s">Big windows, warm bricks, the smell of fresh coffee and a
+            community that feels like family. That's Zenius, your favourite morning stop on Abercrombie Street.</p>
+          <p class="reveal" style="transition-delay:.28s">Our baristas pour with purpose, crafting everything from silky
+            flat whites to incredible latte art featuring seahorses, bunnies, bees and beyond, using premium Zenius
+            blend beans.</p>
+          <p class="reveal" style="transition-delay:.41s">Pull up a seat out front, bring your dog, order the pandan
+            hotcakes, and stay a while. This is what a good morning looks like.</p>
+          <div class="about-stats reveal" style="transition-delay:.55s">
+            <div>
+              <div class="stat-num">#1</div>
+              <div class="stat-lbl">In Chippendale</div>
+            </div>
+            <div>
+              <div class="stat-num">7am</div>
+              <div class="stat-lbl">Open Weekdays</div>
+            </div>
+            <div>
+              <img class="stat-icon-img" src="https://images.unsplash.com/vector-1740286698618-7f01b97f6899?w=200&q=80"
+                alt="Dog friendly">
+              <div class="stat-lbl">Dog Friendly</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ MENU -->
+    <section id="menu">
+      <div class="menu-top">
+        <div class="sec-label reveal">What We Serve</div>
+        <h2 class="sec-title reveal">Our <em>Menu</em></h2>
+      </div>
+      <div class="menu-grid">
+
+        <!-- Coffee & Hot Drinks -->
+        <div class="menu-card reveal">
+          <img class="card-icon-img" src="https://images.unsplash.com/vector-1739984382388-03d3e9f44aa1?w=200&q=80"
+            alt="Coffee">
+          <div class="card-cat">Drinks</div>
+          <h3 class="card-title">Coffee &amp; Hot</h3>
+          <ul class="item-list">
+            <li>
+              <div class="item-name"><strong>Black / Long Black</strong></div><span class="item-price">$5 / $5.5</span>
+            </li>
+            <li>
+              <div class="item-name"><strong>White / Flat White</strong></div><span class="item-price">$5 / $5.5</span>
+            </li>
+            <li>
+              <div class="item-name"><strong>Dirty Chai</strong></div><span class="item-price">$5.5 / $6</span>
+            </li>
+            <li>
+              <div class="item-name"><strong>Mocha</strong></div><span class="item-price">$5.5 / $6</span>
+            </li>
+            <li>
+              <div class="item-name"><strong>Hot Chocolate</strong></div><span class="item-price">$5 / $5.5</span>
+            </li>
+            <li>
+              <div class="item-name"><strong>Sticky Chai on Soy</strong></div><span class="item-price">$6.5</span>
+            </li>
+            <li>
+              <div class="item-name"><strong>Taro / Ube Latte</strong></div><span class="item-price">$6.5</span>
+            </li>
+            <li>
+              <div class="item-name"><strong>Red Velvet Latte</strong></div><span class="item-price">$6.5</span>
+            </li>
+            <li>
+              <div class="item-name"><strong>Turmeric Latte</strong></div><span class="item-price">$6.5</span>
+            </li>
+            <li>
+              <div class="item-name"><strong>Affogato</strong></div><span class="item-price">$6.5</span>
+            </li>
+            <li>
+              <div class="item-name"><strong>Matcha Hikari</strong><small>Japanese specialty, unsweetened</small></div>
+              <span class="item-price">$6.5</span>
+            </li>
+            <li>
+              <div class="item-name"><strong>Iced Matcha / Hojicha</strong></div><span class="item-price">$8</span>
+            </li>
+            <li>
+              <div class="item-name"><strong>Tea</strong><small>Earl Grey, English Breakfast, Green, Peppermint,
+                  Chamomile, Lemongrass Ginger</small></div><span class="item-price">$4.5</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Cold Drinks -->
+        <div class="menu-card reveal" style="transition-delay:.1s">
+          <img class="card-icon-img" src="https://images.unsplash.com/vector-1768808722591-dd648eb55075?w=200&q=80"
+            alt="Cold drinks">
+          <div class="card-cat">Cold</div>
+          <h3 class="card-title">Cold Drinks</h3>
+          <ul class="item-list">
+            <li>
+              <div class="item-name"><strong>Cold Brew</strong></div><span class="item-price">$6.5</span>
+            </li>
+            <li>
+              <div class="item-name"><strong>Iced Latte</strong></div><span class="item-price">$6.5</span>
+            </li>
+            <li>
+              <div class="item-name"><strong>Iced Long Black</strong></div><span class="item-price">$6.5</span>
+            </li>
+            <li>
+              <div class="item-name"><strong>Iced Mocha / Chocolate</strong></div><span class="item-price">$7</span>
+            </li>
+            <li>
+              <div class="item-name"><strong>Iced Chai / Taro / Ube</strong></div><span class="item-price">$7</span>
+            </li>
+            <li>
+              <div class="item-name"><strong>Milkshakes</strong><small>Chocolate, Strawberry, Caramel, Peanut Butter,
+                  Nutella, Banana, Coffee</small></div><span class="item-price">$7</span>
+            </li>
+            <li>
+              <div class="item-name"><strong>Fresh Juices</strong><small>Immunity, Detox, Liver Scrubber</small></div>
+              <span class="item-price">$8.5</span>
+            </li>
+            <li>
+              <div class="item-name"><strong>Smoothies</strong><small>Banana, Mix Berries</small></div><span
+                class="item-price">$9</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Brunch -->
+        <div class="menu-card reveal" style="transition-delay:.2s">
+          <img class="card-icon-img" src="https://images.unsplash.com/vector-1753248836371-f35d1044d920?w=200&q=80"
+            alt="Brunch">
+          <div class="card-cat">Food</div>
+          <h3 class="card-title">Brunch</h3>
+          <ul class="item-list">
+            <li>
+              <div class="item-name"><strong>Avocado on Toast</strong><small>Add egg $3.5, bacon $5, halloumi $5</small>
+              </div><span class="item-price">$9</span>
+            </li>
+            <li>
+              <div class="item-name"><strong>Brekkie Rock N Roll</strong><small>Potato bun, bacon, egg, spinach, avo,
+                  cheese, hashbrown</small></div><span class="item-price">$17.9</span>
+            </li>
+            <li>
+              <div class="item-name"><strong>Say Haloumi</strong><small>Potato bun, haloumi, egg, avo, caramelised
+                  onions, spinach, hashbrown</small></div><span class="item-price">$17.9</span>
+            </li>
+            <li>
+              <div class="item-name"><strong>Secret Corn</strong><small>Haloumi fritters, avo, poached egg, tomato
+                  salsa, green goddess dressing</small></div><span class="item-price">$22.9</span>
+            </li>
+            <li>
+              <div class="item-name"><strong>Pandan Pancake</strong><small>Seasonal fruits, pistachio, maple syrup,
+                  rainbow ice cream</small></div><span class="item-price">$22.9</span>
+            </li>
+            <li>
+              <div class="item-name"><strong>Best Fricken Burger</strong><small>Buttermilk fried chicken, pickles,
+                  coleslaw, jack cheese, sriracha hollandaise</small></div><span class="item-price">$21.9</span>
+            </li>
+            <li>
+              <div class="item-name"><strong>Avo and Smoked Trout on Toast</strong><small>Smashed avo, smoked trout,
+                  goat feta, poached egg, tomato salsa, dukkah</small></div><span class="item-price">$25.9</span>
+            </li>
+            <li>
+              <div class="item-name"><strong>Benedict</strong><small>Smoked trout, spinach, 2 poached eggs, sriracha
+                  hollandaise on turkish</small></div><span class="item-price">$25.9</span>
+            </li>
+            <li>
+              <div class="item-name"><strong>Shakshuka</strong><small>Baked eggs, tomato, capsicum, goat feta, mild
+                  chorizo, garlic sourdough</small></div><span class="item-price">$25.9</span>
+            </li>
+            <li>
+              <div class="item-name"><strong>Chilli Billy</strong><small>Scrambled eggs, Zenius chilli sambal,
+                  mushrooms, goat feta, roti paratha</small></div><span class="item-price">$26.9</span>
+            </li>
+            <li>
+              <div class="item-name"><strong>I'm Starving</strong><small>2 poached eggs, kale, grilled tomato,
+                  mushrooms, avo, chorizo, bacon, hashbrown w/ sourdough</small></div><span
+                class="item-price">$31.9</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Bowls -->
+        <div class="menu-card reveal" style="transition-delay:.3s">
+          <img class="card-icon-img" src="https://images.unsplash.com/vector-1773466975995-31ba8b871cb1?w=200&q=80"
+            alt="Bowls">
+          <div class="card-cat">Bowls</div>
+          <h3 class="card-title">Bowls</h3>
+          <ul class="item-list">
+            <li>
+              <div class="item-name"><strong>Famous Beef Rendang Bowl</strong><small>Slow cooked beef, indo spices,
+                  broccoli, pickled cucumber, fried egg, brown rice</small></div><span class="item-price">$24.9</span>
+            </li>
+            <li>
+              <div class="item-name"><strong>Cauliflower Bowl</strong><small>Fried cauliflower, quinoa, almond,
+                  pomegranate, crispy kale, beetroot hummus, avocado <span class="item-tag">V GF</span></small></div>
+              <span class="item-price">$22.9</span>
+            </li>
+            <li>
+              <div class="item-name"><strong>Soba Salmon Bowl</strong><small>Cold soba noodles, sesame dressing, pickle
+                  cucumber, avocado, edamame, ponzu grilled salmon</small></div><span class="item-price">$26.9</span>
+            </li>
+            <li>
+              <div class="item-name"><strong>Green Bowl</strong><small>Sauteed quinoa, broccoli, asparagus, kale,
+                  labneh, poached egg, edamame, chermoula <span class="item-tag">V GF</span></small></div><span
+                class="item-price">$22.9</span>
+            </li>
+            <li style="flex-direction:column;gap:.5rem;border-top:1px solid var(--border);margin-top:.3rem;">
+              <strong
+                style="color:var(--sage);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;">Sides</strong>
+              <small>Bacon / Chorizo / Halloumi $5 &nbsp;·&nbsp; Mushroom / Goat Feta / Avocado $4.5 &nbsp;·&nbsp; Egg /
+                Cheese / Hashbrown $3.5 &nbsp;·&nbsp; Chicken $6 &nbsp;·&nbsp; Smoked Trout $7 &nbsp;·&nbsp; Grilled
+                Salmon $7 &nbsp;·&nbsp; Fries $7 &nbsp;·&nbsp; Sweet Potato Fries $9</small>
+            </li>
+          </ul>
+          <p style="font-size:.7rem;color:rgba(42,26,14,.32);margin-top:1.2rem;line-height:1.65;">15% surcharge on
+            weekends and public holidays &nbsp;·&nbsp; Free range eggs only &nbsp;·&nbsp; Menu items cannot be
+            substituted</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ FEATURE STRIP -->
+    <div class="feature-strip">
+      <div class="feature-inner">
+        <div class="feature-item reveal">
+          <img class="feature-img" src="https://images.unsplash.com/vector-1758089442829-f7557849a4c4?w=200&q=80"
+            alt="Latte art">
+          <div class="feature-title">Latte Art</div>
+          <div class="feature-desc">Every cup is handcrafted. Seahorses, bees, bunnies. Ask your barista.</div>
+        </div>
+        <div class="feature-item reveal" style="transition-delay:.12s">
+          <img class="feature-img" src="https://images.unsplash.com/vector-1771425300685-0388d3c401e6?w=200&q=80"
+            alt="Outdoor seating">
+          <div class="feature-title">Outdoor Seating</div>
+          <div class="feature-desc">Spill out onto Abercrombie Street and soak up the Chippendale morning sun.</div>
+        </div>
+        <div class="feature-item reveal" style="transition-delay:.24s">
+          <img class="feature-img" src="https://images.unsplash.com/vector-1740286698618-7f01b97f6899?w=200&q=80"
+            alt="Dog friendly">
+          <div class="feature-title">Dog Friendly</div>
+          <div class="feature-desc">Four-legged regulars welcome. Puppy cinos on the house.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════ REVIEWS -->
+    <section id="reviews">
+      <div class="reviews-top">
+        <div>
+          <div class="sec-label reveal">What People Say</div>
+          <h2 class="sec-title reveal">Google <em>Reviews</em></h2>
+        </div>
+        <div class="reviews-rating reveal">
+          <div class="rating-score">4.8</div>
+          <div class="rating-meta">
+            <div class="rating-stars">★★★★★</div>
+            <div class="rating-count">Based on 250+ reviews</div>
+            <div class="rating-source">
+              <span class="google-g"></span> Google Reviews
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reviews-grid">
+
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">Hands down the best coffee in Chippendale. Poppy and Enzen are both amazing, warm,
+            friendly, and they somehow remembered my order after just two days. The vibe is always welcoming, and the
+            coffee is consistently perfect. Zenius has definitely become my go-to spot.</p>
+          <div class="review-author">
+            <div class="review-avatar av-3">S</div>
+            <div>
+              <div class="review-name">Saul Edwards</div>
+              <div class="review-date">6 months ago · Google</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card reveal" style="transition-delay:.1s">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">The matcha was yum!! My friend loved her burger too. WiFi and seating was perfect to do
+            some work at. Thanks to the staff for being so beyond kind.</p>
+          <div class="review-author">
+            <div class="review-avatar av-1">S</div>
+            <div>
+              <div class="review-name">Sophie Jullienne</div>
+              <div class="review-date">1 month ago · Google</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card reveal" style="transition-delay:.2s">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">My favourite shakshouka! And they're always really nice when I need vegetarian menu
+            accommodations. Consistently great food and a genuinely welcoming atmosphere every single visit.</p>
+          <div class="review-author">
+            <div class="review-avatar av-2">M</div>
+            <div>
+              <div class="review-name">Mik</div>
+              <div class="review-date">1 month ago · Google</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align:center; margin-top:3rem;" class="reveal" style="transition-delay:.3s">
+        <a href="https://www.google.com/maps/place/ZENIUS/@-33.8919618,151.1953813,17z/data=!4m8!3m7!1s0x6b12b00af7f93765:0xe3d77d3b2b3f4a4a!8m2!3d-33.8919618!4d151.1953813!9m1!1b1"
+          target="_blank" rel="noopener" class="reviews-link">
+          Read all reviews on Google
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+            <polyline points="15 3 21 3 21 9" />
+            <line x1="10" y1="14" x2="21" y2="3" />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ GALLERY -->
+    <section id="gallery">
+      <div class="gallery-top">
+        <div>
+          <div class="sec-label reveal">From Our World</div>
+          <h2 class="sec-title reveal"><em>Gallery</em></h2>
+        </div>
+        <a href="https://www.instagram.com/zeniuschippendale/" target="_blank" rel="noopener" class="ig-link reveal">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+          </svg>
+          @zeniuschippendale
+        </a>
+      </div>
+      <div class="gallery-grid">
+        <div class="g-item reveal">
+          <div class="g-inner gp-1"><img src="images/gallery-1.jpg" alt="Zenius latte art"
+              style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
+          <div class="g-overlay">
+            <p>Latte Art</p>
+          </div>
+        </div>
+        <div class="g-item reveal" style="transition-delay:.07s">
+          <div class="g-inner gp-2"><img src="images/gallery-2.jpg" alt="Zenius brunch"
+              style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
+          <div class="g-overlay">
+            <p>Weekend Brunch</p>
+          </div>
+        </div>
+        <div class="g-item reveal" style="transition-delay:.14s">
+          <div class="g-inner gp-3"><img src="images/gallery-3.jpg" alt="Morning coffee"
+              style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
+          <div class="g-overlay">
+            <p>Morning Brew</p>
+          </div>
+        </div>
+        <div class="g-item reveal" style="transition-delay:.21s">
+          <div class="g-inner gp-4"><img src="images/gallery-4.jpg" alt="Pandan hotcakes"
+              style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
+          <div class="g-overlay">
+            <p>Pandan Hotcakes</p>
+          </div>
+        </div>
+        <div class="g-item reveal" style="transition-delay:.28s">
+          <div class="g-inner gp-5"><img src="images/gallery-5.jpg" alt="Cafe atmosphere"
+              style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
+          <div class="g-overlay">
+            <p>Good Vibes</p>
+          </div>
+        </div>
+        <div class="g-item reveal" style="transition-delay:.35s">
+          <div class="g-inner gp-6"><img src="images/gallery-6.jpg" alt="Alfresco seating"
+              style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
+          <div class="g-overlay">
+            <p>Alfresco</p>
+          </div>
+        </div>
+        <div class="g-item reveal" style="transition-delay:.42s">
+          <div class="g-inner gp-7"><img src="images/gallery-7.jpg" alt="Acai bowl"
+              style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
+          <div class="g-overlay">
+            <p>Acai Bowl</p>
+          </div>
+        </div>
+        <div class="g-item reveal" style="transition-delay:.49s">
+          <div class="g-inner gp-8"><img src="images/gallery-8.jpg" alt="Coffee craft"
+              style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
+          <div class="g-overlay">
+            <p>The Craft</p>
+          </div>
+        </div>
+        <div class="g-item reveal" style="transition-delay:.56s">
+          <div class="g-inner gp-9"><img src="images/gallery-9.jpg" alt="Zenius cafe"
+              style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
+          <div class="g-overlay">
+            <p>Morning Light</p>
+          </div>
+        </div>
+        <div class="g-item reveal" style="transition-delay:.63s">
+          <div class="g-inner gp-10"><img src="images/gallery-10.jpg" alt="Zenius coffee"
+              style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
+          <div class="g-overlay">
+            <p>Fresh Brew</p>
+          </div>
+        </div>
+        <div class="g-item reveal" style="transition-delay:.70s">
+          <div class="g-inner gp-11"><img src="images/gallery-11.jpg" alt="Zenius food"
+              style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
+          <div class="g-overlay">
+            <p>House Favourite</p>
+          </div>
+        </div>
+        <div class="g-item reveal" style="transition-delay:.77s">
+          <div class="g-inner gp-12"><img src="images/gallery-12.jpg" alt="Zenius brunch plate"
+              style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
+          <div class="g-overlay">
+            <p>Weekend Plate</p>
+          </div>
+        </div>
+        <div class="g-item reveal" style="transition-delay:.91s">
+          <div class="g-inner gp-14"><img src="images/gallery-14.jpg" alt="Zenius vibes"
+              style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
+          <div class="g-overlay">
+            <p>Chippendale Vibes</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ VISIT -->
+    <section id="visit">
+      <div class="visit-top">
+        <div class="sec-label reveal">Come Say Hi</div>
+        <h2 class="sec-title reveal">Find <em>Us</em></h2>
+      </div>
+      <div class="visit-grid">
+        <div class="v-card reveal">
+          <img class="v-card-icon-img" src="https://images.unsplash.com/vector-1743008344420-9eb252030d79?w=200&q=80"
+            alt="Opening hours">
+          <h3>Hours</h3>
+          <ul class="hours-list">
+            <li><span class="h-day">Monday</span> <span class="h-time">7am to 3pm</span></li>
+            <li><span class="h-day">Tuesday</span> <span class="h-time">7am to 3pm</span></li>
+            <li><span class="h-day">Wednesday</span> <span class="h-time">7am to 3pm</span></li>
+            <li><span class="h-day">Thursday</span> <span class="h-time">7am to 3pm</span></li>
+            <li><span class="h-day">Friday</span> <span class="h-time">7am to 3pm</span></li>
+            <li><span class="h-day">Saturday</span> <span class="h-time">8am to 3pm</span></li>
+            <li><span class="h-day">Sunday</span> <span class="h-time">8am to 3pm</span></li>
+            <li style="border-top:1px solid var(--border);margin-top:.3rem;padding-top:.7rem;"><span class="h-day"
+                style="color:var(--terra);">Kitchen</span> <span class="h-time"
+                style="color:var(--terra);font-weight:500;">Closes at 2pm daily</span></li>
+          </ul>
+        </div>
+        <div class="map-card reveal" style="transition-delay:.12s">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.8551!2d151.19538!3d-33.89196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12b00af7f93765%3A0xe3d77d3b2b3f4a4a!2s96%20Abercrombie%20St%2C%20Chippendale%20NSW%202008!5e0!3m2!1sen!2sau!4v1"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Zenius Coffee at 96 Abercrombie St, Chippendale">
+          </iframe>
+        </div>
+        <div class="v-card reveal" style="transition-delay:.24s">
+          <img class="v-card-icon-img" src="https://images.unsplash.com/vector-1739952585073-547101f0eebd?w=200&q=80"
+            alt="Location">
+          <h3>Contact</h3>
+          <ul class="contact-list">
+            <li>
+              <span class="c-label">Address</span>
+              <span class="c-val">96 Abercrombie Street<br>Chippendale NSW 2008</span>
+            </li>
+            <li>
+              <span class="c-label">Phone</span>
+              <span class="c-val"><a href="tel:+61289578415">+61 2 8957 8415</a></span>
+            </li>
+            <li>
+              <span class="c-label">Email</span>
+              <span class="c-val"><a href="mailto:zeniuscoffee@gmail.com">zeniuscoffee@gmail.com</a></span>
+            </li>
+            <li>
+              <span class="c-label">Instagram</span>
+              <span class="c-val"><a href="https://www.instagram.com/zeniuschippendale/" target="_blank"
+                  rel="noopener">@zeniuschippendale</a></span>
+            </li>
+            <li>
+              <span class="c-label">TikTok</span>
+              <span class="c-val"><a href="https://www.tiktok.com/@zeniuscoffee" target="_blank"
+                  rel="noopener">@zeniuscoffee</a></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════ FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Zenius<span>.</span></div>
+        <div class="footer-tagline"> Specialty Coffee &nbsp;·&nbsp; Brunch</div>
+      </div>
+      <div class="footer-links" aria-label="Footer links">
+        <a href="#about">Story</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#visit">Visit</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/zeniuschippendale/" target="_blank" rel="noopener" class="social-btn"
+          aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+          </svg>
+        </a>
+        <a href="https://www.tiktok.com/@zeniuscoffee" target="_blank" rel="noopener" class="social-btn"
+          aria-label="TikTok">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34l-.04-9.02a8.19 8.19 0 004.79 1.52V4.38a4.85 4.85 0 01-1-.31z" />
+          </svg>
+        </a>
+        <a href="https://www.facebook.com/zeniuscoffee/" target="_blank" rel="noopener" class="social-btn"
+          aria-label="Facebook">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="yr"></span> Zenius Coffee. All rights reserved.</span>
+      <span>96 Abercrombie Street, Chippendale NSW 2008</span>
+    </div>
+  </footer>
+
+  <script>
+    var isTouch = window.matchMedia('(pointer: coarse)').matches;
+    var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    /* ── Scroll progress + nav ── */
+    var progressEl = document.getElementById('progress');
+    var navEl = document.getElementById('nav');
+    window.addEventListener('scroll', function () {
+      var s = window.scrollY, t = document.documentElement.scrollHeight - window.innerHeight;
+      progressEl.style.width = (s / t * 100) + '%';
+      navEl.classList.toggle('scrolled', s > 60);
+    }, { passive: true });
+
+    /* ── Hamburger ── */
+    var hamburger = document.getElementById('hamburger');
+    hamburger.addEventListener('click', function () {
+      var open = navEl.classList.toggle('menu-open');
+      hamburger.setAttribute('aria-expanded', String(open));
+    });
+    document.querySelectorAll('.nav-links a').forEach(function (l) {
+      l.addEventListener('click', function () {
+        navEl.classList.remove('menu-open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
     });
 
-    function drawBean(x, y, r, rot, a) {
-      ctx.save();
-      ctx.translate(x, y); ctx.rotate(rot); ctx.globalAlpha = a;
-      ctx.beginPath(); ctx.ellipse(0, 0, r * 2.4, r * 1.4, 0, 0, Math.PI * 2);
-      ctx.fillStyle = '#8B5A2B'; ctx.fill();
-      ctx.beginPath(); ctx.moveTo(-r * 2, 0); ctx.lineTo(r * 2, 0);
-      ctx.strokeStyle = 'rgba(251,247,242,.6)'; ctx.lineWidth = 0.5; ctx.stroke();
-      ctx.restore();
+    /* ── Custom cursor ── */
+    if (!isTouch) {
+      var dot = document.getElementById('cur-dot'), ring = document.getElementById('cur-ring');
+      var mx = 0, my = 0, rx = 0, ry = 0;
+      document.addEventListener('mousemove', function (e) { mx = e.clientX; my = e.clientY; });
+      document.addEventListener('mouseleave', function () { dot.style.opacity = '0'; ring.style.opacity = '0'; });
+      document.addEventListener('mouseenter', function () { dot.style.opacity = '1'; ring.style.opacity = '1'; });
+      (function tick() {
+        rx += (mx - rx) * 0.11; ry += (my - ry) * 0.11;
+        dot.style.left = mx + 'px'; dot.style.top = my + 'px';
+        ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+        requestAnimationFrame(tick);
+      })();
     }
 
-    (function animate() {
-      ctx.clearRect(0, 0, W, H);
-      BEANS.forEach(function (p) {
-        p.x += p.vx; p.y += p.vy; p.rot += p.rspd;
-        if (p.y < -15) p.y = H + 15;
-        if (p.x < -15) p.x = W + 15;
-        if (p.x > W + 15) p.x = -15;
-        if (p.dot) {
-          ctx.save(); ctx.globalAlpha = p.a;
-          ctx.beginPath(); ctx.arc(p.x, p.y, p.r * 0.7, 0, Math.PI * 2);
-          ctx.fillStyle = '#C8855A'; ctx.fill(); ctx.restore();
-        } else {
-          drawBean(p.x, p.y, p.r, p.rot, p.a);
-        }
+    /* ── Scroll reveal ── */
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+
+    /* ── Particle canvas (light-mode coffee beans) ── */
+    if (!isTouch && !prefersReduced) {
+      var canvas = document.getElementById('particle-canvas');
+      var ctx = canvas.getContext('2d');
+      var W, H;
+      function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+      resize();
+      window.addEventListener('resize', resize);
+
+      var BEANS = Array.from({ length: 35 }, function () {
+        return {
+          x: Math.random() * window.innerWidth,
+          y: Math.random() * window.innerHeight,
+          r: Math.random() * 2.5 + 0.8,
+          vx: (Math.random() - 0.5) * 0.2,
+          vy: -(Math.random() * 0.35 + 0.1),
+          rot: Math.random() * Math.PI * 2,
+          rspd: (Math.random() - 0.5) * 0.015,
+          a: Math.random() * 0.18 + 0.04,
+          dot: Math.random() > 0.6
+        };
       });
-      requestAnimationFrame(animate);
-    })();
-  }
 
-  /* ── Smooth scroll ── */
-  document.querySelectorAll('a[href^="#"]').forEach(function (a) {
-    a.addEventListener('click', function (e) {
-      var target = document.querySelector(a.getAttribute('href'));
-      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-    });
-  });
-
-  /* ── Hero parallax ── */
-  if (!prefersReduced) {
-    var heroTitle = document.querySelector('.hero-title');
-    window.addEventListener('scroll', function () {
-      var y = window.scrollY;
-      if (y < window.innerHeight && heroTitle) {
-        heroTitle.style.transform = 'translateY(' + (y * 0.15) + 'px)';
-        heroTitle.style.opacity = String(Math.max(0, 1 - y / (window.innerHeight * 0.75)));
+      function drawBean(x, y, r, rot, a) {
+        ctx.save();
+        ctx.translate(x, y); ctx.rotate(rot); ctx.globalAlpha = a;
+        ctx.beginPath(); ctx.ellipse(0, 0, r * 2.4, r * 1.4, 0, 0, Math.PI * 2);
+        ctx.fillStyle = '#8B5A2B'; ctx.fill();
+        ctx.beginPath(); ctx.moveTo(-r * 2, 0); ctx.lineTo(r * 2, 0);
+        ctx.strokeStyle = 'rgba(251,247,242,.6)'; ctx.lineWidth = 0.5; ctx.stroke();
+        ctx.restore();
       }
-    }, { passive: true });
-  }
-</script>
+
+      (function animate() {
+        ctx.clearRect(0, 0, W, H);
+        BEANS.forEach(function (p) {
+          p.x += p.vx; p.y += p.vy; p.rot += p.rspd;
+          if (p.y < -15) p.y = H + 15;
+          if (p.x < -15) p.x = W + 15;
+          if (p.x > W + 15) p.x = -15;
+          if (p.dot) {
+            ctx.save(); ctx.globalAlpha = p.a;
+            ctx.beginPath(); ctx.arc(p.x, p.y, p.r * 0.7, 0, Math.PI * 2);
+            ctx.fillStyle = '#C8855A'; ctx.fill(); ctx.restore();
+          } else {
+            drawBean(p.x, p.y, p.r, p.rot, p.a);
+          }
+        });
+        requestAnimationFrame(animate);
+      })();
+    }
+
+    /* ── Smooth scroll ── */
+    document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        var target = document.querySelector(a.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    });
+
+    /* ── Hero parallax ── */
+    if (!prefersReduced) {
+      var heroTitle = document.querySelector('.hero-title');
+      window.addEventListener('scroll', function () {
+        var y = window.scrollY;
+        if (y < window.innerHeight && heroTitle) {
+          heroTitle.style.transform = 'translateY(' + (y * 0.15) + 'px)';
+          heroTitle.style.opacity = String(Math.max(0, 1 - y / (window.innerHeight * 0.75)));
+        }
+      }, { passive: true });
+    }
+  </script>
 </body>
+
 </html>
